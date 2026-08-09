@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-11';
+  var APP_VERSION = '20260809-12';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -281,7 +281,7 @@
       }).then(function (r) {
         if (r.ok) {
           setDebug('更新完成');
-          alert(t('saved'));
+          alert(t('savedPublishing'));
           return true;
         }
         setDebug('更新失败：' + (r.error || 'unknown'));
@@ -493,6 +493,11 @@
       if (r.ok) {
         state.unlocked = true;
         github.authed = true;
+        try {
+          localStorage.setItem('heat_admin_token', state.githubToken);
+          localStorage.setItem('heat_admin_pass', pw);
+          localStorage.setItem('heat_admin_ts', String(Date.now()));
+        } catch (e) {}
         $('pass-msg').textContent = '';
         $('pass-overlay').hidden = true;
         openAdmin();
@@ -783,6 +788,16 @@
     });
 
     $('btn-admin').addEventListener('click', openAdmin);
+    try {
+      var savedTok = localStorage.getItem('heat_admin_token');
+      var savedPass = localStorage.getItem('heat_admin_pass');
+      if (savedTok && savedPass) {
+        state.githubToken = savedTok.trim();
+        state.adminPassword = savedPass;
+        state.unlocked = true;
+        github.authed = true;
+      }
+    } catch (e) {}
     $('admin-close').addEventListener('click', closeAdmin);
     $('btn-unlock').addEventListener('click', tryUnlock);
     $('pass-input').addEventListener('keydown', function (e) { if (e.key === 'Enter') tryUnlock(); });
@@ -822,6 +837,11 @@
       github.authed = false;
       state.unlocked = false;
       state.adminPassword = '';
+      try {
+        localStorage.removeItem('heat_admin_token');
+        localStorage.removeItem('heat_admin_pass');
+        localStorage.removeItem('heat_admin_ts');
+      } catch (e) {}
       closeAdmin();
     });
     $('btn-logout').hidden = !github.mode;
@@ -853,8 +873,12 @@
         var list = Array.isArray(obj) ? obj : (obj && Array.isArray(obj.products) ? obj.products : null);
         if (list && list.length) {
           state.products = list.map(function (p, i) { return normalize(p, i + 1); });
+          try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ schema: SCHEMA, savedAt: new Date().toISOString(), products: state.products })); } catch (e) {}
         }
         finish();
+        if (state.unlocked) {
+          setTimeout(function () { openAdmin(); }, 300);
+        }
       }).catch(function () { boot(); });
     } else {
       boot();
