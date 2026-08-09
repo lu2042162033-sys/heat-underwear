@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-7';
+  var APP_VERSION = '20260809-8';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -30,7 +30,8 @@
     return fetch(path, init).then(function (res) {
       return res.json().then(function (data) {
         if (res.status === 401) github.authed = false;
-        var out = { ok: res.ok, status: res.status, data: data };
+        var ok = res.status >= 200 && res.status < 300;
+        var out = { ok: ok, status: res.status, data: data };
         setDebug('请求返回 ' + res.status + (path.indexOf('dispatches') >= 0 ? '（dispatch）' : ''));
         return out;
       }).catch(function () {
