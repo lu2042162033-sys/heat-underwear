@@ -1,0 +1,71 @@
+name: Update Products (Admin)
+
+on:
+  repository_dispatch:
+    types: [update-products, check-password]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.DEPLOY_TOKEN }}
+
+      - name: Verify admin password
+        id: auth
+        env:
+          EXPECTED: ${{ secrets.ADMIN_PASSWORD }}
+          GIVEN: ${{ github.event.client_payload.password }}
+        run: |
+          if [ "$GIVEN" = "$EXPECTED" ] && [ -n "$GIVEN" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Prepare site dir
+        run: mkdir -p w/outputs/site/data
+
+      - name: Write products.json
+        if: steps.auth.outputs.ok == 'true' && github.event.action == 'update-products'
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+        run: |
+          echo "$PAYLOAD" | python3 -c "
+import json, sys
+payload = json.load(sys.stdin)
+products = payload.get('products')
+if not isinstance(products, list) or len(products) < 1:
+    sys.exit('BAD_PAYLOAD')
+import datetime
+data = {'version': 2, 'updatedAt': datetime.datetime.now().isoformat(), 'products': products}
+with open('w/outputs/site/data/products.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print('products.json written:', len(products))
+"
+
+      - name: Write auth result (check-password)
+        if: steps.auth.outputs.ok == 'false' || github.event.action == 'check-password'
+        env:
+          REQ: ${{ github.event.client_payload.request_id }}
+          OK: ${{ steps.auth.outputs.ok }}
+        run: |
+          mkdir -p w/outputs/site/data
+          printf '{"request_id":"%s","valid":%s,"ts":"%s"}' "$REQ" "$OK" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > w/outputs/site/data/admin-auth.json
+          echo "auth result written: valid=$OK"
+
+      - name: Commit and push
+        run: |
+          git config user.name "heat-site-bot"
+          git config user.email "heat-site-bot@users.noreply.github.com"
+          git add w/outputs/site/data/products.json w/outputs/site/data/admin-auth.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: admin update (${GITHUB_EVENT_NAME:-dispatch})"
+          git push

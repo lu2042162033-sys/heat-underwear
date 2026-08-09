@@ -3,3 +3,5 @@ server-data/
 npm-debug.log*
 w/work/tools/
 *.log
+
+w/work/ssh/

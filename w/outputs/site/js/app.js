@@ -18,16 +18,19 @@
   function storeSet(k, v) { memStore[k] = v; try { localStorage.setItem(k, v); } catch (e) {} }
   function storeDel(k) { delete memStore[k]; try { localStorage.removeItem(k); } catch (e) {} }
 
-  function api(path, opts) {
-    var init = { method: (opts && opts.method) || 'GET', credentials: 'same-origin', headers: {} };
+  function ghApi(path, opts) {
+    var init = { method: (opts && opts.method) || 'GET', headers: {} };
+    var token = (opts && opts.token) ? opts.token : (state.githubToken || '');
+    if (token) init.headers['Authorization'] = 'Bearer ' + token;
+    init.headers['Accept'] = 'application/vnd.github+json';
+    init.headers['X-GitHub-Api-Version'] = '2022-11-28';
     if (opts && opts.json) {
       init.headers['Content-Type'] = 'application/json';
       init.body = JSON.stringify(opts.json);
     }
-    if (opts && opts.form) init.body = opts.form;
     return fetch(path, init).then(function (res) {
       return res.json().then(function (data) {
-        if (res.status === 401) server.authed = false;
+        if (res.status === 401) github.authed = false;
         return { ok: res.ok, status: res.status, data: data };
       }).catch(function () {
         return { ok: false, status: res.status, data: null };
@@ -36,13 +39,65 @@
       return { ok: false, status: 0, data: null };
     });
   }
-  function detectServer() {
-    return api('api/me').then(function (r) {
-      if (r.ok && r.data && r.data.server === true) {
-        server.authed = !!r.data.authed;
-        return true;
-      }
-      return false;
+  function ghRepo() { return (CFG.pages && CFG.pages.repo) || ''; }
+  function ghDataUrl() {
+    var r = ghRepo();
+    return r ? 'https://raw.githubusercontent.com/' + r + '/main/' + (CFG.pages.dataPath || 'data/products.json') : '';
+  }
+  function ghDispatch(eventType, payload, token) {
+    return ghApi('https://api.github.com/repos/' + ghRepo() + '/dispatches', {
+      method: 'POST', token: token, json: { event_type: eventType, client_payload: payload }
+    });
+  }
+  function rid() {
+    return 'r' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  }
+  function ghAuthUrl() {
+    var r = ghRepo();
+    return r ? 'https://raw.githubusercontent.com/' + r + '/main/w/outputs/site/data/admin-auth.json' : '';
+  }
+  function pollAuth(requestId, timeoutMs) {
+    var url = ghAuthUrl();
+    var started = Date.now();
+    var last = '';
+    function tick(resolve, reject) {
+      fetch(url, { cache: 'no-store' }).then(function (res) {
+        if (!res.ok) throw new Error('poll ' + res.status);
+        return res.text();
+      }).then(function (body) {
+        var obj = null;
+        try { obj = JSON.parse(body); } catch (e) {}
+        if (obj && obj.request_id && obj.request_id !== last) {
+          last = obj.request_id;
+          if (obj.request_id === requestId) {
+            resolve(obj);
+            return;
+          }
+        }
+        if (Date.now() - started > timeoutMs) {
+          reject(new Error('timeout'));
+          return;
+        }
+        setTimeout(function () { tick(resolve, reject); }, 2500);
+      }).catch(function (e) {
+        if (Date.now() - started > timeoutMs) {
+          reject(e);
+          return;
+        }
+        setTimeout(function () { tick(resolve, reject); }, 2500);
+      });
+    }
+    return new Promise(function (resolve, reject) { tick(resolve, reject); });
+  }
+  function ghRequest(eventType, payload) {
+    payload.request_id = rid();
+    return ghDispatch(eventType, payload, state.githubToken).then(function (r) {
+      if (!r.ok) return { ok: false, error: 'dispatch' };
+      return pollAuth(payload.request_id, 45000).then(function (auth) {
+        return { ok: !!auth.valid, auth: auth };
+      }).catch(function () {
+        return { ok: false, error: 'timeout' };
+      });
     });
   }
 
@@ -55,6 +110,7 @@
     editingId: null
   };
   var server = { mode: false, authed: false, images: null };
+  var github = { mode: !!CFG.pages, authed: false };
 
   function $(id) { return document.getElementById(id); }
   function el(tag, cls, text) {
@@ -132,27 +188,27 @@
     return SEED.map(function (p, i) { return normalize(p, i + 1); });
   }
   function saveProducts(list) {
-    if (server.mode) {
-      return api('api/products', { method: 'PUT', json: { products: list } }).then(function (r) {
-        if (!r.ok) {
-          if (r.status === 401) {
-            server.authed = false;
-            alert(t('loginExpired'));
-          } else {
-            alert(t('saveErr'));
-          }
-          return false;
-        }
+    if (!github.mode) {
+      var payload = { schema: SCHEMA, savedAt: new Date().toISOString(), products: list };
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (e) {
+        alert(t('uploadTooBig'));
+      }
+      return Promise.resolve(true);
+    }
+    return ghRequest('update-products', {
+      password: state.adminPassword,
+      schema: SCHEMA,
+      products: list
+    }).then(function (r) {
+      if (r.ok) {
+        alert(t('saved'));
         return true;
-      });
-    }
-    var payload = { schema: SCHEMA, savedAt: new Date().toISOString(), products: list };
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-    } catch (e) {
-      alert(t('uploadTooBig'));
-    }
-    return Promise.resolve(true);
+      }
+      alert(t('saveErr'));
+      return false;
+    });
   }
   function nextId() {
     return state.products.reduce(function (m, p) { return Math.max(m, toNum(p.id)); }, 0) + 1;
@@ -261,7 +317,7 @@
     $('empty').textContent = t('noResults');
     $('count').textContent = list.length + ' ' + t('countSuffix');
     document.documentElement.setAttribute('data-self-test',
-      'seed:' + SEED.length + ':cards:' + list.length + ':lang:' + state.lang + ':mode:' + (server.mode ? 'server' : 'local'));
+      'seed:' + SEED.length + ':cards:' + list.length + ':lang:' + state.lang + ':mode:' + (github.mode ? 'pages' : 'local'));
   }
   function renderAll() {
     applyI18n();
@@ -299,17 +355,22 @@
 
   /* ---------- 管理面板 ---------- */
   function openAdmin() {
-    if (server.mode && !server.authed) state.unlocked = false;
+    if (github.mode && !github.authed) state.unlocked = false;
     if (!state.unlocked) {
       $('pass-msg').textContent = '';
+      $('pass-msg').style.color = '';
       $('pass-input').value = '';
+      $('pass-token').value = state.githubToken || '';
+      $('pass-token').hidden = !github.mode;
+      $('pass-token-label').hidden = !github.mode;
+      $('pass-token-label').textContent = t('tokenLabel');
+      $('pass-token').placeholder = t('tokenPlaceholder');
       $('pass-overlay').hidden = false;
       $('pass-input').focus();
       return;
     }
     $('admin-overlay').hidden = false;
     state.adminOpen = true;
-    $('btn-logout').hidden = !server.mode;
     renderAdminLabels();
     renderAdminTable();
   }
@@ -319,30 +380,43 @@
   }
   function tryUnlock() {
     var pw = $('pass-input').value;
-    if (server.mode) {
-      api('api/login', { method: 'POST', json: { password: pw } }).then(function (r) {
-        if (r.ok) {
-          state.unlocked = true;
-          server.authed = true;
-          $('pass-overlay').hidden = true;
-          openAdmin();
-        } else {
-          $('pass-msg').textContent = (r.data && r.data.error === 'too_many') ? t('tooMany') : t('passcodeWrong');
-          $('pass-input').value = '';
-          $('pass-input').focus();
-        }
-      });
+    var tk = $('pass-token').value.trim();
+    if (!github.mode) {
+      if (pw === String(CFG.adminPasscode || '8888')) {
+        state.unlocked = true;
+        $('pass-overlay').hidden = true;
+        openAdmin();
+      } else {
+        $('pass-msg').textContent = t('passcodeWrong');
+        $('pass-input').value = '';
+        $('pass-input').focus();
+      }
       return;
     }
-    if (pw === String(CFG.adminPasscode || '8888')) {
-      state.unlocked = true;
-      $('pass-overlay').hidden = true;
-      openAdmin();
-    } else {
-      $('pass-msg').textContent = t('passcodeWrong');
-      $('pass-input').value = '';
-      $('pass-input').focus();
+    state.adminPassword = pw;
+    state.githubToken = tk || (CFG.pages && CFG.pages.token) || '';
+    if (!state.githubToken) {
+      $('pass-msg').textContent = t('tokenRequired');
+      $('pass-msg').style.color = '#b23b3b';
+      $('pass-token').focus();
+      return;
     }
+    $('pass-msg').textContent = t('checkingPass');
+    $('pass-msg').style.color = '#8a8a8a';
+    ghRequest('check-password', { password: pw }).then(function (r) {
+      if (r.ok) {
+        state.unlocked = true;
+        github.authed = true;
+        $('pass-msg').textContent = '';
+        $('pass-overlay').hidden = true;
+        openAdmin();
+      } else {
+        $('pass-msg').textContent = t('passcodeWrong');
+        $('pass-msg').style.color = '#b23b3b';
+        $('pass-input').value = '';
+        $('pass-input').focus();
+      }
+    });
   }
   function buildSelect(sel, keys, labelFn, selected) {
     var cur = selected !== undefined ? selected : sel.value;
@@ -473,15 +547,9 @@
     buildSelect($('f-status'), I18N.statusKeys, statusName, p ? (p.status || '已匹配') : '已匹配');
     $('f-note').value = p ? (p.note || '') : '';
     $('f-image').value = p ? (p.image || '') : '';
-    renderImageSelect(server.mode ? (server.images || IMAGES) : IMAGES, p ? p.image : '');
+    renderImageSelect(IMAGES, p ? p.image : '');
     updatePreview();
     $('form-overlay').hidden = false;
-    if (server.mode && !server.images) {
-      api('api/images').then(function (r) {
-        server.images = (r.ok && Array.isArray(r.data.images)) ? r.data.images : [];
-        renderImageSelect(server.images, $('f-image').value.trim());
-      });
-    }
   }
   function closeForm() {
     $('form-overlay').hidden = true;
@@ -556,16 +624,21 @@
   }
   function resetData() {
     if (!confirm(t('resetConfirm'))) return;
-    if (server.mode) {
-      api('api/reset', { method: 'POST' }).then(function (r) {
-        if (!r.ok) return;
-        return api('api/products');
+    if (github.mode) {
+      var seed = SEED.map(function (p, i) { return normalize(p, i + 1); });
+      ghRequest('update-products', {
+        password: state.adminPassword,
+        schema: SCHEMA,
+        products: seed
       }).then(function (r) {
-        if (r && r.ok && Array.isArray(r.data.products)) {
-          state.products = r.data.products.map(function (p, i) { return normalize(p, i + 1); });
+        if (r.ok) {
+          state.products = seed;
           renderGrid();
           renderNav();
           renderAdminTable();
+          alert(t('saved'));
+        } else {
+          alert(t('saveErr'));
         }
       });
       return;
@@ -638,27 +711,7 @@
     $('upload-file').addEventListener('change', function () {
       var f = this.files && this.files[0];
       if (!f) return;
-      if (server.mode) {
-        var fr = new FileReader();
-        fr.onload = function () {
-          api('api/images', { method: 'POST', json: { data: fr.result } }).then(function (r) {
-            if (r.ok && r.data && r.data.filename) {
-              if (server.images) server.images.push(r.data.filename);
-              $('f-image').value = r.data.filename;
-              updatePreview();
-            } else if (r.status === 401) {
-              alert(t('loginExpired'));
-            } else {
-              alert(t('uploadErr'));
-            }
-          });
-        };
-        fr.onerror = function () { alert(t('uploadErr')); };
-        fr.readAsDataURL(f);
-        this.value = '';
-        return;
-      }
-      if (f.size > MAX_UPLOAD) alert(t('uploadTooBig'));
+      if (f.size > MAX_UPLOAD) { alert(t('uploadTooBig')); this.value = ''; return; }
       var frLocal = new FileReader();
       frLocal.onload = function () {
         $('f-image').value = frLocal.result;
@@ -670,19 +723,19 @@
     });
 
     $('btn-logout').addEventListener('click', function () {
-      api('api/logout', { method: 'POST' }).then(function () {
-        server.authed = false;
-        state.unlocked = false;
-        closeAdmin();
-      });
+      github.authed = false;
+      state.unlocked = false;
+      state.adminPassword = '';
+      closeAdmin();
     });
-    $('btn-logout').hidden = true;
+    $('btn-logout').hidden = !github.mode;
 
     function finish() {
       renderAll();
       window.__HEAT = {
         state: state,
         server: server,
+        github: github,
         t: t,
         fmtPrice: fmtPrice,
         saveProducts: saveProducts,
@@ -692,21 +745,24 @@
       };
     }
 
-    detectServer().then(function (isServer) {
-      server.mode = isServer;
-      if (server.mode) {
-        return api('api/products').then(function (r) {
-          if (r.ok && Array.isArray(r.data.products)) {
-            state.products = r.data.products.map(function (p, i) { return normalize(p, i + 1); });
-          } else {
-            state.products = loadProducts();
-          }
-          finish();
-        });
-      }
+    function boot() {
       state.products = loadProducts();
       finish();
-    });
+    }
+    if (github.mode && ghDataUrl()) {
+      fetch(ghDataUrl(), { cache: 'no-store' }).then(function (res) {
+        if (!res.ok) throw new Error('fetch failed');
+        return res.json();
+      }).then(function (obj) {
+        var list = Array.isArray(obj) ? obj : (obj && Array.isArray(obj.products) ? obj.products : null);
+        if (list && list.length) {
+          state.products = list.map(function (p, i) { return normalize(p, i + 1); });
+        }
+        finish();
+      }).catch(function () { boot(); });
+    } else {
+      boot();
+    }
   }
 
   if (document.readyState === 'loading') {
