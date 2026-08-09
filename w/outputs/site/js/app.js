@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-6';
+  var APP_VERSION = '20260809-7';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -63,35 +63,49 @@
   function ghAuthSiteUrl() {
     return location.origin + location.pathname + 'data/admin-auth.json';
   }
+  function ghAuthSiteUrl() {
+    return location.origin + location.pathname + 'data/admin-auth.json';
+  }
   function pollAuth(requestId, timeoutMs) {
-    var url = ghAuthUrl();
+    var rawUrl = ghAuthUrl();
+    var siteUrl = ghAuthSiteUrl();
     var started = Date.now();
-    var last = '';
-    function tick(resolve, reject) {
-      fetch(url, { cache: 'no-store' }).then(function (res) {
+    var lastId = '';
+    function fetchOne(url) {
+      return fetch(url + (url.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' }).then(function (res) {
         if (!res.ok) throw new Error('poll ' + res.status);
         return res.text();
-      }).then(function (body) {
+      });
+    }
+    function tick(resolve, reject) {
+      fetchOne(siteUrl).catch(function () { return ''; }).then(function (body) {
         var obj = null;
         try { obj = JSON.parse(body); } catch (e) {}
-        if (obj && obj.request_id && obj.request_id !== last) {
-          last = obj.request_id;
+        if (obj && obj.request_id && obj.request_id !== lastId) {
+          lastId = obj.request_id;
+          setDebug('回执出现 ' + obj.request_id + '（等待 ' + requestId + '）');
           if (obj.request_id === requestId) {
             resolve(obj);
             return;
           }
         }
-        if (Date.now() - started > timeoutMs) {
-          reject(new Error('timeout'));
-          return;
-        }
-        setTimeout(function () { tick(resolve, reject); }, 2500);
-      }).catch(function (e) {
-        if (Date.now() - started > timeoutMs) {
-          reject(e);
-          return;
-        }
-        setTimeout(function () { tick(resolve, reject); }, 2500);
+        return fetchOne(rawUrl).catch(function () { return ''; }).then(function (body2) {
+          var obj2 = null;
+          try { obj2 = JSON.parse(body2); } catch (e) {}
+          if (obj2 && obj2.request_id && obj2.request_id !== lastId) {
+            lastId = obj2.request_id;
+            setDebug('raw回执 ' + obj2.request_id + '（等待 ' + requestId + '）');
+            if (obj2.request_id === requestId) {
+              resolve(obj2);
+              return;
+            }
+          }
+          if (Date.now() - started > timeoutMs) {
+            reject(new Error('timeout'));
+            return;
+          }
+          setTimeout(function () { tick(resolve, reject); }, 2000);
+        });
       });
     }
     return new Promise(function (resolve, reject) { tick(resolve, reject); });
@@ -114,14 +128,32 @@
   }
   function ghRequest(eventType, payload) {
     payload.request_id = rid();
+    setDebug('发送请求 ' + eventType + '（ID: ' + payload.request_id + '）');
     return ghDispatch(eventType, payload, state.githubToken).then(function (r) {
-      if (!r.ok) return { ok: false, error: 'dispatch' };
-      return pollAuth(payload.request_id, 45000).then(function (auth) {
+      if (r.status === 401 || r.status === 403) {
+        setDebug('请求被拒（令牌无效）');
+        return { ok: false, error: 'token' };
+      }
+      if (!r.ok) {
+        setDebug('请求发送失败（状态 ' + r.status + '）');
+        return { ok: false, error: 'dispatch' };
+      }
+      setDebug('请求已发送，等待校验回执…');
+      return pollAuth(payload.request_id, 60000).then(function (auth) {
+        setDebug('收到回执：' + (auth.valid ? '口令正确' : '口令错误'));
         return { ok: !!auth.valid, auth: auth };
       }).catch(function () {
+        setDebug('等待回执超时');
         return { ok: false, error: 'timeout' };
       });
     });
+  }
+  function setDebug(msg) {
+    var el = document.getElementById('pass-debug');
+    if (el) {
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
   }
 
   var state = {
