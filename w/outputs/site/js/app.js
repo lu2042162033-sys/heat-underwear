@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-12';
+  var APP_VERSION = '20260809-13';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -864,9 +864,18 @@
     function boot() {
       state.products = loadProducts();
       finish();
+      if (state.unlocked) {
+        setTimeout(function () { openAdmin(); }, 400);
+      }
+    }
+    function finishBoot() {
+      finish();
+      if (state.unlocked) {
+        setTimeout(function () { openAdmin(); }, 400);
+      }
     }
     if (github.mode && ghDataUrl()) {
-      fetch(ghDataUrl(), { cache: 'no-store' }).then(function (res) {
+      fetch(ghDataUrl() + '?t=' + Date.now(), { cache: 'no-store' }).then(function (res) {
         if (!res.ok) throw new Error('fetch failed');
         return res.json();
       }).then(function (obj) {
@@ -875,10 +884,7 @@
           state.products = list.map(function (p, i) { return normalize(p, i + 1); });
           try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ schema: SCHEMA, savedAt: new Date().toISOString(), products: state.products })); } catch (e) {}
         }
-        finish();
-        if (state.unlocked) {
-          setTimeout(function () { openAdmin(); }, 300);
-        }
+        finishBoot();
       }).catch(function () { boot(); });
     } else {
       boot();
