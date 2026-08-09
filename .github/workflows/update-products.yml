@@ -40,6 +40,8 @@ jobs:
           with open(src, encoding='utf-8') as f:
               obj = json.load(f)
           products = obj.get('products') if isinstance(obj, dict) else obj
+          if isinstance(products, dict) and 'value' in products:
+              products = products['value']
           if not isinstance(products, list) or len(products) < 1:
               raise SystemExit('BAD_PENDING_DATA')
           import datetime
