@@ -37,17 +37,17 @@ jobs:
           PAYLOAD: ${{ toJSON(github.event.client_payload) }}
         run: |
           echo "$PAYLOAD" | python3 -c "
-import json, sys
-payload = json.load(sys.stdin)
-products = payload.get('products')
-if not isinstance(products, list) or len(products) < 1:
-    sys.exit('BAD_PAYLOAD')
-import datetime
-data = {'version': 2, 'updatedAt': datetime.datetime.now().isoformat(), 'products': products}
-with open('w/outputs/site/data/products.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-print('products.json written:', len(products))
-"
+          import json, sys
+          payload = json.load(sys.stdin)
+          products = payload.get('products')
+          if not isinstance(products, list) or len(products) < 1:
+              sys.exit('BAD_PAYLOAD')
+          import datetime
+          data = {'version': 2, 'updatedAt': datetime.datetime.now().isoformat(), 'products': products}
+          with open('w/outputs/site/data/products.json', 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+          print('products.json written:', len(products))
+          "
 
       - name: Write auth result (check-password)
         if: steps.auth.outputs.ok == 'false' || github.event.action == 'check-password'
@@ -68,5 +68,5 @@ print('products.json written:', len(products))
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: admin update (${GITHUB_EVENT_NAME:-dispatch})"
+          git commit -m "chore: admin update"
           git push
