@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-09T20:05:27.688120",
+  "updatedAt": "2026-08-09T20:06:46.073179",
   "products": [
     {
       "code": "6088",
@@ -2305,18 +2305,6 @@
       "status": "无价格",
       "note": "图片中未显示尺码信息（分类待确认）",
       "id": 192
-    },
-    {
-      "code": "TEST-003",
-      "name": "测试3",
-      "category": "文胸",
-      "sizes": "M-L",
-      "unitPrice": 1234,
-      "dozenPrice": 12340,
-      "image": "",
-      "status": "已匹配",
-      "note": "",
-      "id": 193
     }
   ]
 }
