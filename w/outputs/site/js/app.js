@@ -11,6 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
+  var APP_VERSION = '20260809-3';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -279,6 +280,8 @@
     $('search').placeholder = t('searchPlaceholder');
     $('footer-contact').textContent = state.lang === 'zh' ? (CFG.contactZh || '') : (CFG.contactEs || '');
     $('btn-admin').textContent = t('admin');
+    var vEl = $('site-version');
+    if (vEl) vEl.textContent = 'v' + APP_VERSION;
   }
   function renderNav() {
     var nav = $('cats');
@@ -339,7 +342,7 @@
     $('empty').textContent = t('noResults');
     $('count').textContent = list.length + ' ' + t('countSuffix');
     document.documentElement.setAttribute('data-self-test',
-      'seed:' + SEED.length + ':cards:' + list.length + ':lang:' + state.lang + ':mode:' + (github.mode ? 'pages' : 'local'));
+      'v:' + APP_VERSION + ':seed:' + SEED.length + ':cards:' + list.length + ':lang:' + state.lang + ':mode:' + (github.mode ? 'pages' : 'local'));
   }
   function renderAll() {
     applyI18n();
