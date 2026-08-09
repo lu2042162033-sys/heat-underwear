@@ -89,6 +89,22 @@
     }
     return new Promise(function (resolve, reject) { tick(resolve, reject); });
   }
+  function ghWritePending(products) {
+    var r = ghRepo();
+    var path = 'w/outputs/site/data/pending-products.json';
+    var content = btoa(unescape(encodeURIComponent(JSON.stringify({
+      schema: SCHEMA,
+      savedAt: new Date().toISOString(),
+      products: products
+    }))));
+    return ghApi('https://api.github.com/repos/' + r + '/contents/' + path, {
+      method: 'PUT',
+      token: state.githubToken,
+      json: { message: 'chore: stage products from admin', content: content, branch: 'main' }
+    }).then(function (res) {
+      return { ok: res.ok, status: res.status };
+    });
+  }
   function ghRequest(eventType, payload) {
     payload.request_id = rid();
     return ghDispatch(eventType, payload, state.githubToken).then(function (r) {
@@ -197,17 +213,22 @@
       }
       return Promise.resolve(true);
     }
-    return ghRequest('update-products', {
-      password: state.adminPassword,
-      schema: SCHEMA,
-      products: list
-    }).then(function (r) {
-      if (r.ok) {
-        alert(t('saved'));
-        return true;
+    return ghWritePending(list).then(function (w) {
+      if (!w.ok) {
+        alert(t('saveErr'));
+        return false;
       }
-      alert(t('saveErr'));
-      return false;
+      return ghRequest('update-products', {
+        password: state.adminPassword,
+        schema: SCHEMA
+      }).then(function (r) {
+        if (r.ok) {
+          alert(t('saved'));
+          return true;
+        }
+        alert(t('saveErr'));
+        return false;
+      });
     });
   }
   function nextId() {
@@ -626,20 +647,22 @@
     if (!confirm(t('resetConfirm'))) return;
     if (github.mode) {
       var seed = SEED.map(function (p, i) { return normalize(p, i + 1); });
-      ghRequest('update-products', {
-        password: state.adminPassword,
-        schema: SCHEMA,
-        products: seed
-      }).then(function (r) {
-        if (r.ok) {
-          state.products = seed;
-          renderGrid();
-          renderNav();
-          renderAdminTable();
-          alert(t('saved'));
-        } else {
-          alert(t('saveErr'));
-        }
+      ghWritePending(seed).then(function (w) {
+        if (!w.ok) { alert(t('saveErr')); return; }
+        return ghRequest('update-products', {
+          password: state.adminPassword,
+          schema: SCHEMA
+        }).then(function (r) {
+          if (r.ok) {
+            state.products = seed;
+            renderGrid();
+            renderNav();
+            renderAdminTable();
+            alert(t('saved'));
+          } else {
+            alert(t('saveErr'));
+          }
+        });
       });
       return;
     }
