@@ -54,6 +54,9 @@
     var r = ghRepo();
     return r ? 'https://raw.githubusercontent.com/' + r + '/main/w/outputs/site/data/admin-auth.json' : '';
   }
+  function ghAuthSiteUrl() {
+    return location.origin + location.pathname + 'data/admin-auth.json';
+  }
   function pollAuth(requestId, timeoutMs) {
     var url = ghAuthUrl();
     var started = Date.now();
