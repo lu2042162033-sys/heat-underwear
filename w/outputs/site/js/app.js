@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-5';
+  var APP_VERSION = '20260809-6';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -30,11 +30,16 @@
     return fetch(path, init).then(function (res) {
       return res.json().then(function (data) {
         if (res.status === 401) github.authed = false;
-        return { ok: res.ok, status: res.status, data: data };
+        var out = { ok: res.ok, status: res.status, data: data };
+        setDebug('请求返回 ' + res.status + (path.indexOf('dispatches') >= 0 ? '（dispatch）' : ''));
+        return out;
       }).catch(function () {
-        return { ok: false, status: res.status, data: null };
+        var out = { ok: false, status: res.status, data: null };
+        setDebug('请求返回 ' + res.status + '（无响应体）');
+        return out;
       });
-    }).catch(function () {
+    }).catch(function (e) {
+      setDebug('请求异常：' + (e && e.message ? e.message : '网络错误'));
       return { ok: false, status: 0, data: null };
     });
   }
