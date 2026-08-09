@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-13';
+  var APP_VERSION = '20260809-14';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -53,7 +53,9 @@
   function ghRepo() { return (CFG.pages && CFG.pages.repo) || ''; }
   function ghDataUrl() {
     var r = ghRepo();
-    return r ? 'https://raw.githubusercontent.com/' + r + '/main/' + (CFG.pages.dataPath || 'data/products.json') : '';
+    var site = location.origin + location.pathname + (CFG.pages.dataPath || 'data/products.json');
+    var raw = r ? 'https://raw.githubusercontent.com/' + r + '/main/' + (CFG.pages.dataPath || 'data/products.json') : '';
+    return site + '|' + raw;
   }
   function ghDispatch(eventType, payload, token) {
     return ghApi('https://api.github.com/repos/' + ghRepo() + '/dispatches', {
@@ -875,10 +877,15 @@
       }
     }
     if (github.mode && ghDataUrl()) {
-      fetch(ghDataUrl() + '?t=' + Date.now(), { cache: 'no-store' }).then(function (res) {
-        if (!res.ok) throw new Error('fetch failed');
-        return res.json();
-      }).then(function (obj) {
+      var urls = ghDataUrl().split('|');
+      function tryFetch(i) {
+        if (i >= urls.length) return Promise.reject(new Error('all failed'));
+        return fetch(urls[i] + '?t=' + Date.now(), { cache: 'no-store' }).then(function (res) {
+          if (!res.ok) return tryFetch(i + 1);
+          return res.json();
+        });
+      }
+      tryFetch(0).then(function (obj) {
         var list = Array.isArray(obj) ? obj : (obj && Array.isArray(obj.products) ? obj.products : null);
         if (list && list.length) {
           state.products = list.map(function (p, i) { return normalize(p, i + 1); });
