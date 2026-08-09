@@ -28,20 +28,20 @@ jobs:
             echo "ok=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Prepare site dir
-        run: mkdir -p w/outputs/site/data
-
-      - name: Write products.json
+      - name: Apply pending products
         if: steps.auth.outputs.ok == 'true' && github.event.action == 'update-products'
-        env:
-          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
         run: |
-          echo "$PAYLOAD" | python3 -c "
-          import json, sys
-          payload = json.load(sys.stdin)
-          products = payload.get('products')
+          python3 -c "
+          import json, os
+          src = 'w/outputs/site/data/pending-products.json'
+          if not os.path.exists(src):
+              print('NO_PENDING_FILE')
+              raise SystemExit(0)
+          with open(src, encoding='utf-8') as f:
+              obj = json.load(f)
+          products = obj.get('products') if isinstance(obj, dict) else obj
           if not isinstance(products, list) or len(products) < 1:
-              sys.exit('BAD_PAYLOAD')
+              raise SystemExit('BAD_PENDING_DATA')
           import datetime
           data = {'version': 2, 'updatedAt': datetime.datetime.now().isoformat(), 'products': products}
           with open('w/outputs/site/data/products.json', 'w', encoding='utf-8') as f:
@@ -49,8 +49,7 @@ jobs:
           print('products.json written:', len(products))
           "
 
-      - name: Write auth result (check-password)
-        if: steps.auth.outputs.ok == 'false' || github.event.action == 'check-password'
+      - name: Write auth result
         env:
           REQ: ${{ github.event.client_payload.request_id }}
           OK: ${{ steps.auth.outputs.ok }}
@@ -63,7 +62,7 @@ jobs:
         run: |
           git config user.name "heat-site-bot"
           git config user.email "heat-site-bot@users.noreply.github.com"
-          git add w/outputs/site/data/products.json w/outputs/site/data/admin-auth.json
+          git add w/outputs/site/data/products.json w/outputs/site/data/admin-auth.json w/outputs/site/data/pending-products.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
