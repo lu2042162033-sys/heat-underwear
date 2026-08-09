@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-3';
+  var APP_VERSION = '20260809-4';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -384,6 +384,8 @@
     if (!state.unlocked) {
       $('pass-msg').textContent = '';
       $('pass-msg').style.color = '';
+      var dbg = $('pass-debug');
+      if (dbg) { dbg.textContent = ''; dbg.style.display = 'none'; }
       $('pass-input').value = '';
       $('pass-token').value = state.githubToken || '';
       $('pass-token').hidden = !github.mode;
