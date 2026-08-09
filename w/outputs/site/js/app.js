@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-10';
+  var APP_VERSION = '20260809-11';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -120,17 +120,25 @@
   function ghWritePending(products) {
     var r = ghRepo();
     var path = 'w/outputs/site/data/pending-products.json';
+    var apiPath = 'https://api.github.com/repos/' + r + '/contents/' + path;
     var content = btoa(unescape(encodeURIComponent(JSON.stringify({
       schema: SCHEMA,
       savedAt: new Date().toISOString(),
       products: products
     }))));
-    return ghApi('https://api.github.com/repos/' + r + '/contents/' + path, {
-      method: 'PUT',
-      token: state.githubToken,
-      json: { message: 'chore: stage products from admin', content: content, branch: 'main' }
-    }).then(function (res) {
-      return { ok: res.ok, status: res.status };
+    var body = { message: 'chore: stage products from admin', content: content, branch: 'main' };
+    return ghApi(apiPath, { method: 'GET', token: state.githubToken }).then(function (g) {
+      if (g.ok && g.data && g.data.sha) body.sha = g.data.sha;
+      return ghApi(apiPath, {
+        method: 'PUT',
+        token: state.githubToken,
+        json: body
+      }).then(function (res) {
+        var msg = '';
+        if (!res.ok && res.data && res.data.message) msg = '（' + res.data.message + '）';
+        setDebug('pending 写入返回 ' + res.status + msg);
+        return { ok: res.ok, status: res.status };
+      });
     });
   }
   function ghRequest(eventType, payload) {
