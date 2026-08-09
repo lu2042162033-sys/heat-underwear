@@ -22,8 +22,6 @@
     var init = { method: (opts && opts.method) || 'GET', headers: {} };
     var token = (opts && opts.token) ? opts.token : (state.githubToken || '');
     if (token) init.headers['Authorization'] = 'Bearer ' + token;
-    init.headers['Accept'] = 'application/vnd.github+json';
-    init.headers['X-GitHub-Api-Version'] = '2022-11-28';
     if (opts && opts.json) {
       init.headers['Content-Type'] = 'application/json';
       init.body = JSON.stringify(opts.json);
@@ -415,7 +413,7 @@
       return;
     }
     state.adminPassword = pw;
-    state.githubToken = tk || (CFG.pages && CFG.pages.token) || '';
+    state.githubToken = (tk || (CFG.pages && CFG.pages.token) || '').trim();
     if (!state.githubToken) {
       $('pass-msg').textContent = t('tokenRequired');
       $('pass-msg').style.color = '#b23b3b';
@@ -431,6 +429,13 @@
         $('pass-msg').textContent = '';
         $('pass-overlay').hidden = true;
         openAdmin();
+      } else if (r.error === 'token') {
+        $('pass-msg').textContent = t('tokenError');
+        $('pass-msg').style.color = '#b23b3b';
+        $('pass-token').focus();
+      } else if (r.error === 'timeout') {
+        $('pass-msg').textContent = t('passTimeout');
+        $('pass-msg').style.color = '#b23b3b';
       } else {
         $('pass-msg').textContent = t('passcodeWrong');
         $('pass-msg').style.color = '#b23b3b';
