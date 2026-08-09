@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-09T18:57:59.885233",
+  "updatedAt": "2026-08-09T20:05:27.688120",
   "products": [
     {
-      "id": 1,
       "code": "6088",
       "name": "",
       "category": "文胸",
@@ -12,10 +11,10 @@
       "dozenPrice": 95000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.56 PM.jpeg",
       "status": "无价格",
-      "note": "图片展示了多种颜色（安歌拉红、梦境黑、浅绿、勿忘蓝、香槟、粉底液肤），未见具体尺码信息。（分类待确认）"
+      "note": "图片展示了多种颜色（安歌拉红、梦境黑、浅绿、勿忘蓝、香槟、粉底液肤），未见具体尺码信息。（分类待确认）",
+      "id": 1
     },
     {
-      "id": 2,
       "code": "616",
       "name": "",
       "category": "文胸",
@@ -24,10 +23,10 @@
       "dozenPrice": 87000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.10 PM (4).jpeg",
       "status": "已匹配",
-      "note": ""
+      "note": "",
+      "id": 2
     },
     {
-      "id": 3,
       "code": "6659",
       "name": "",
       "category": "文胸",
@@ -36,10 +35,10 @@
       "dozenPrice": 110000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.58 PM (2).jpeg",
       "status": "已匹配",
-      "note": "图片未显示尺码信息"
+      "note": "图片未显示尺码信息",
+      "id": 3
     },
     {
-      "id": 4,
       "code": "891",
       "name": "",
       "category": "文胸",
@@ -48,10 +47,10 @@
       "dozenPrice": 125000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.01 PM (4).jpeg",
       "status": "已匹配",
-      "note": "图片未见尺码信息，显示多款颜色可选"
+      "note": "图片未见尺码信息，显示多款颜色可选",
+      "id": 4
     },
     {
-      "id": 5,
       "code": "913",
       "name": "",
       "category": "文胸",
@@ -60,10 +59,10 @@
       "dozenPrice": 125000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.57 PM.jpeg",
       "status": "已匹配",
-      "note": "图片右上角显示数字913作为货号，未见尺码信息。"
+      "note": "图片右上角显示数字913作为货号，未见尺码信息。",
+      "id": 5
     },
     {
-      "id": 6,
       "code": "917",
       "name": "",
       "category": "文胸",
@@ -72,10 +71,10 @@
       "dozenPrice": 140000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.10 PM.jpeg",
       "status": "无价格",
-      "note": "图片展示了四种颜色的文胸（黑、白、米、肤色）"
+      "note": "图片展示了四种颜色的文胸（黑、白、米、肤色）",
+      "id": 6
     },
     {
-      "id": 7,
       "code": "94316",
       "name": "",
       "category": "文胸",
@@ -84,10 +83,10 @@
       "dozenPrice": 60000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM.jpeg",
       "status": "已匹配",
-      "note": "图片上方有红色数字94316，文胸上有'C'标记（可能指C罩杯）及'HANA'品牌标签，具体尺码范围文字模糊不可辨"
+      "note": "图片上方有红色数字94316，文胸上有'C'标记（可能指C罩杯）及'HANA'品牌标签，具体尺码范围文字模糊不可辨",
+      "id": 7
     },
     {
-      "id": 8,
       "code": "94457",
       "name": "",
       "category": "文胸",
@@ -96,10 +95,10 @@
       "dozenPrice": 87000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (2).jpeg",
       "status": "已匹配",
-      "note": "图片右下角显示数字94457，未见具体尺码信息"
+      "note": "图片右下角显示数字94457，未见具体尺码信息",
+      "id": 8
     },
     {
-      "id": 9,
       "code": "967",
       "name": "",
       "category": "文胸",
@@ -108,10 +107,10 @@
       "dozenPrice": 125000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.10 PM (1).jpeg",
       "status": "已匹配",
-      "note": ""
+      "note": "",
+      "id": 9
     },
     {
-      "id": 10,
       "code": "968",
       "name": "",
       "category": "文胸",
@@ -120,10 +119,10 @@
       "dozenPrice": 140000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (4).jpeg",
       "status": "无价格",
-      "note": "品牌C&Y"
+      "note": "品牌C&Y",
+      "id": 10
     },
     {
-      "id": 11,
       "code": "H05002",
       "name": "",
       "category": "文胸",
@@ -132,10 +131,10 @@
       "dozenPrice": 120000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.38 PM (1).jpeg",
       "status": "无价格",
-      "note": "编号已确认，价格待补"
+      "note": "编号已确认，价格待补",
+      "id": 11
     },
     {
-      "id": 12,
       "code": "H80008",
       "name": "",
       "category": "文胸",
@@ -144,10 +143,10 @@
       "dozenPrice": 110000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.56 PM (2).jpeg",
       "status": "已匹配",
-      "note": "品牌: HEAT UNDERWEAR SPAIN"
+      "note": "品牌: HEAT UNDERWEAR SPAIN",
+      "id": 12
     },
     {
-      "id": 13,
       "code": "HF20009",
       "name": "",
       "category": "文胸",
@@ -156,10 +155,10 @@
       "dozenPrice": 80000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.38 PM.jpeg",
       "status": "需核对",
-      "note": "目录OCR价80000，待核对"
+      "note": "目录OCR价80000，待核对",
+      "id": 13
     },
     {
-      "id": 14,
       "code": "HG1704",
       "name": "",
       "category": "文胸",
@@ -168,10 +167,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (3).jpeg",
       "status": "已匹配",
-      "note": "品牌HEAT UNDERWEAR，展示多色款式"
+      "note": "品牌HEAT UNDERWEAR，展示多色款式",
+      "id": 14
     },
     {
-      "id": 15,
       "code": "HG1705",
       "name": "",
       "category": "文胸",
@@ -180,10 +179,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM (2).jpeg",
       "status": "已匹配",
-      "note": "品牌Heat Underwear，多色可选"
+      "note": "品牌Heat Underwear，多色可选",
+      "id": 15
     },
     {
-      "id": 16,
       "code": "HG1706",
       "name": "",
       "category": "文胸",
@@ -192,10 +191,10 @@
       "dozenPrice": 175000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (2).jpeg",
       "status": "已匹配",
-      "note": "品牌Heat Underwear，多色可选"
+      "note": "品牌Heat Underwear，多色可选",
+      "id": 16
     },
     {
-      "id": 17,
       "code": "HG1717",
       "name": "",
       "category": "文胸",
@@ -204,10 +203,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (1).jpeg",
       "status": "需核对",
-      "note": "品牌Heat Underwear，多色可选"
+      "note": "品牌Heat Underwear，多色可选",
+      "id": 17
     },
     {
-      "id": 18,
       "code": "HG1719",
       "name": "",
       "category": "文胸",
@@ -216,10 +215,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.59 PM (2).jpeg",
       "status": "已匹配",
-      "note": "右下角文字标注，右侧有色卡显示多色可选"
+      "note": "右下角文字标注，右侧有色卡显示多色可选",
+      "id": 18
     },
     {
-      "id": 19,
       "code": "HI50014",
       "name": "",
       "category": "文胸",
@@ -228,10 +227,10 @@
       "dozenPrice": 108000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.57 PM (4).jpeg",
       "status": "已匹配",
-      "note": "多色展示，标签可见40D-48D等尺码"
+      "note": "多色展示，标签可见40D-48D等尺码",
+      "id": 19
     },
     {
-      "id": 20,
       "code": "HN50094",
       "name": "",
       "category": "文胸",
@@ -240,10 +239,10 @@
       "dozenPrice": 81000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (2).jpeg",
       "status": "无价格",
-      "note": ""
+      "note": "",
+      "id": 20
     },
     {
-      "id": 21,
       "code": "HN50094",
       "name": "",
       "category": "文胸",
@@ -252,10 +251,10 @@
       "dozenPrice": 81000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (3).jpeg",
       "status": "无价格",
-      "note": "品牌HEAT UNDERWEAR，多色展示"
+      "note": "品牌HEAT UNDERWEAR，多色展示",
+      "id": 21
     },
     {
-      "id": 22,
       "code": "HN50108B",
       "name": "",
       "category": "文胸",
@@ -264,10 +263,10 @@
       "dozenPrice": 95000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (1).jpeg",
       "status": "无价格",
-      "note": "标签可见COMFORT 40B/38B"
+      "note": "标签可见COMFORT 40B/38B",
+      "id": 22
     },
     {
-      "id": 23,
       "code": "HN8558B",
       "name": "",
       "category": "文胸",
@@ -276,10 +275,10 @@
       "dozenPrice": 81000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (1).jpeg",
       "status": "已匹配",
-      "note": "图片右下角显示"
+      "note": "图片右下角显示",
+      "id": 23
     },
     {
-      "id": 24,
       "code": "HN8558B",
       "name": "",
       "category": "文胸",
@@ -288,10 +287,10 @@
       "dozenPrice": 81000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (4).jpeg",
       "status": "已匹配",
-      "note": "品牌HEAT UNDERWEAR，多色展示"
+      "note": "品牌HEAT UNDERWEAR，多色展示",
+      "id": 24
     },
     {
-      "id": 25,
       "code": "HS20126",
       "name": "",
       "category": "文胸",
@@ -300,10 +299,10 @@
       "dozenPrice": 110000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM (1).jpeg",
       "status": "已匹配",
-      "note": "图片中未显示尺码信息"
+      "note": "图片中未显示尺码信息",
+      "id": 25
     },
     {
-      "id": 26,
       "code": "WS1282",
       "name": "",
       "category": "文胸",
@@ -312,10 +311,10 @@
       "dozenPrice": 43200,
       "image": "WhatsApp Image 2026-08-05 at 8.27.03 PM (2).jpeg",
       "status": "无价格",
-      "note": "右上角标注杯垫（分类待确认）"
+      "note": "右上角标注杯垫（分类待确认）",
+      "id": 26
     },
     {
-      "id": 27,
       "code": "B04",
       "name": "",
       "category": "文胸",
@@ -324,10 +323,10 @@
       "dozenPrice": 125000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.04 PM (4).jpeg",
       "status": "无价格",
-      "note": "图片底部有数字30，疑似价格或无关标记，无明确尺码信息（分类待确认）"
+      "note": "图片底部有数字30，疑似价格或无关标记，无明确尺码信息（分类待确认）",
+      "id": 27
     },
     {
-      "id": 28,
       "code": "786",
       "name": "",
       "category": "文胸",
@@ -336,10 +335,10 @@
       "dozenPrice": 125000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.01 PM (3).jpeg",
       "status": "无价格",
-      "note": "吊牌显示尺码为M和XL，未见明显货号"
+      "note": "吊牌显示尺码为M和XL，未见明显货号",
+      "id": 28
     },
     {
-      "id": 29,
       "code": "TOP-202L-4",
       "name": "",
       "category": "背心",
@@ -348,10 +347,10 @@
       "dozenPrice": 54000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.03 PM.jpeg",
       "status": "无价格",
-      "note": "无痕4030螺纹V版钩扣短背心（分类待确认）"
+      "note": "无痕4030螺纹V版钩扣短背心（分类待确认）",
+      "id": 29
     },
     {
-      "id": 30,
       "code": "TOP-205L-4",
       "name": "",
       "category": "背心",
@@ -360,10 +359,10 @@
       "dozenPrice": 46000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.03 PM (1).jpeg",
       "status": "无价格",
-      "note": "无痕4030螺纹一字围短背心，QTY: 50DZ（分类待确认）"
+      "note": "无痕4030螺纹一字围短背心，QTY: 50DZ（分类待确认）",
+      "id": 30
     },
     {
-      "id": 31,
       "code": "TOP-210L-4",
       "name": "",
       "category": "背心",
@@ -372,10 +371,10 @@
       "dozenPrice": 49000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.15 PM.jpeg",
       "status": "无价格",
-      "note": "无痕4030螺纹前排钩扣短背心（分类待确认）"
+      "note": "无痕4030螺纹前排钩扣短背心（分类待确认）",
+      "id": 31
     },
     {
-      "id": 32,
       "code": "WS1118-1",
       "name": "",
       "category": "背心",
@@ -384,10 +383,10 @@
       "dozenPrice": 60000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.06 PM (4).jpeg",
       "status": "无价格",
-      "note": "4CM织带，面料210克，S棉坑条"
+      "note": "4CM织带，面料210克，S棉坑条",
+      "id": 32
     },
     {
-      "id": 33,
       "code": "WS1430-1",
       "name": "",
       "category": "背心",
@@ -396,10 +395,10 @@
       "dozenPrice": 46000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.06 PM (2).jpeg",
       "status": "无价格",
-      "note": "40支棉190克"
+      "note": "40支棉190克",
+      "id": 33
     },
     {
-      "id": 34,
       "code": "TOP-200L-4",
       "name": "",
       "category": "背心",
@@ -408,10 +407,10 @@
       "dozenPrice": 52000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.04 PM (3).jpeg",
       "status": "无价格",
-      "note": "无痕4030螺纹运动版短背心（分类待确认）"
+      "note": "无痕4030螺纹运动版短背心（分类待确认）",
+      "id": 34
     },
     {
-      "id": 35,
       "code": "12-G830",
       "name": "",
       "category": "内裤",
@@ -420,10 +419,10 @@
       "dozenPrice": 59400,
       "image": "WhatsApp Image 2026-08-05 at 8.27.12 PM (2).jpeg",
       "status": "无价格",
-      "note": "标签显示NO:12-M830及尺码S/M/L，右下角显示12-G830及尺码XL-XXL-XXXL"
+      "note": "标签显示NO:12-M830及尺码S/M/L，右下角显示12-G830及尺码XL-XXL-XXXL",
+      "id": 35
     },
     {
-      "id": 36,
       "code": "12-M830",
       "name": "",
       "category": "内裤",
@@ -432,10 +431,10 @@
       "dozenPrice": 48600,
       "image": "WhatsApp Image 2026-08-05 at 8.27.12 PM (1).jpeg",
       "status": "无价格",
-      "note": "标签及右下角文字显示货号为12-M830，尺码涵盖S、M、L"
+      "note": "标签及右下角文字显示货号为12-M830，尺码涵盖S、M、L",
+      "id": 36
     },
     {
-      "id": 37,
       "code": "40S-914",
       "name": "",
       "category": "内裤",
@@ -444,10 +443,10 @@
       "dozenPrice": 22000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM (2).jpeg",
       "status": "无价格",
-      "note": "40支精梳棉 40 combed cotton"
+      "note": "40支精梳棉 40 combed cotton",
+      "id": 37
     },
     {
-      "id": 38,
       "code": "40S-919",
       "name": "",
       "category": "内裤",
@@ -456,10 +455,10 @@
       "dozenPrice": 22000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM (4).jpeg",
       "status": "无价格",
-      "note": "品牌HNNA，40支精梳棉"
+      "note": "品牌HNNA，40支精梳棉",
+      "id": 38
     },
     {
-      "id": 39,
       "code": "BOM-311X",
       "name": "",
       "category": "内裤",
@@ -468,10 +467,10 @@
       "dozenPrice": 19000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.15 PM (1).jpeg",
       "status": "无价格",
-      "note": "12PC混色，P/M 5件, G/GG 7件"
+      "note": "12PC混色，P/M 5件, G/GG 7件",
+      "id": 39
     },
     {
-      "id": 40,
       "code": "BOM-321X",
       "name": "",
       "category": "内裤",
@@ -480,10 +479,10 @@
       "dozenPrice": 19000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.01 PM (2).jpeg",
       "status": "无价格",
-      "note": "12PC装，P/M码5件，G/GG码7件"
+      "note": "12PC装，P/M码5件，G/GG码7件",
+      "id": 40
     },
     {
-      "id": 41,
       "code": "CH-501",
       "name": "",
       "category": "内裤",
@@ -492,10 +491,10 @@
       "dozenPrice": 30000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.06 PM (1).jpeg",
       "status": "无价格",
-      "note": "品牌Heat Underwear，高腰内裤(Braga alta)，多色可选"
+      "note": "品牌Heat Underwear，高腰内裤(Braga alta)，多色可选",
+      "id": 41
     },
     {
-      "id": 42,
       "code": "CH-502",
       "name": "",
       "category": "内裤",
@@ -504,10 +503,10 @@
       "dozenPrice": 30000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.09 PM.jpeg",
       "status": "无价格",
-      "note": "右下角可见"
+      "note": "右下角可见",
+      "id": 42
     },
     {
-      "id": 43,
       "code": "CH-506",
       "name": "",
       "category": "内裤",
@@ -516,10 +515,10 @@
       "dozenPrice": 30000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM (2).jpeg",
       "status": "无价格",
-      "note": "右下角可见"
+      "note": "右下角可见",
+      "id": 43
     },
     {
-      "id": 44,
       "code": "CH-508",
       "name": "",
       "category": "内裤",
@@ -528,10 +527,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.10 PM (2).jpeg",
       "status": "无价格",
-      "note": "品牌Heat Underwear，Cotton Feminine系列"
+      "note": "品牌Heat Underwear，Cotton Feminine系列",
+      "id": 44
     },
     {
-      "id": 45,
       "code": "CH-601",
       "name": "",
       "category": "内裤",
@@ -540,10 +539,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM (3).jpeg",
       "status": "无价格",
-      "note": "左下角标注 CH-601: S-M-L，标签显示 NO:CH-601"
+      "note": "左下角标注 CH-601: S-M-L，标签显示 NO:CH-601",
+      "id": 45
     },
     {
-      "id": 46,
       "code": "CH-602",
       "name": "",
       "category": "内裤",
@@ -552,10 +551,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (4).jpeg",
       "status": "无价格",
-      "note": ""
+      "note": "",
+      "id": 46
     },
     {
-      "id": 47,
       "code": "CH-602",
       "name": "",
       "category": "内裤",
@@ -564,10 +563,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.13 PM (1).jpeg",
       "status": "无价格",
-      "note": "左下角标注，含海绵垫提臀设计"
+      "note": "左下角标注，含海绵垫提臀设计",
+      "id": 47
     },
     {
-      "id": 48,
       "code": "CH-613",
       "name": "",
       "category": "内裤",
@@ -576,10 +575,10 @@
       "dozenPrice": 350000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM.jpeg",
       "status": "无价格",
-      "note": "图片左下角及吊牌可见"
+      "note": "图片左下角及吊牌可见",
+      "id": 48
     },
     {
-      "id": 49,
       "code": "CH-8002",
       "name": "",
       "category": "内裤",
@@ -588,10 +587,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM.jpeg",
       "status": "无价格",
-      "note": "品牌Heat Underwear，经典款内裤(Braga clásica)，多色展示"
+      "note": "品牌Heat Underwear，经典款内裤(Braga clásica)，多色展示",
+      "id": 49
     },
     {
-      "id": 50,
       "code": "CH-8003",
       "name": "",
       "category": "内裤",
@@ -600,10 +599,10 @@
       "dozenPrice": 24500,
       "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM (3).jpeg",
       "status": "无价格",
-      "note": ""
+      "note": "",
+      "id": 50
     },
     {
-      "id": 51,
       "code": "CH-8007X",
       "name": "",
       "category": "内裤",
@@ -612,10 +611,10 @@
       "dozenPrice": 28000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM (5).jpeg",
       "status": "无价格",
-      "note": "图片右下角可见"
+      "note": "图片右下角可见",
+      "id": 51
     },
     {
-      "id": 52,
       "code": "CH-8008X",
       "name": "",
       "category": "内裤",
@@ -624,10 +623,10 @@
       "dozenPrice": 28000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM (3).jpeg",
       "status": "无价格",
-      "note": "展示四色内裤，标签可见CORTE LASER（激光裁剪/无痕）字样"
+      "note": "展示四色内裤，标签可见CORTE LASER（激光裁剪/无痕）字样",
+      "id": 52
     },
     {
-      "id": 53,
       "code": "CH-8009X",
       "name": "",
       "category": "内裤",
@@ -636,10 +635,10 @@
       "dozenPrice": 26000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM (1).jpeg",
       "status": "无价格",
-      "note": "Heat Underwear品牌内裤展示"
+      "note": "Heat Underwear品牌内裤展示",
+      "id": 53
     },
     {
-      "id": 54,
       "code": "CH-8013",
       "name": "",
       "category": "内裤",
@@ -648,10 +647,10 @@
       "dozenPrice": 34000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.09 PM (2).jpeg",
       "status": "无价格",
-      "note": "图片右下角可见货号及尺码范围，内裤标签可见S和L"
+      "note": "图片右下角可见货号及尺码范围，内裤标签可见S和L",
+      "id": 54
     },
     {
-      "id": 55,
       "code": "CH-8014",
       "name": "",
       "category": "内裤",
@@ -660,10 +659,10 @@
       "dozenPrice": 28000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.55 PM (1).jpeg",
       "status": "无价格",
-      "note": "图片展示了S、L、XL三个尺码的实物，右下角标注了可选尺码范围。"
+      "note": "图片展示了S、L、XL三个尺码的实物，右下角标注了可选尺码范围。",
+      "id": 55
     },
     {
-      "id": 56,
       "code": "CH-8015",
       "name": "",
       "category": "内裤",
@@ -672,10 +671,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM (1).jpeg",
       "status": "无价格",
-      "note": "品牌HEAT UNDERWEAR，腰带印有amour，实物标签可见M/L/XL"
+      "note": "品牌HEAT UNDERWEAR，腰带印有amour，实物标签可见M/L/XL",
+      "id": 56
     },
     {
-      "id": 57,
       "code": "H16010",
       "name": "",
       "category": "内裤",
@@ -684,10 +683,10 @@
       "dozenPrice": 96000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.12 PM (3).jpeg",
       "status": "无价格",
-      "note": "Heat Underwear品牌，多色款"
+      "note": "Heat Underwear品牌，多色款",
+      "id": 57
     },
     {
-      "id": 58,
       "code": "H5033",
       "name": "",
       "category": "内裤",
@@ -696,10 +695,10 @@
       "dozenPrice": 24300,
       "image": "WhatsApp Image 2026-08-05 at 8.27.04 PM.jpeg",
       "status": "无价格",
-      "note": "标签显示CORTE LASER（无痕裁剪），右下角标注S-M-L-XL"
+      "note": "标签显示CORTE LASER（无痕裁剪），右下角标注S-M-L-XL",
+      "id": 58
     },
     {
-      "id": 59,
       "code": "H5034",
       "name": "",
       "category": "内裤",
@@ -708,10 +707,10 @@
       "dozenPrice": 32500,
       "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM (4).jpeg",
       "status": "无价格",
-      "note": "右下角标注H5034尺码L-XL-XXL-XXXL，包装可见HX86000款尺码L/XL"
+      "note": "右下角标注H5034尺码L-XL-XXL-XXXL，包装可见HX86000款尺码L/XL",
+      "id": 59
     },
     {
-      "id": 60,
       "code": "H5035",
       "name": "",
       "category": "内裤",
@@ -720,10 +719,10 @@
       "dozenPrice": 24300,
       "image": "WhatsApp Image 2026-08-05 at 8.26.57 PM (1).jpeg",
       "status": "已匹配",
-      "note": "图片右下角标注了货号和尺码，内裤标签显示有M, L, XL尺码，款式为CORTE LASER（激光切割）"
+      "note": "图片右下角标注了货号和尺码，内裤标签显示有M, L, XL尺码，款式为CORTE LASER（激光切割）",
+      "id": 60
     },
     {
-      "id": 61,
       "code": "H5063",
       "name": "",
       "category": "内裤",
@@ -732,10 +731,10 @@
       "dozenPrice": 32500,
       "image": "WhatsApp Image 2026-08-05 at 8.27.05 PM (3).jpeg",
       "status": "已匹配",
-      "note": "图片右下角及标签显示款号H5063，尺码包含S/M, M/L, XL/XXL"
+      "note": "图片右下角及标签显示款号H5063，尺码包含S/M, M/L, XL/XXL",
+      "id": 61
     },
     {
-      "id": 62,
       "code": "H85012",
       "name": "",
       "category": "内裤",
@@ -744,10 +743,10 @@
       "dozenPrice": 25000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.36 PM (1).jpeg",
       "status": "需核对",
-      "note": "目录OCR价25000，待核对"
+      "note": "目录OCR价25000，待核对",
+      "id": 62
     },
     {
-      "id": 63,
       "code": "HB5049",
       "name": "",
       "category": "内裤",
@@ -756,10 +755,10 @@
       "dozenPrice": 33500,
       "image": "WhatsApp Image 2026-08-05 at 8.27.09 PM (1).jpeg",
       "status": "无价格",
-      "note": "图片右下角明确标注了货号和尺码范围，包含三条不同花色的内裤"
+      "note": "图片右下角明确标注了货号和尺码范围，包含三条不同花色的内裤",
+      "id": 63
     },
     {
-      "id": 64,
       "code": "HM-SC3-1",
       "name": "",
       "category": "内裤",
@@ -768,10 +767,10 @@
       "dozenPrice": 19000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.05 PM (1).jpeg",
       "status": "无价格",
-      "note": "300DZ/CAIXA, P/2,M/4,G/4,GG/2"
+      "note": "300DZ/CAIXA, P/2,M/4,G/4,GG/2",
+      "id": 64
     },
     {
-      "id": 65,
       "code": "HM-SCF3-1",
       "name": "",
       "category": "内裤",
@@ -780,10 +779,10 @@
       "dozenPrice": 19000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.01 PM (1).jpeg",
       "status": "无价格",
-      "note": "300DZ/CAIXA, 配比 P/2,M/4,G/4,GG/2"
+      "note": "300DZ/CAIXA, 配比 P/2,M/4,G/4,GG/2",
+      "id": 65
     },
     {
-      "id": 66,
       "code": "HY5077-MJ",
       "name": "",
       "category": "内裤",
@@ -792,10 +791,10 @@
       "dozenPrice": 24500,
       "image": "WhatsApp Image 2026-08-05 at 8.27.04 PM (2).jpeg",
       "status": "无价格",
-      "note": "右下角标注，多色展示"
+      "note": "右下角标注，多色展示",
+      "id": 66
     },
     {
-      "id": 67,
       "code": "HY5079-MJ",
       "name": "",
       "category": "内裤",
@@ -804,10 +803,10 @@
       "dozenPrice": 24500,
       "image": "WhatsApp Image 2026-08-05 at 8.26.59 PM (3).jpeg",
       "status": "无价格",
-      "note": "图片右下角可见"
+      "note": "图片右下角可见",
+      "id": 67
     },
     {
-      "id": 68,
       "code": "JTP303",
       "name": "",
       "category": "内裤",
@@ -816,10 +815,10 @@
       "dozenPrice": 16200,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (5).jpeg",
       "status": "无价格",
-      "note": "40支精梳棉"
+      "note": "40支精梳棉",
+      "id": 68
     },
     {
-      "id": 69,
       "code": "JTP309",
       "name": "",
       "category": "内裤",
@@ -828,10 +827,10 @@
       "dozenPrice": 16200,
       "image": "WhatsApp Image 2026-08-05 at 8.27.13 PM (3).jpeg",
       "status": "无价格",
-      "note": "40支精梳棉"
+      "note": "40支精梳棉",
+      "id": 69
     },
     {
-      "id": 70,
       "code": "JTP310",
       "name": "",
       "category": "内裤",
@@ -840,10 +839,10 @@
       "dozenPrice": 16200,
       "image": "WhatsApp Image 2026-08-05 at 8.27.04 PM (1).jpeg",
       "status": "无价格",
-      "note": "40支精梳棉"
+      "note": "40支精梳棉",
+      "id": 70
     },
     {
-      "id": 71,
       "code": "NTS2160",
       "name": "",
       "category": "内裤",
@@ -852,10 +851,10 @@
       "dozenPrice": 13500,
       "image": "WhatsApp Image 2026-08-05 at 8.26.58 PM.jpeg",
       "status": "已匹配",
-      "note": "三条一卡, 22-24-26CM"
+      "note": "三条一卡, 22-24-26CM",
+      "id": 71
     },
     {
-      "id": 72,
       "code": "NTS2168",
       "name": "",
       "category": "内裤",
@@ -864,10 +863,10 @@
       "dozenPrice": 13500,
       "image": "WhatsApp Image 2026-08-05 at 8.26.56 PM (3).jpeg",
       "status": "已匹配",
-      "note": "对应尺寸22-24-26CM，三条一卡"
+      "note": "对应尺寸22-24-26CM，三条一卡",
+      "id": 72
     },
     {
-      "id": 73,
       "code": "Q8331",
       "name": "",
       "category": "内裤",
@@ -876,10 +875,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (3).jpeg",
       "status": "已匹配",
-      "note": "包含黑色、白色、红色、灰紫、墨绿、焦糖、肤色、豆沙等颜色"
+      "note": "包含黑色、白色、红色、灰紫、墨绿、焦糖、肤色、豆沙等颜色",
+      "id": 73
     },
     {
-      "id": 74,
       "code": "Q8359",
       "name": "",
       "category": "内裤",
@@ -888,10 +887,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.57 PM (3).jpeg",
       "status": "无价格",
-      "note": "颜色：墨绿/焦糖/白色/豆沙/黑色/肤色；M腰围30CM，L腰围32CM，XL腰围34CM"
+      "note": "颜色：墨绿/焦糖/白色/豆沙/黑色/肤色；M腰围30CM，L腰围32CM，XL腰围34CM",
+      "id": 74
     },
     {
-      "id": 75,
       "code": "Q8370",
       "name": "",
       "category": "内裤",
@@ -900,10 +899,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.05 PM (2).jpeg",
       "status": "无价格",
-      "note": "图片右下角标注NO.: Q8370#，下方尺寸图显示有M和L两个尺码"
+      "note": "图片右下角标注NO.: Q8370#，下方尺寸图显示有M和L两个尺码",
+      "id": 75
     },
     {
-      "id": 76,
       "code": "Q8393",
       "name": "",
       "category": "内裤",
@@ -912,10 +911,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.59 PM (4).jpeg",
       "status": "无价格",
-      "note": "图片右下角标注NO.: Q8393#，下方展示了S和M两个尺码的尺寸图"
+      "note": "图片右下角标注NO.: Q8393#，下方展示了S和M两个尺码的尺寸图",
+      "id": 76
     },
     {
-      "id": 77,
       "code": "Q8397",
       "name": "",
       "category": "内裤",
@@ -924,10 +923,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.56 PM (1).jpeg",
       "status": "无价格",
-      "note": "多色可选：粉色、肤色、艳蓝、浅绿、黑色、白色、红色"
+      "note": "多色可选：粉色、肤色、艳蓝、浅绿、黑色、白色、红色",
+      "id": 77
     },
     {
-      "id": 78,
       "code": "Q8399",
       "name": "",
       "category": "内裤",
@@ -936,10 +935,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.57 PM (2).jpeg",
       "status": "已匹配",
-      "note": "M码腰围32CM长19CM，L码腰围34CM长20CM"
+      "note": "M码腰围32CM长19CM，L码腰围34CM长20CM",
+      "id": 78
     },
     {
-      "id": 79,
       "code": "Q8500",
       "name": "",
       "category": "内裤",
@@ -948,10 +947,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.06 PM.jpeg",
       "status": "已匹配",
-      "note": "图片显示有M(腰围30CM)和L(腰围32CM)两个尺码，共9种颜色。"
+      "note": "图片显示有M(腰围30CM)和L(腰围32CM)两个尺码，共9种颜色。",
+      "id": 79
     },
     {
-      "id": 80,
       "code": "Q8517",
       "name": "",
       "category": "内裤",
@@ -960,10 +959,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM.jpeg",
       "status": "已匹配",
-      "note": "底部尺码表显示M(腰围32cm)和L(腰围34cm)，吊牌上可见SIZE: L"
+      "note": "底部尺码表显示M(腰围32cm)和L(腰围34cm)，吊牌上可见SIZE: L",
+      "id": 80
     },
     {
-      "id": 81,
       "code": "Q8524",
       "name": "",
       "category": "内裤",
@@ -972,10 +971,10 @@
       "dozenPrice": 29700,
       "image": "WhatsApp Image 2026-08-05 at 8.26.55 PM.jpeg",
       "status": "无价格",
-      "note": "右下角标注尺码M和L，吊牌显示SIZE L，多色可选"
+      "note": "右下角标注尺码M和L，吊牌显示SIZE L，多色可选",
+      "id": 81
     },
     {
-      "id": 82,
       "code": "TZ907",
       "name": "",
       "category": "内裤",
@@ -984,10 +983,10 @@
       "dozenPrice": 16000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.59 PM (1).jpeg",
       "status": "无价格",
-      "note": "腰围24-26-28CM"
+      "note": "腰围24-26-28CM",
+      "id": 82
     },
     {
-      "id": 83,
       "code": "WS1073",
       "name": "",
       "category": "内裤",
@@ -996,10 +995,10 @@
       "dozenPrice": 22000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.59 PM.jpeg",
       "status": "无价格",
-      "note": "对应腰围28-30-32-34CM，2CM织带S棉坑条面料210克"
+      "note": "对应腰围28-30-32-34CM，2CM织带S棉坑条面料210克",
+      "id": 83
     },
     {
-      "id": 84,
       "code": "YB674",
       "name": "",
       "category": "内裤",
@@ -1008,10 +1007,10 @@
       "dozenPrice": 22000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.01 PM.jpeg",
       "status": "无价格",
-      "note": "31-33CM，泳布材质"
+      "note": "31-33CM，泳布材质",
+      "id": 84
     },
     {
-      "id": 85,
       "code": "LZL-038",
       "name": "",
       "category": "内裤",
@@ -1020,10 +1019,10 @@
       "dozenPrice": 24500,
       "image": "WhatsApp Image 2026-08-05 at 8.27.05 PM (4).jpeg",
       "status": "无价格",
-      "note": "图片上仅有品牌标识'LZL'，未见具体货号和尺码信息。"
+      "note": "图片上仅有品牌标识'LZL'，未见具体货号和尺码信息。",
+      "id": 85
     },
     {
-      "id": 86,
       "code": "CH-603",
       "name": "",
       "category": "内裤",
@@ -1032,10 +1031,10 @@
       "dozenPrice": 150000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.12 PM.jpeg",
       "status": "无价格",
-      "note": "Heat Underwear Shapewear"
+      "note": "Heat Underwear Shapewear",
+      "id": 86
     },
     {
-      "id": 87,
       "code": "CH-604",
       "name": "",
       "category": "内裤",
@@ -1044,10 +1043,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM (4).jpeg",
       "status": "无价格",
-      "note": "品牌Heat Underwear，塑身衣Shapewear"
+      "note": "品牌Heat Underwear，塑身衣Shapewear",
+      "id": 87
     },
     {
-      "id": 88,
       "code": "H5062",
       "name": "",
       "category": "内裤",
@@ -1056,10 +1055,10 @@
       "dozenPrice": 27000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.05 PM.jpeg",
       "status": "无价格",
-      "note": "图片右下角及标签显示款号H5062，包含S/M, M/L, XL/XXL(标签显示XL/2XL)等尺码，款式为Tanga clásica"
+      "note": "图片右下角及标签显示款号H5062，包含S/M, M/L, XL/XXL(标签显示XL/2XL)等尺码，款式为Tanga clásica",
+      "id": 88
     },
     {
-      "id": 89,
       "code": "C9708",
       "name": "",
       "category": "内衣裤套装",
@@ -1068,10 +1067,10 @@
       "dozenPrice": 120000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.37 PM.jpeg",
       "status": "已匹配",
-      "note": "目录价120000"
+      "note": "目录价120000",
+      "id": 89
     },
     {
-      "id": 90,
       "code": "C9709",
       "name": "",
       "category": "内衣裤套装",
@@ -1080,10 +1079,10 @@
       "dozenPrice": 120000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.37 PM (1).jpeg",
       "status": "已匹配",
-      "note": "目录价120000"
+      "note": "目录价120000",
+      "id": 90
     },
     {
-      "id": 91,
       "code": "H925006",
       "name": "",
       "category": "内衣裤套装",
@@ -1092,10 +1091,10 @@
       "dozenPrice": 195000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.35 PM (1).jpeg",
       "status": "无价格",
-      "note": "编号已确认，价格待补"
+      "note": "编号已确认，价格待补",
+      "id": 91
     },
     {
-      "id": 92,
       "code": "HK04012",
       "name": "",
       "category": "内衣裤套装",
@@ -1104,10 +1103,10 @@
       "dozenPrice": 240000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.34 PM.jpeg",
       "status": "已匹配",
-      "note": "目录价240000"
+      "note": "目录价240000",
+      "id": 92
     },
     {
-      "id": 93,
       "code": "HK20010",
       "name": "",
       "category": "内衣裤套装",
@@ -1116,10 +1115,10 @@
       "dozenPrice": 195000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.36 PM.jpeg",
       "status": "已匹配",
-      "note": "目录价195000"
+      "note": "目录价195000",
+      "id": 93
     },
     {
-      "id": 94,
       "code": "K606",
       "name": "",
       "category": "内衣裤套装",
@@ -1128,10 +1127,10 @@
       "dozenPrice": 220000,
       "image": "WhatsApp Image 2026-08-07 at 12.10.35 PM.jpeg",
       "status": "已匹配",
-      "note": "目录价220000"
+      "note": "目录价220000",
+      "id": 94
     },
     {
-      "id": 95,
       "code": "HW1061",
       "name": "",
       "category": "睡衣",
@@ -1140,10 +1139,10 @@
       "dozenPrice": 360000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM.jpeg",
       "status": "无价格",
-      "note": "品牌为HEAT UNDERWEAR（分类待确认）"
+      "note": "品牌为HEAT UNDERWEAR（分类待确认）",
+      "id": 95
     },
     {
-      "id": 96,
       "code": "HP384",
       "name": "",
       "category": "睡衣",
@@ -1152,10 +1151,10 @@
       "dozenPrice": 648000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.12 PM (4).jpeg",
       "status": "无价格",
-      "note": "5color（分类待确认）"
+      "note": "5color（分类待确认）",
+      "id": 96
     },
     {
-      "id": 97,
       "code": "HP385",
       "name": "",
       "category": "睡衣",
@@ -1164,10 +1163,10 @@
       "dozenPrice": 614000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.13 PM (2).jpeg",
       "status": "无价格",
-      "note": "品牌 Heat Underwear（分类待确认）"
+      "note": "品牌 Heat Underwear（分类待确认）",
+      "id": 97
     },
     {
-      "id": 98,
       "code": "HP390",
       "name": "",
       "category": "睡衣",
@@ -1176,10 +1175,10 @@
       "dozenPrice": 363000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.09 PM (3).jpeg",
       "status": "已匹配",
-      "note": "3PCS: 1top+2panty（分类待确认）"
+      "note": "3PCS: 1top+2panty（分类待确认）",
+      "id": 98
     },
     {
-      "id": 99,
       "code": "302",
       "name": "",
       "category": "睡衣",
@@ -1188,10 +1187,10 @@
       "dozenPrice": 108000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.03 PM (4).jpeg",
       "status": "无价格",
-      "note": "Heat Underwear品牌睡衣套装，右上角显示有多色可选（分类待确认）"
+      "note": "Heat Underwear品牌睡衣套装，右上角显示有多色可选（分类待确认）",
+      "id": 99
     },
     {
-      "id": 100,
       "code": "HH60001",
       "name": "",
       "category": "束身衣",
@@ -1200,10 +1199,10 @@
       "dozenPrice": 189000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.58 PM (1).jpeg",
       "status": "已匹配",
-      "note": "HEAT UNDERWEAR SPAIN 塑身衣"
+      "note": "HEAT UNDERWEAR SPAIN 塑身衣",
+      "id": 100
     },
     {
-      "id": 101,
       "code": "HH60005",
       "name": "",
       "category": "束身衣",
@@ -1212,10 +1211,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM.jpeg",
       "status": "已匹配",
-      "note": "品牌 Heat Underwear Spain，产品为 Shapewear 塑身衣"
+      "note": "品牌 Heat Underwear Spain，产品为 Shapewear 塑身衣",
+      "id": 101
     },
     {
-      "id": 102,
       "code": "HH60009",
       "name": "",
       "category": "束身衣",
@@ -1224,10 +1223,10 @@
       "dozenPrice": 135000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.58 PM (3).jpeg",
       "status": "已匹配",
-      "note": "塑身衣，有黑色和肤色"
+      "note": "塑身衣，有黑色和肤色",
+      "id": 102
     },
     {
-      "id": 103,
       "code": "HH60011",
       "name": "",
       "category": "束身衣",
@@ -1236,10 +1235,10 @@
       "dozenPrice": 135000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.56 PM (4).jpeg",
       "status": "无价格",
-      "note": "Heat Underwear Shapewear，吊牌显示NO:HH60011"
+      "note": "Heat Underwear Shapewear，吊牌显示NO:HH60011",
+      "id": 103
     },
     {
-      "id": 104,
       "code": "HH60019",
       "name": "",
       "category": "束身衣",
@@ -1248,10 +1247,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.03 PM (3).jpeg",
       "status": "已匹配",
-      "note": "Shapewear塑身裤"
+      "note": "Shapewear塑身裤",
+      "id": 104
     },
     {
-      "id": 105,
       "code": "HH60021",
       "name": "",
       "category": "束身衣",
@@ -1260,10 +1259,10 @@
       "dozenPrice": 189000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.15 PM (2).jpeg",
       "status": "已匹配",
-      "note": "Heat Underwear品牌塑身裤"
+      "note": "Heat Underwear品牌塑身裤",
+      "id": 105
     },
     {
-      "id": 106,
       "code": "HH60024",
       "name": "",
       "category": "束身衣",
@@ -1272,10 +1271,10 @@
       "dozenPrice": 243000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.13 PM.jpeg",
       "status": "已匹配",
-      "note": "图片右下角标注"
+      "note": "图片右下角标注",
+      "id": 106
     },
     {
-      "id": 107,
       "code": "HH60035",
       "name": "",
       "category": "束身衣",
@@ -1284,10 +1283,10 @@
       "dozenPrice": 189000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.06 PM (3).jpeg",
       "status": "无价格",
-      "note": "Heat Underwear塑身衣"
+      "note": "Heat Underwear塑身衣",
+      "id": 107
     },
     {
-      "id": 108,
       "code": "021",
       "name": "",
       "category": "瑜伽裤",
@@ -1296,10 +1295,10 @@
       "dozenPrice": 350000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.52 PM (4).jpeg",
       "status": "已匹配",
-      "note": "条纹喇叭裤套装"
+      "note": "条纹喇叭裤套装",
+      "id": 108
     },
     {
-      "id": 109,
       "code": "049",
       "name": "",
       "category": "瑜伽裤",
@@ -1308,10 +1307,10 @@
       "dozenPrice": 140000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.49 PM (4).jpeg",
       "status": "已匹配",
-      "note": "高腰收腹口袋喇叭裤"
+      "note": "高腰收腹口袋喇叭裤",
+      "id": 109
     },
     {
-      "id": 110,
       "code": "049",
       "name": "",
       "category": "瑜伽裤",
@@ -1320,10 +1319,10 @@
       "dozenPrice": 140000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.52 PM.jpeg",
       "status": "已匹配",
-      "note": "高腰收腹口袋喇叭裤，240PCS"
+      "note": "高腰收腹口袋喇叭裤，240PCS",
+      "id": 110
     },
     {
-      "id": 111,
       "code": "053",
       "name": "",
       "category": "瑜伽裤",
@@ -1332,10 +1331,10 @@
       "dozenPrice": 295000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.51 PM (2).jpeg",
       "status": "已匹配",
-      "note": "开叉喇叭瑜伽裤套装"
+      "note": "开叉喇叭瑜伽裤套装",
+      "id": 111
     },
     {
-      "id": 112,
       "code": "062",
       "name": "",
       "category": "瑜伽裤",
@@ -1344,10 +1343,10 @@
       "dozenPrice": 295000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.49 PM.jpeg",
       "status": "已匹配",
-      "note": "V-WAIST THREAD YOGA SET, 108PCS"
+      "note": "V-WAIST THREAD YOGA SET, 108PCS",
+      "id": 112
     },
     {
-      "id": 113,
       "code": "071",
       "name": "",
       "category": "瑜伽裤",
@@ -1356,10 +1355,10 @@
       "dozenPrice": 260000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.42 PM.jpeg",
       "status": "无价格",
-      "note": "交叉露背连体瑜伽服"
+      "note": "交叉露背连体瑜伽服",
+      "id": 113
     },
     {
-      "id": 114,
       "code": "1002",
       "name": "",
       "category": "瑜伽裤",
@@ -1368,10 +1367,10 @@
       "dozenPrice": 280000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.50 PM (1).jpeg",
       "status": "需核对",
-      "note": "交叉腰运动喇叭裤套装"
+      "note": "交叉腰运动喇叭裤套装",
+      "id": 114
     },
     {
-      "id": 115,
       "code": "1005",
       "name": "",
       "category": "瑜伽裤",
@@ -1380,10 +1379,10 @@
       "dozenPrice": 245000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.50 PM (2).jpeg",
       "status": "无价格",
-      "note": "翻领百褶连衣裙（分类待确认）"
+      "note": "翻领百褶连衣裙（分类待确认）",
+      "id": 115
     },
     {
-      "id": 116,
       "code": "113",
       "name": "",
       "category": "瑜伽裤",
@@ -1392,10 +1391,10 @@
       "dozenPrice": 280000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.51 PM (1).jpeg",
       "status": "已匹配",
-      "note": "运动长袖瑜伽裤套装"
+      "note": "运动长袖瑜伽裤套装",
+      "id": 116
     },
     {
-      "id": 117,
       "code": "116",
       "name": "",
       "category": "瑜伽裤",
@@ -1404,10 +1403,10 @@
       "dozenPrice": 245000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.50 PM.jpeg",
       "status": "已匹配",
-      "note": "撞色网球裙套装"
+      "note": "撞色网球裙套装",
+      "id": 117
     },
     {
-      "id": 118,
       "code": "120",
       "name": "",
       "category": "瑜伽裤",
@@ -1416,10 +1415,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.54 PM.jpeg",
       "status": "已匹配",
-      "note": "图片标注NO.120，未见尺码信息（分类待确认）"
+      "note": "图片标注NO.120，未见尺码信息（分类待确认）",
+      "id": 118
     },
     {
-      "id": 119,
       "code": "185",
       "name": "",
       "category": "瑜伽裤",
@@ -1428,10 +1427,10 @@
       "dozenPrice": 352000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.50 PM (3).jpeg",
       "status": "已匹配",
-      "note": "立领外套瑜伽套装"
+      "note": "立领外套瑜伽套装",
+      "id": 119
     },
     {
-      "id": 120,
       "code": "210",
       "name": "",
       "category": "瑜伽裤",
@@ -1440,10 +1439,10 @@
       "dozenPrice": 130000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.52 PM (2).jpeg",
       "status": "已匹配",
-      "note": "蜜桃臀豹纹喇叭裤，240PCS"
+      "note": "蜜桃臀豹纹喇叭裤，240PCS",
+      "id": 120
     },
     {
-      "id": 121,
       "code": "218",
       "name": "",
       "category": "瑜伽裤",
@@ -1452,10 +1451,10 @@
       "dozenPrice": 224000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.48 PM.jpeg",
       "status": "已匹配",
-      "note": "细带美背喇叭裤套装"
+      "note": "细带美背喇叭裤套装",
+      "id": 121
     },
     {
-      "id": 122,
       "code": "218",
       "name": "",
       "category": "瑜伽裤",
@@ -1464,10 +1463,10 @@
       "dozenPrice": 224000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.52 PM (1).jpeg",
       "status": "已匹配",
-      "note": "细带美背喇叭裤套装"
+      "note": "细带美背喇叭裤套装",
+      "id": 122
     },
     {
-      "id": 123,
       "code": "275",
       "name": "",
       "category": "瑜伽裤",
@@ -1476,10 +1475,10 @@
       "dozenPrice": 123000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.51 PM.jpeg",
       "status": "无价格",
-      "note": "网纱口袋瑜伽裤"
+      "note": "网纱口袋瑜伽裤",
+      "id": 123
     },
     {
-      "id": 124,
       "code": "276",
       "name": "",
       "category": "瑜伽裤",
@@ -1488,10 +1487,10 @@
       "dozenPrice": 135000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.55 PM (2).jpeg",
       "status": "无价格",
-      "note": "图片未显示尺码信息（分类待确认）"
+      "note": "图片未显示尺码信息（分类待确认）",
+      "id": 124
     },
     {
-      "id": 125,
       "code": "277",
       "name": "",
       "category": "瑜伽裤",
@@ -1500,10 +1499,10 @@
       "dozenPrice": 110000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.51 PM (3).jpeg",
       "status": "无价格",
-      "note": "240PCS, 三分口袋款骑行短裤"
+      "note": "240PCS, 三分口袋款骑行短裤",
+      "id": 125
     },
     {
-      "id": 126,
       "code": "290",
       "name": "",
       "category": "瑜伽裤",
@@ -1512,10 +1511,10 @@
       "dozenPrice": 85000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.52 PM (3).jpeg",
       "status": "已匹配",
-      "note": "蜜桃臀珠光裤九分裤"
+      "note": "蜜桃臀珠光裤九分裤",
+      "id": 126
     },
     {
-      "id": 127,
       "code": "367",
       "name": "",
       "category": "瑜伽裤",
@@ -1524,10 +1523,10 @@
       "dozenPrice": 118000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.43 PM (4).jpeg",
       "status": "无价格",
-      "note": "跑步口袋五分裤，240PCS"
+      "note": "跑步口袋五分裤，240PCS",
+      "id": 127
     },
     {
-      "id": 128,
       "code": "3823",
       "name": "",
       "category": "瑜伽裤",
@@ -1536,10 +1535,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.54 PM (1).jpeg",
       "status": "已匹配",
-      "note": "拉链款喇叭裤"
+      "note": "拉链款喇叭裤",
+      "id": 128
     },
     {
-      "id": 129,
       "code": "DH001",
       "name": "",
       "category": "瑜伽裤",
@@ -1548,10 +1547,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.44 PM (4).jpeg",
       "status": "无价格",
-      "note": "螺纹高腰喇叭裤/YOGA PANTS"
+      "note": "螺纹高腰喇叭裤/YOGA PANTS",
+      "id": 129
     },
     {
-      "id": 130,
       "code": "DH002",
       "name": "",
       "category": "瑜伽裤",
@@ -1560,10 +1559,10 @@
       "dozenPrice": 270000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.47 PM (1).jpeg",
       "status": "已匹配",
-      "note": "美背短裙套装"
+      "note": "美背短裙套装",
+      "id": 130
     },
     {
-      "id": 131,
       "code": "DH003",
       "name": "",
       "category": "瑜伽裤",
@@ -1572,10 +1571,10 @@
       "dozenPrice": 252000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.53 PM (2).jpeg",
       "status": "已匹配",
-      "note": "收皱美背短裙套装/Yoga Tennis Dress Set"
+      "note": "收皱美背短裙套装/Yoga Tennis Dress Set",
+      "id": 131
     },
     {
-      "id": 132,
       "code": "DH004",
       "name": "",
       "category": "瑜伽裤",
@@ -1584,10 +1583,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.44 PM (2).jpeg",
       "status": "已匹配",
-      "note": "抽绳高腰喇叭裤"
+      "note": "抽绳高腰喇叭裤",
+      "id": 132
     },
     {
-      "id": 133,
       "code": "DH005",
       "name": "",
       "category": "瑜伽裤",
@@ -1596,10 +1595,10 @@
       "dozenPrice": 252000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.54 PM (3).jpeg",
       "status": "已匹配",
-      "note": "V领美背短裤套装/YOGA SHORTS SET"
+      "note": "V领美背短裤套装/YOGA SHORTS SET",
+      "id": 133
     },
     {
-      "id": 134,
       "code": "DH006",
       "name": "",
       "category": "瑜伽裤",
@@ -1608,10 +1607,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.43 PM.jpeg",
       "status": "无价格",
-      "note": "瑜伽连帽外套"
+      "note": "瑜伽连帽外套",
+      "id": 134
     },
     {
-      "id": 135,
       "code": "DH008",
       "name": "",
       "category": "瑜伽裤",
@@ -1620,10 +1619,10 @@
       "dozenPrice": 270000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.44 PM (1).jpeg",
       "status": "无价格",
-      "note": "美背九分裤套装，三色可选"
+      "note": "美背九分裤套装，三色可选",
+      "id": 135
     },
     {
-      "id": 136,
       "code": "DH008",
       "name": "",
       "category": "瑜伽裤",
@@ -1632,10 +1631,10 @@
       "dozenPrice": 270000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.49 PM (1).jpeg",
       "status": "无价格",
-      "note": "美背九分裤套装"
+      "note": "美背九分裤套装",
+      "id": 136
     },
     {
-      "id": 137,
       "code": "DH009",
       "name": "",
       "category": "瑜伽裤",
@@ -1644,10 +1643,10 @@
       "dozenPrice": 224000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.43 PM (3).jpeg",
       "status": "已匹配",
-      "note": "吊带连衣裙"
+      "note": "吊带连衣裙",
+      "id": 137
     },
     {
-      "id": 138,
       "code": "DH010",
       "name": "",
       "category": "瑜伽裤",
@@ -1656,10 +1655,10 @@
       "dozenPrice": 270000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.47 PM (2).jpeg",
       "status": "已匹配",
-      "note": "运动短裤套装/YOGA SHORTS SET，含黑白两色，CTN:120PCS"
+      "note": "运动短裤套装/YOGA SHORTS SET，含黑白两色，CTN:120PCS",
+      "id": 138
     },
     {
-      "id": 139,
       "code": "DH012",
       "name": "",
       "category": "瑜伽裤",
@@ -1668,10 +1667,10 @@
       "dozenPrice": 224000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.49 PM (3).jpeg",
       "status": "已匹配",
-      "note": "吊带连衣裙，CTN:144PCS"
+      "note": "吊带连衣裙，CTN:144PCS",
+      "id": 139
     },
     {
-      "id": 140,
       "code": "DH012",
       "name": "",
       "category": "瑜伽裤",
@@ -1680,10 +1679,10 @@
       "dozenPrice": 224000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.54 PM (2).jpeg",
       "status": "已匹配",
-      "note": "吊带连衣裙"
+      "note": "吊带连衣裙",
+      "id": 140
     },
     {
-      "id": 141,
       "code": "DH013",
       "name": "",
       "category": "瑜伽裤",
@@ -1692,10 +1691,10 @@
       "dozenPrice": 405000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.44 PM (3).jpeg",
       "status": "无价格",
-      "note": "螺纹美背外套喇叭裤瑜伽套装"
+      "note": "螺纹美背外套喇叭裤瑜伽套装",
+      "id": 141
     },
     {
-      "id": 142,
       "code": "DH014",
       "name": "",
       "category": "瑜伽裤",
@@ -1704,10 +1703,10 @@
       "dozenPrice": 150000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.42 PM (2).jpeg",
       "status": "已匹配",
-      "note": "隐形拉链磨毛九分裤"
+      "note": "隐形拉链磨毛九分裤",
+      "id": 142
     },
     {
-      "id": 143,
       "code": "DH015",
       "name": "",
       "category": "瑜伽裤",
@@ -1716,10 +1715,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.42 PM (1).jpeg",
       "status": "已匹配",
-      "note": "隐形拉链磨毛喇叭裤，加绒瑜伽裤"
+      "note": "隐形拉链磨毛喇叭裤，加绒瑜伽裤",
+      "id": 143
     },
     {
-      "id": 144,
       "code": "DH016",
       "name": "",
       "category": "瑜伽裤",
@@ -1728,10 +1727,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.42 PM (3).jpeg",
       "status": "已匹配",
-      "note": "口袋款磨毛喇叭裤，加绒设计"
+      "note": "口袋款磨毛喇叭裤，加绒设计",
+      "id": 144
     },
     {
-      "id": 145,
       "code": "DH017",
       "name": "",
       "category": "瑜伽裤",
@@ -1740,10 +1739,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.36 PM (2).jpeg",
       "status": "无价格",
-      "note": "磨毛宽松阔腿裤，加绒款"
+      "note": "磨毛宽松阔腿裤，加绒款",
+      "id": 145
     },
     {
-      "id": 146,
       "code": "DH018",
       "name": "",
       "category": "瑜伽裤",
@@ -1752,10 +1751,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.40 PM (1).jpeg",
       "status": "已匹配",
-      "note": "磨毛高腰喇叭裤/YOGA PANTS"
+      "note": "磨毛高腰喇叭裤/YOGA PANTS",
+      "id": 146
     },
     {
-      "id": 147,
       "code": "DH022",
       "name": "",
       "category": "瑜伽裤",
@@ -1764,10 +1763,10 @@
       "dozenPrice": 378000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.37 PM.jpeg",
       "status": "已匹配",
-      "note": "休闲运动两件套，黑白两色"
+      "note": "休闲运动两件套，黑白两色",
+      "id": 147
     },
     {
-      "id": 148,
       "code": "DH024",
       "name": "",
       "category": "瑜伽裤",
@@ -1776,10 +1775,10 @@
       "dozenPrice": 243000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.38 PM (4).jpeg",
       "status": "已匹配",
-      "note": "羊羔绒保暖外套"
+      "note": "羊羔绒保暖外套",
+      "id": 148
     },
     {
-      "id": 149,
       "code": "DH025",
       "name": "",
       "category": "瑜伽裤",
@@ -1788,10 +1787,10 @@
       "dozenPrice": 150000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.41 PM (1).jpeg",
       "status": "已匹配",
-      "note": "加绒小黑裤/YOGA PANTS"
+      "note": "加绒小黑裤/YOGA PANTS",
+      "id": 149
     },
     {
-      "id": 150,
       "code": "DH026",
       "name": "",
       "category": "瑜伽裤",
@@ -1800,10 +1799,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.40 PM (2).jpeg",
       "status": "已匹配",
-      "note": "羊羔绒瑜伽裤"
+      "note": "羊羔绒瑜伽裤",
+      "id": 150
     },
     {
-      "id": 151,
       "code": "DH028",
       "name": "",
       "category": "瑜伽裤",
@@ -1812,10 +1811,10 @@
       "dozenPrice": 135000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.36 PM (1).jpeg",
       "status": "无价格",
-      "note": "磨毛高腰提臀骑行裤"
+      "note": "磨毛高腰提臀骑行裤",
+      "id": 151
     },
     {
-      "id": 152,
       "code": "DH030",
       "name": "",
       "category": "瑜伽裤",
@@ -1824,10 +1823,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.41 PM.jpeg",
       "status": "已匹配",
-      "note": "贝贝绒口袋瑜伽裤"
+      "note": "贝贝绒口袋瑜伽裤",
+      "id": 152
     },
     {
-      "id": 153,
       "code": "DH031",
       "name": "",
       "category": "瑜伽裤",
@@ -1836,10 +1835,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.40 PM (3).jpeg",
       "status": "已匹配",
-      "note": "羊羔绒口袋骑行裤"
+      "note": "羊羔绒口袋骑行裤",
+      "id": 153
     },
     {
-      "id": 154,
       "code": "DH033",
       "name": "",
       "category": "瑜伽裤",
@@ -1848,10 +1847,10 @@
       "dozenPrice": 98000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.43 PM (2).jpeg",
       "status": "需核对",
-      "note": "系带运动短裤"
+      "note": "系带运动短裤",
+      "id": 154
     },
     {
-      "id": 155,
       "code": "DH034",
       "name": "",
       "category": "瑜伽裤",
@@ -1860,10 +1859,10 @@
       "dozenPrice": 252000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.53 PM (3).jpeg",
       "status": "无价格",
-      "note": "撞色背心喇叭裤套装，CTN:120PCS"
+      "note": "撞色背心喇叭裤套装，CTN:120PCS",
+      "id": 155
     },
     {
-      "id": 156,
       "code": "DH035",
       "name": "",
       "category": "瑜伽裤",
@@ -1872,10 +1871,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.48 PM (1).jpeg",
       "status": "已匹配",
-      "note": "系带短袖喇叭裤套装"
+      "note": "系带短袖喇叭裤套装",
+      "id": 156
     },
     {
-      "id": 157,
       "code": "DH036",
       "name": "",
       "category": "瑜伽裤",
@@ -1884,10 +1883,10 @@
       "dozenPrice": 252000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.53 PM.jpeg",
       "status": "已匹配",
-      "note": "吊带美背九分裤套装"
+      "note": "吊带美背九分裤套装",
+      "id": 157
     },
     {
-      "id": 158,
       "code": "DH040",
       "name": "",
       "category": "瑜伽裤",
@@ -1896,10 +1895,10 @@
       "dozenPrice": 243000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.48 PM (2).jpeg",
       "status": "已匹配",
-      "note": "假两件无袖网球裙"
+      "note": "假两件无袖网球裙",
+      "id": 158
     },
     {
-      "id": 159,
       "code": "DH042",
       "name": "",
       "category": "瑜伽裤",
@@ -1908,10 +1907,10 @@
       "dozenPrice": 224000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.54 PM (4).jpeg",
       "status": "已匹配",
-      "note": "V领撞色连衣裙"
+      "note": "V领撞色连衣裙",
+      "id": 159
     },
     {
-      "id": 160,
       "code": "DH046",
       "name": "",
       "category": "瑜伽裤",
@@ -1920,10 +1919,10 @@
       "dozenPrice": 270000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.47 PM.jpeg",
       "status": "已匹配",
-      "note": "撞色吊带长裤套装"
+      "note": "撞色吊带长裤套装",
+      "id": 160
     },
     {
-      "id": 161,
       "code": "DH047",
       "name": "",
       "category": "瑜伽裤",
@@ -1932,10 +1931,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.48 PM (3).jpeg",
       "status": "需核对",
-      "note": "口袋阔腿裤"
+      "note": "口袋阔腿裤",
+      "id": 161
     },
     {
-      "id": 162,
       "code": "DH048",
       "name": "",
       "category": "瑜伽裤",
@@ -1944,10 +1943,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.47 PM (3).jpeg",
       "status": "已匹配",
-      "note": "螺纹隐形拉链瑜伽裤，CTN:192PCS"
+      "note": "螺纹隐形拉链瑜伽裤，CTN:192PCS",
+      "id": 162
     },
     {
-      "id": 163,
       "code": "DH049",
       "name": "",
       "category": "瑜伽裤",
@@ -1956,10 +1955,10 @@
       "dozenPrice": 135000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.46 PM.jpeg",
       "status": "已匹配",
-      "note": "螺纹高腰瑜伽裤"
+      "note": "螺纹高腰瑜伽裤",
+      "id": 163
     },
     {
-      "id": 164,
       "code": "DH054",
       "name": "",
       "category": "瑜伽裤",
@@ -1968,10 +1967,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.46 PM (1).jpeg",
       "status": "已匹配",
-      "note": "半拉链长袖交叉腰喇叭裤套装"
+      "note": "半拉链长袖交叉腰喇叭裤套装",
+      "id": 164
     },
     {
-      "id": 165,
       "code": "DH056",
       "name": "",
       "category": "瑜伽裤",
@@ -1980,10 +1979,10 @@
       "dozenPrice": 216000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.46 PM (2).jpeg",
       "status": "已匹配",
-      "note": "口袋宽松长裤，四色可选"
+      "note": "口袋宽松长裤，四色可选",
+      "id": 165
     },
     {
-      "id": 166,
       "code": "DH058",
       "name": "",
       "category": "瑜伽裤",
@@ -1992,10 +1991,10 @@
       "dozenPrice": 154000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.53 PM (1).jpeg",
       "status": "需核对",
-      "note": "休闲口袋阔腿裤"
+      "note": "休闲口袋阔腿裤",
+      "id": 166
     },
     {
-      "id": 167,
       "code": "DH059",
       "name": "",
       "category": "瑜伽裤",
@@ -2004,10 +2003,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.40 PM (4).jpeg",
       "status": "已匹配",
-      "note": "高腰休闲阔腿裤，加绒款，CTN:96 PCS"
+      "note": "高腰休闲阔腿裤，加绒款，CTN:96 PCS",
+      "id": 167
     },
     {
-      "id": 168,
       "code": "DH061",
       "name": "",
       "category": "瑜伽裤",
@@ -2016,10 +2015,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.40 PM.jpeg",
       "status": "已匹配",
-      "note": "高腰抽绳喇叭裤，加绒款"
+      "note": "高腰抽绳喇叭裤，加绒款",
+      "id": 168
     },
     {
-      "id": 169,
       "code": "DH062",
       "name": "",
       "category": "瑜伽裤",
@@ -2028,10 +2027,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.42 PM (4).jpeg",
       "status": "已匹配",
-      "note": "系带口袋款喇叭裤，加绒"
+      "note": "系带口袋款喇叭裤，加绒",
+      "id": 169
     },
     {
-      "id": 170,
       "code": "DH063",
       "name": "",
       "category": "瑜伽裤",
@@ -2040,10 +2039,10 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.40 PM (5).jpeg",
       "status": "已匹配",
-      "note": "拉链排扣喇叭裤，右下角显示加绒材质，CTN:96PCS"
+      "note": "拉链排扣喇叭裤，右下角显示加绒材质，CTN:96PCS",
+      "id": 170
     },
     {
-      "id": 171,
       "code": "DH064",
       "name": "",
       "category": "瑜伽裤",
@@ -2052,10 +2051,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.39 PM (1).jpeg",
       "status": "已匹配",
-      "note": "拉链排扣鲨鱼裤，含加绒内里展示"
+      "note": "拉链排扣鲨鱼裤，含加绒内里展示",
+      "id": 171
     },
     {
-      "id": 172,
       "code": "DH064",
       "name": "",
       "category": "瑜伽裤",
@@ -2064,10 +2063,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM (3).jpeg",
       "status": "已匹配",
-      "note": "拉链排扣鲨鱼裤，加绒款"
+      "note": "拉链排扣鲨鱼裤，加绒款",
+      "id": 172
     },
     {
-      "id": 173,
       "code": "DH065",
       "name": "",
       "category": "瑜伽裤",
@@ -2076,10 +2075,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.38 PM.jpeg",
       "status": "已匹配",
-      "note": "运动健身裤工装裤"
+      "note": "运动健身裤工装裤",
+      "id": 173
     },
     {
-      "id": 174,
       "code": "DH066",
       "name": "",
       "category": "瑜伽裤",
@@ -2088,10 +2087,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.36 PM.jpeg",
       "status": "已匹配",
-      "note": "黑色清装，运动健身裤工装裤"
+      "note": "黑色清装，运动健身裤工装裤",
+      "id": 174
     },
     {
-      "id": 175,
       "code": "DH066",
       "name": "",
       "category": "瑜伽裤",
@@ -2100,10 +2099,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.38 PM (1).jpeg",
       "status": "已匹配",
-      "note": "黑色清装，运动健身裤工装裤"
+      "note": "黑色清装，运动健身裤工装裤",
+      "id": 175
     },
     {
-      "id": 176,
       "code": "DH067",
       "name": "",
       "category": "瑜伽裤",
@@ -2112,10 +2111,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.38 PM (2).jpeg",
       "status": "无价格",
-      "note": "羊羔绒字母九分裤，CTN:96PCS"
+      "note": "羊羔绒字母九分裤，CTN:96PCS",
+      "id": 176
     },
     {
-      "id": 177,
       "code": "DH069",
       "name": "",
       "category": "瑜伽裤",
@@ -2124,10 +2123,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.38 PM (3).jpeg",
       "status": "已匹配",
-      "note": "羊羔绒高腰收腹九分裤"
+      "note": "羊羔绒高腰收腹九分裤",
+      "id": 177
     },
     {
-      "id": 178,
       "code": "DH069",
       "name": "",
       "category": "瑜伽裤",
@@ -2136,10 +2135,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM (4).jpeg",
       "status": "已匹配",
-      "note": "羊羔绒高腰收腹九分裤，三色可选"
+      "note": "羊羔绒高腰收腹九分裤，三色可选",
+      "id": 178
     },
     {
-      "id": 179,
       "code": "DH071",
       "name": "",
       "category": "瑜伽裤",
@@ -2148,10 +2147,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.37 PM (1).jpeg",
       "status": "已匹配",
-      "note": "贝贝绒塑形高腰瑜伽裤，CTN:144PCS"
+      "note": "贝贝绒塑形高腰瑜伽裤，CTN:144PCS",
+      "id": 179
     },
     {
-      "id": 180,
       "code": "DH076",
       "name": "",
       "category": "瑜伽裤",
@@ -2160,10 +2159,10 @@
       "dozenPrice": 297000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.36 PM (3).jpeg",
       "status": "已匹配",
-      "note": "宽松版型外套，CTN:48PCS"
+      "note": "宽松版型外套，CTN:48PCS",
+      "id": 180
     },
     {
-      "id": 181,
       "code": "DH078",
       "name": "",
       "category": "瑜伽裤",
@@ -2172,10 +2171,10 @@
       "dozenPrice": 200000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.39 PM.jpeg",
       "status": "已匹配",
-      "note": "修身版型外套，加绒款"
+      "note": "修身版型外套，加绒款",
+      "id": 181
     },
     {
-      "id": 182,
       "code": "DH081",
       "name": "",
       "category": "瑜伽裤",
@@ -2184,10 +2183,10 @@
       "dozenPrice": 162000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM (2).jpeg",
       "status": "已匹配",
-      "note": "织带双腰裤阔腿裤，三色可选"
+      "note": "织带双腰裤阔腿裤，三色可选",
+      "id": 182
     },
     {
-      "id": 183,
       "code": "DH084",
       "name": "",
       "category": "瑜伽裤",
@@ -2196,10 +2195,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.46 PM (4).jpeg",
       "status": "已匹配",
-      "note": "立领短款外套阔腿裤套装"
+      "note": "立领短款外套阔腿裤套装",
+      "id": 183
     },
     {
-      "id": 184,
       "code": "DH085",
       "name": "",
       "category": "瑜伽裤",
@@ -2208,10 +2207,10 @@
       "dozenPrice": 405000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.46 PM (3).jpeg",
       "status": "已匹配",
-      "note": "裸感显瘦瑜伽服三件套，CTN:84PCS"
+      "note": "裸感显瘦瑜伽服三件套，CTN:84PCS",
+      "id": 184
     },
     {
-      "id": 185,
       "code": "DH086",
       "name": "",
       "category": "瑜伽裤",
@@ -2220,10 +2219,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM.jpeg",
       "status": "已匹配",
-      "note": "交叉下摆上衣阔腿裤套装"
+      "note": "交叉下摆上衣阔腿裤套装",
+      "id": 185
     },
     {
-      "id": 186,
       "code": "DH088",
       "name": "",
       "category": "瑜伽裤",
@@ -2232,10 +2231,10 @@
       "dozenPrice": 297000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM (1).jpeg",
       "status": "已匹配",
-      "note": "吊带背心撞色阔腿裤套装"
+      "note": "吊带背心撞色阔腿裤套装",
+      "id": 186
     },
     {
-      "id": 187,
       "code": "DH089",
       "name": "",
       "category": "瑜伽裤",
@@ -2244,10 +2243,10 @@
       "dozenPrice": 324000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.44 PM.jpeg",
       "status": "无价格",
-      "note": "方领锁骨打底衫纯色阔腿裤套装"
+      "note": "方领锁骨打底衫纯色阔腿裤套装",
+      "id": 187
     },
     {
-      "id": 188,
       "code": "DH090",
       "name": "",
       "category": "瑜伽裤",
@@ -2256,10 +2255,10 @@
       "dozenPrice": 150000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.37 PM (2).jpeg",
       "status": "已匹配",
-      "note": "塑身翘臀九分裤，加绒款"
+      "note": "塑身翘臀九分裤，加绒款",
+      "id": 188
     },
     {
-      "id": 189,
       "code": "DH091",
       "name": "",
       "category": "瑜伽裤",
@@ -2268,10 +2267,10 @@
       "dozenPrice": 150000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.37 PM (3).jpeg",
       "status": "无价格",
-      "note": "塑身提臀九分裤"
+      "note": "塑身提臀九分裤",
+      "id": 189
     },
     {
-      "id": 190,
       "code": "DH092",
       "name": "",
       "category": "瑜伽裤",
@@ -2280,10 +2279,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.37 PM (4).jpeg",
       "status": "无价格",
-      "note": "YIHE塑身翘臀喇叭裤，加绒款"
+      "note": "YIHE塑身翘臀喇叭裤，加绒款",
+      "id": 190
     },
     {
-      "id": 191,
       "code": "DH093",
       "name": "",
       "category": "瑜伽裤",
@@ -2292,10 +2291,10 @@
       "dozenPrice": 176000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.37 PM (5).jpeg",
       "status": "已匹配",
-      "note": "塑身提臀喇叭裤，含加绒款示意"
+      "note": "塑身提臀喇叭裤，含加绒款示意",
+      "id": 191
     },
     {
-      "id": 192,
       "code": "P3811",
       "name": "",
       "category": "瑜伽裤",
@@ -2304,7 +2303,20 @@
       "dozenPrice": 190000,
       "image": "WhatsApp Image 2026-08-05 at 8.26.43 PM (1).jpeg",
       "status": "无价格",
-      "note": "图片中未显示尺码信息（分类待确认）"
+      "note": "图片中未显示尺码信息（分类待确认）",
+      "id": 192
+    },
+    {
+      "code": "TEST-003",
+      "name": "测试3",
+      "category": "文胸",
+      "sizes": "M-L",
+      "unitPrice": 1234,
+      "dozenPrice": 12340,
+      "image": "",
+      "status": "已匹配",
+      "note": "",
+      "id": 193
     }
   ]
 }
