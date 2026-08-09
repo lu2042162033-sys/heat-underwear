@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-9';
+  var APP_VERSION = '20260809-10';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -259,19 +259,24 @@
       }
       return Promise.resolve(true);
     }
+    setDebug('保存：写入 pending 文件…');
     return ghWritePending(list).then(function (w) {
       if (!w.ok) {
+        setDebug('保存失败：pending 写入返回 ' + w.status);
         alert(t('saveErr'));
         return false;
       }
+      setDebug('pending 写入成功，触发更新…');
       return ghRequest('update-products', {
         password: state.adminPassword,
         schema: SCHEMA
       }).then(function (r) {
         if (r.ok) {
+          setDebug('更新完成');
           alert(t('saved'));
           return true;
         }
+        setDebug('更新失败：' + (r.error || 'unknown'));
         alert(t('saveErr'));
         return false;
       });
@@ -706,8 +711,9 @@
     if (!confirm(t('resetConfirm'))) return;
     if (github.mode) {
       var seed = SEED.map(function (p, i) { return normalize(p, i + 1); });
+      setDebug('恢复：写入 pending…');
       ghWritePending(seed).then(function (w) {
-        if (!w.ok) { alert(t('saveErr')); return; }
+        if (!w.ok) { setDebug('恢复失败：pending 写入 ' + w.status); alert(t('saveErr')); return; }
         return ghRequest('update-products', {
           password: state.adminPassword,
           schema: SCHEMA
