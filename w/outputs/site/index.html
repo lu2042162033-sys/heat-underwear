@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEAT UNDERWEAR · 商品展示</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="lang-toggle">
+      <button id="lang-zh" class="lang-btn active" type="button">中文</button>
+      <button id="lang-es" class="lang-btn" type="button">ES</button>
+    </div>
+    <div class="brand">
+      <h1>HEAT UNDERWEAR</h1>
+      <p class="store-line" id="store-line"></p>
+      <p class="subtitle" id="subtitle"></p>
+    </div>
+    <div class="search-row">
+      <input id="search" type="search" autocomplete="off" aria-label="search">
+    </div>
+  </header>
+
+  <nav class="cats" id="cats" aria-label="categories"></nav>
+
+  <main>
+    <p class="count-line" id="count"></p>
+    <div id="grid" class="grid"></div>
+    <p id="empty" class="empty" hidden></p>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-contact"></p>
+    <p><a id="btn-admin" class="admin-link" role="button" tabindex="0"></a></p>
+  </footer>
+
+  <!-- 灯箱 -->
+  <div id="lightbox" class="overlay" hidden>
+    <button id="lb-close" class="lb-close" type="button" title="close">×</button>
+    <div class="lightbox-content">
+      <div class="lb-media"><img id="lb-img" alt=""></div>
+      <div class="lb-details">
+        <h3 id="lb-code" class="lb-code"></h3>
+        <p id="lb-name" class="lb-name"></p>
+        <div class="lb-meta">
+          <p id="lb-cat"></p>
+          <p id="lb-size"></p>
+          <p id="lb-unit" class="lb-price"></p>
+          <p id="lb-dozen" class="lb-price dozen"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 管理口令 -->
+  <div id="pass-overlay" class="overlay" hidden>
+    <div class="panel">
+      <h3 id="pass-title"></h3>
+      <p class="muted" id="pass-prompt"></p>
+      <input id="pass-input" type="password" autocomplete="off">
+      <p class="form-msg" id="pass-msg"></p>
+      <button id="btn-unlock" class="btn primary" type="button"></button>
+    </div>
+  </div>
+
+  <!-- 管理面板 -->
+  <div id="admin-overlay" class="overlay" hidden>
+    <div class="admin-panel">
+      <div class="admin-head">
+        <h3 id="admin-title"></h3>
+        <button id="admin-close" class="btn" type="button">×</button>
+      </div>
+      <div class="admin-toolbar">
+        <button id="btn-add" class="btn primary" type="button"></button>
+        <button id="btn-export" class="btn" type="button"></button>
+        <button id="btn-import" class="btn" type="button"></button>
+        <input id="import-file" type="file" accept=".json,application/json" hidden>
+        <button id="btn-reset" class="btn danger" type="button"></button>
+        <button id="btn-logout" class="btn" type="button" hidden></button>
+        <input id="admin-search" type="search" autocomplete="off">
+        <select id="admin-cat"></select>
+      </div>
+      <div class="admin-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="image"></th>
+              <th>ID</th>
+              <th data-i18n="code"></th>
+              <th data-i18n="category"></th>
+              <th data-i18n="size"></th>
+              <th data-i18n="unitPrice"></th>
+              <th data-i18n="dozenPrice"></th>
+              <th data-i18n="status"></th>
+              <th data-i18n="note"></th>
+              <th data-i18n="actions"></th>
+            </tr>
+          </thead>
+          <tbody id="admin-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 商品表单 -->
+  <div id="form-overlay" class="overlay" hidden>
+    <div class="panel form-panel">
+      <h3 id="form-title"></h3>
+      <div class="form-grid">
+        <div><label data-i18n="code"></label><input id="f-code"></div>
+        <div><label data-i18n="name"></label><input id="f-name"></div>
+        <div><label data-i18n="category"></label><select id="f-category"></select></div>
+        <div><label data-i18n="size"></label><input id="f-sizes"></div>
+        <div><label data-i18n="unitPrice"></label><input id="f-unit" type="number" min="0"></div>
+        <div><label data-i18n="dozenPrice"></label><input id="f-dozen" type="number" min="0"></div>
+        <div><label data-i18n="status"></label><select id="f-status"></select></div>
+        <div class="span-2">
+          <label data-i18n="image"></label>
+          <div class="image-picker">
+            <select id="f-image-select"></select>
+            <input id="f-image" autocomplete="off">
+            <button id="btn-upload" class="btn" type="button"></button>
+            <input id="upload-file" type="file" accept="image/*" hidden>
+          </div>
+          <p class="hint" id="f-image-tip"></p>
+          <div class="image-preview"><img id="f-preview" alt="" hidden></div>
+        </div>
+        <div class="span-2">
+          <label data-i18n="note"></label>
+          <textarea id="f-note" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="form-footer">
+        <button id="btn-cancel" class="btn" type="button"></button>
+        <button id="btn-save" class="btn primary" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/site-config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/images.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: heat-underwear
+    runtime: python
+    plan: free
+    buildCommand: ""
+    startCommand: python server.py
+    envVars:
+      - key: SECURE_COOKIE
+        value: "1"
+      - key: ADMIN_PASSWORD
+        sync: false
