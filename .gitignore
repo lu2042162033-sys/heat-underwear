@@ -1,3 +1,5 @@
 node_modules/
 server-data/
 npm-debug.log*
+w/work/tools/
+*.log
