@@ -1,2 +1,2 @@
 @echo off
-start "" "%~dp0w\outputs\site\index.html"
+start https://lu2042162033-sys.github.io/heat-underwear/
