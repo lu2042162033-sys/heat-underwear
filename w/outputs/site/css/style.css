@@ -147,3 +147,5 @@ main{max-width:1280px;margin:0 auto;padding:8px 24px 70px;}
     box-sizing: border-box;
   }
   #pass-debug { color: #8a8a8a; font-size: 12px; margin-top: 4px; }
+
+  .version-tag { font-size: 11px; color: #b8b2a7; margin: 0 0 8px; }
