@@ -30,9 +30,15 @@
   <nav class="cats" id="cats" aria-label="categories">
     <div class="cat-menu">
       <button id="cat-menu-btn" class="cat-btn" type="button"></button>
-      <div id="cat-menu-panel" class="cat-menu-panel" hidden></div>
     </div>
   </nav>
+  <div id="cat-drawer" class="cat-drawer" hidden>
+    <div class="cat-drawer-head">
+      <span id="cat-drawer-title"></span>
+      <button id="cat-drawer-close" class="btn" type="button">×</button>
+    </div>
+    <div id="cat-menu-panel" class="cat-menu-panel"></div>
+  </div>
 
   <main>
     <p class="count-line" id="count"></p>
