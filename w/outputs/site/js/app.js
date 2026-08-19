@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-15';
+  var APP_VERSION = '20260809-16';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -285,32 +285,26 @@
   function saveProducts(list) {
     if (!github.mode) {
       var payload = { schema: SCHEMA, savedAt: new Date().toISOString(), products: list };
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-      } catch (e) {
-        alert(t('uploadTooBig'));
-      }
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch (e) {}
+      showToast(t("saved"), "success", 2500);
       return Promise.resolve(true);
     }
-    setDebug('保存：写入 pending 文件…');
+    showToast(t("saving"), "", 20000);
     return ghWritePending(list).then(function (w) {
       if (!w.ok) {
-        setDebug('保存失败：pending 写入返回 ' + w.status);
-        alert(t('saveErr'));
+        showToast(t("saveFailed"), "error", 5000);
         return false;
       }
-      setDebug('pending 写入成功，触发更新…');
-      return ghRequest('update-products', {
+      showToast(t("savedPublishing"), "", 25000);
+      return ghRequest("update-products", {
         password: state.adminPassword,
         schema: SCHEMA
       }).then(function (r) {
         if (r.ok) {
-          setDebug('更新完成');
-          alert(t('savedPublishing'));
+          showToast(t("saved"), "success", 3000);
           return true;
         }
-        setDebug('更新失败：' + (r.error || 'unknown'));
-        alert(t('saveErr'));
+        showToast(t("saveFailed"), "error", 5000);
         return false;
       });
     });
@@ -446,6 +440,20 @@
     renderHeader();
     renderNav();
     renderGrid();
+    var ab = document.getElementById('btn-add-cart');
+    if (ab) ab.textContent = t('addToCart');
+    var lq = document.getElementById('lb-qty-label');
+    if (lq) lq.textContent = t('qty');
+    var cc = document.getElementById('btn-cart-clear');
+    if (cc) cc.textContent = t('cartClear');
+    var ce = document.getElementById('btn-cart-export');
+    if (ce) ce.textContent = t('cartExport');
+    var cb = document.getElementById('btn-cart-back');
+    if (cb) cb.textContent = t('cartBack');
+    var ct = document.getElementById('cart-title');
+    if (ct) ct.textContent = t('cart');
+    var tl = document.getElementById('cart-total-label');
+    if (tl) tl.textContent = t('cartTotal') + ': ';
     if (state.adminOpen && !$('admin-overlay').hidden) renderAdminLabels();
   }
 
@@ -480,6 +488,18 @@
 
 
 
+
+  /* ---------- 浮动提示条 ---------- */
+  var toastTimer = null;
+  function showToast(msg, type, duration) {
+    var t = document.getElementById("toast");
+    if (!t) return;
+    t.textContent = msg;
+    t.className = "toast" + (type === "error" ? " error" : type === "success" ? " success" : "");
+    t.hidden = false;
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.hidden = true; }, duration || 3500);
+  }
 
   /* ---------- 购物车 ---------- */
   function renderCartBadge() {
@@ -521,9 +541,24 @@
     var foot = document.getElementById("cart-foot");
     if (!box) return;
     box.textContent = "";
-    if (!state.cart.length) { empty.hidden = false; empty.textContent = t("cartEmpty"); foot.hidden = true; return; }
+    var cClear = document.getElementById("btn-cart-clear");
+    if (cClear) cClear.textContent = t("cartClear");
+    var cExport = document.getElementById("btn-cart-export");
+    if (cExport) cExport.textContent = t("cartExport");
+    var cBack = document.getElementById("btn-cart-back");
+    if (cBack) cBack.textContent = t("cartBack");
+    var cTitle = document.getElementById("cart-title");
+    if (cTitle) cTitle.textContent = t("cart");
+    var tLabel = document.getElementById("cart-total-label");
+    if (tLabel) tLabel.textContent = t("cartTotal") + ": ";
+    if (!state.cart.length) {
+      empty.hidden = false;
+      empty.textContent = t("cartEmpty");
+      if (foot) foot.hidden = true;
+      return;
+    }
     empty.hidden = true;
-    foot.hidden = false;
+    if (foot) foot.hidden = false;
     state.cart.forEach(function (it) {
       var row = el("div", "cart-item");
       var thumb = el("div", "cart-thumb");
@@ -533,10 +568,10 @@
         im.alt = it.code || "";
         im.addEventListener("error", function () { im.style.visibility = "hidden"; });
         thumb.appendChild(im);
-      } else { thumb.textContent = "\u2014"; }
+      } else { thumb.textContent = "—"; }
       row.appendChild(thumb);
       var info = el("div", "cart-info");
-      info.appendChild(el("div", "cart-code", it.code || "\u2014"));
+      info.appendChild(el("div", "cart-code", it.code || "—"));
       if (it.name) info.appendChild(el("div", "cart-name", it.name));
       info.appendChild(el("div", "cart-cat", catName(it.category)));
       var modeWrap = el("div", "cart-mode");
@@ -549,20 +584,26 @@
       info.appendChild(modeWrap);
       row.appendChild(info);
       var qtyWrap = el("div", "cart-qty");
-      var bMinus = el("button", "qty-btn", "\u2212");
+      var bMinus = el("button", "qty-btn", "−");
       var bPlus = el("button", "qty-btn", "+");
       bMinus.type = "button"; bPlus.type = "button";
       bMinus.addEventListener("click", function () { it.qty = Math.max(1, toNum(it.qty) - 1); saveCart(state.cart); });
       bPlus.addEventListener("click", function () { it.qty = Math.min(99, toNum(it.qty) + 1); saveCart(state.cart); });
       qtyWrap.appendChild(bMinus);
-      qtyWrap.appendChild(el("span", "qty-val", String(it.qty)));
+      var qtyVal = el("span", "qty-val", it.mode === "dozen" ? (toNum(it.qty) / 12).toFixed(1) + " " + t("cartByDozen") : String(it.qty) + " " + t("cartByUnit"));
+      qtyWrap.appendChild(qtyVal);
       qtyWrap.appendChild(bPlus);
       row.appendChild(qtyWrap);
       var right = el("div", "cart-right");
-      var line = el("div", "cart-line-total", fmtMoney(cartLinePrice(it)));
-      var hint = el("div", "cart-line-hint", it.mode === "dozen" ? t("cartModeDozen") + " \u00d7 " + (toNum(it.qty) / 12).toFixed(2) : t("cartModeUnit") + " \u00d7 " + it.qty);
-      right.appendChild(line); right.appendChild(hint);
-      var bDel = el("button", "cart-del", "\u00d7");
+      var priceLine = el("div", "cart-line-total", fmtMoney(it.mode === "dozen" ? toNum(it.dozenPrice) : toNum(it.unitPrice)));
+      right.appendChild(priceLine);
+      var hint = el("div", "cart-line-hint", it.mode === "dozen"
+        ? (toNum(it.qty) / 12).toFixed(1) + " " + t("cartByDozen") + " × " + fmtMoney(toNum(it.dozenPrice))
+        : it.qty + " " + t("cartByUnit") + " × " + fmtMoney(toNum(it.unitPrice)));
+      right.appendChild(hint);
+      var sub = el("div", "cart-sub", fmtMoney(cartLinePrice(it)));
+      right.appendChild(sub);
+      var bDel = el("button", "cart-del-btn", t("cartRemove"));
       bDel.type = "button";
       bDel.addEventListener("click", function () {
         for (var i = 0; i < state.cart.length; i++) {
@@ -859,13 +900,11 @@
         state.products[i] = obj;
       }
     }
-    saveProducts(state.products).then(function (ok) {
-      if (!ok) return;
-      closeForm();
-      renderGrid();
-      renderNav();
-      renderAdminTable();
-    });
+    closeForm();
+    renderGrid();
+    renderNav();
+    renderAdminTable();
+    saveProducts(state.products);
   }
 
   /* ---------- 导出 / 导入 / 重置 ---------- */
@@ -978,7 +1017,7 @@
     if (cartBack) cartBack.addEventListener('click', closeCart);
     var cartClear = $('btn-cart-clear');
     if (cartClear) cartClear.addEventListener('click', function () {
-      if (confirm(t('resetConfirm'))) { saveCart([]); alert(t('cartCleared')); }
+      if (confirm(t('cartClearConfirm'))) { saveCart([]); showToast(t('cartCleared'), 'success', 2500); }
     });
     var cartExport = $('btn-cart-export');
     if (cartExport) cartExport.addEventListener('click', exportCartPdf);

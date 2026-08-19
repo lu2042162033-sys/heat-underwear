@@ -189,9 +189,34 @@ main{max-width:1280px;margin:0 auto;padding:8px 24px 70px;}
 .cart-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;align-self:center;position:relative;min-width:86px;}
 .cart-line-total{font-size:14px;font-weight:600;color:var(--ink);}
 .cart-line-hint{font-size:10px;color:#b8b2a7;}
-.cart-del{position:absolute;top:-10px;right:-6px;border:none;background:transparent;color:#c9c2b6;font-size:16px;cursor:pointer;padding:2px 4px;}
-.cart-del:hover{color:#c0392b;}
+.cart-del-btn{margin-top:4px;border:1px solid #e5ded2;background:transparent;color:#a88b7a;border-radius:999px;padding:5px 14px;font-size:12px;cursor:pointer;min-height:36px;transition:all .15s;}
+.cart-del-btn:hover{border-color:#c0392b;color:#c0392b;background:#fdf3f1;}
 .cart-foot{border-top:1px solid var(--line);padding:16px 22px 20px;background:#faf8f4;}
 .cart-total{display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:12px;}
 .cart-actions{display:flex;gap:8px;flex-wrap:wrap;}
 .cart-actions .btn{flex:1;}
+
+/* ---------- 浮动提示条 ---------- */
+.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:999;background:rgba(35,31,26,.92);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;letter-spacing:.03em;box-shadow:0 8px 28px rgba(0,0,0,.18);max-width:88vw;text-align:center;}
+.toast.success{background:rgba(36,112,73,.94);}
+.toast.error{background:rgba(176,58,46,.94);}
+/* ---------- 购物车行内小计 ---------- */
+.cart-sub{margin-top:2px;font-size:12px;color:#8a8a8a;}
+.cart-line-total{font-size:14px;font-weight:600;color:var(--ink);}
+.cart-line-hint{font-size:10px;color:#b8b2a7;}
+/* ---------- 移动端购物车 ---------- */
+@media(max-width:480px){
+  .cart-panel{width:100%;}
+  .cart-item{flex-wrap:wrap;padding:12px 4px;}
+  .cart-thumb{width:46px;height:54px;}
+  .cart-qty{gap:4px;}
+  .qty-btn{width:32px;height:32px;font-size:16px;}
+  .cart-right{min-width:96px;}
+  .cart-actions{flex-direction:column;}
+  .cart-actions .btn{width:100%;min-height:44px;font-size:15px;}
+  .cart-del-btn{min-height:38px;}
+}
+/* ---------- 移动端分类面板 ---------- */
+@media(max-width:480px){
+  .cat-menu-panel{position:fixed;left:12px;right:12px;top:auto;bottom:12px;transform:none;width:auto;min-width:0;max-height:62vh;grid-template-columns:repeat(2,1fr);}
+}
