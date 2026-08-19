@@ -21,15 +21,44 @@
     <div class="search-row">
       <input id="search" type="search" autocomplete="off" aria-label="search">
     </div>
+    <button id="btn-cart" class="cart-btn" type="button" aria-label="cart">
+      <span class="cart-icon">&#128722;</span>
+      <span class="cart-badge" id="cart-badge" hidden>0</span>
+    </button>
   </header>
 
-  <nav class="cats" id="cats" aria-label="categories"></nav>
+  <nav class="cats" id="cats" aria-label="categories">
+    <div class="cat-menu">
+      <button id="cat-menu-btn" class="cat-btn" type="button"></button>
+      <div id="cat-menu-panel" class="cat-menu-panel" hidden></div>
+    </div>
+  </nav>
 
   <main>
     <p class="count-line" id="count"></p>
     <div id="grid" class="grid"></div>
     <p id="empty" class="empty" hidden></p>
   </main>
+
+  <!-- 购物车面板 -->
+  <div id="cart-overlay" class="overlay cart-overlay" hidden>
+    <div class="cart-panel">
+      <div class="cart-head">
+        <h3 id="cart-title"></h3>
+        <button id="cart-close" class="btn" type="button">×</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div id="cart-empty" class="cart-empty" hidden></div>
+      <div class="cart-foot" id="cart-foot">
+        <p class="cart-total"><span id="cart-total-label"></span><span id="cart-total"></span></p>
+        <div class="cart-actions">
+          <button id="btn-cart-clear" class="btn danger" type="button"></button>
+          <button id="btn-cart-export" class="btn primary" type="button"></button>
+          <button id="btn-cart-back" class="btn" type="button"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <p id="footer-contact"></p>
@@ -50,6 +79,11 @@
           <p id="lb-size"></p>
           <p id="lb-unit" class="lb-price"></p>
           <p id="lb-dozen" class="lb-price dozen"></p>
+        </div>
+        <div class="lb-cart-row">
+          <label class="lb-qty-label" id="lb-qty-label"></label>
+          <input id="lb-qty" type="number" min="1" max="99" value="1">
+          <button id="btn-add-cart" class="btn primary" type="button"></button>
         </div>
       </div>
     </div>
