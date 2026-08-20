@@ -922,11 +922,8 @@
     $('form-title').textContent = p ? t('editProduct') : t('addProduct');
     $('f-code').value = p ? (p.code || '') : '';
     $('f-name').value = p ? (p.name || '') : '';
-    buildSelect($('f-category'), I18N.categoryKeys, catName, p ? p.category : '文胸');
-    $('f-category').addEventListener('change', function () {
-      var bf = $('brand-field');
-      if (bf) bf.hidden = this.value !== '化妆品';
-    });
+    var cat = p ? p.category : '文胸';
+    buildSelect($('f-category'), I18N.categoryKeys, catName, cat);
     $('f-sizes').value = p ? (p.sizes || '') : '';
     $('f-unit').value = p ? String(p.unitPrice || '') : '';
     $('f-dozen').value = p ? String(p.dozenPrice || '') : '';
@@ -941,14 +938,16 @@
       b0.value = '';
       b0.textContent = t('brandNone');
       brandSel.appendChild(b0);
-      (I18N.brandKeys || []).forEach(function (bk) {
+      (I18N.brandKeys || ['PINK 21', 'TEI']).forEach(function (bk) {
         var o = document.createElement('option');
         o.value = bk;
         o.textContent = bk;
         brandSel.appendChild(o);
       });
-      brandSel.value = p ? (p.brand || '') : '';
-      $('brand-field').hidden = cat !== '化妆品';
+      var bv = p ? (p.brand || '') : '';
+      try { brandSel.value = bv; } catch (e) {}
+      var bf = $('brand-field');
+      if (bf) bf.hidden = cat !== '化妆品';
     }
     updatePreview();
     $('form-overlay').hidden = false;
@@ -1146,6 +1145,10 @@
     $('btn-reset').addEventListener('click', resetData);
     $('btn-cancel').addEventListener('click', closeForm);
     $('btn-save').addEventListener('click', saveForm);
+    $('f-category').addEventListener('change', function () {
+      var bf = $('brand-field');
+      if (bf) bf.hidden = this.value !== '化妆品';
+    });
     $('f-image-select').addEventListener('change', function () {
       $('f-image').value = this.value;
       updatePreview();
