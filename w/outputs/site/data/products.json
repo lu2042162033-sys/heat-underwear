@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:47:28.212058",
+  "updatedAt": "2026-08-20T20:47:43.054075",
   "products": [
     {
       "code": "6088",
@@ -1602,9 +1602,9 @@
       "id": 123
     },
     {
-      "code": "276",
+      "code": "YIHE-276",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 13500,
@@ -1615,9 +1615,9 @@
       "id": 124
     },
     {
-      "code": "277",
+      "code": "YIHE-277",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 11000,
