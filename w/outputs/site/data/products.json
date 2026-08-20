@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:43:54.604068",
+  "updatedAt": "2026-08-20T20:44:47.066723",
   "products": [
     {
       "code": "6088",
@@ -1448,7 +1448,7 @@
     {
       "code": "062",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 29500,
@@ -1461,7 +1461,7 @@
     {
       "code": "071",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 26000,
@@ -1474,7 +1474,7 @@
     {
       "code": "1002",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 28000,
@@ -1487,7 +1487,7 @@
     {
       "code": "1005",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 24500,
