@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:57:01.512497",
+  "updatedAt": "2026-08-20T20:57:23.545164",
   "products": [
     {
       "code": "6088",
@@ -3046,9 +3046,9 @@
     },
     {
       "code": "CS6976",
-      "name": "",
+      "name": "唇蜜",
       "category": "化妆品",
-      "brand": "",
+      "brand": "PINK 21",
       "sizes": "",
       "unitPrice": 2100,
       "dozenPrice": 0,
