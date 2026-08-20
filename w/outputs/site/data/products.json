@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T17:27:44.113764",
+  "updatedAt": "2026-08-20T17:28:00.253833",
   "products": [
     {
       "code": "6088",
@@ -2189,7 +2189,7 @@
     {
       "code": "DH084",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "sizes": "M/L L/XL XL/2XL",
       "unitPrice": 32400,
       "dozenPrice": 324000,
@@ -2201,7 +2201,7 @@
     {
       "code": "DH085",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "sizes": "M/L L/XL XL/2XL",
       "unitPrice": 40500,
       "dozenPrice": 405000,
