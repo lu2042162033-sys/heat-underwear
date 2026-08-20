@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-17';
+  var APP_VERSION = '20260809-18';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -177,6 +177,7 @@
     lang: storeGet(LANG_KEY) === 'es' ? 'es' : 'zh',
     products: [],
     category: 'all',
+    brand: '',
     query: '',
     unlocked: false,
     editingId: null,
@@ -248,6 +249,7 @@
       code: p.code != null ? String(p.code) : '',
       name: p.name || '',
       category: p.category || '文胸',
+      brand: p.brand || '',
       sizes: p.sizes != null ? String(p.sizes) : '',
       unitPrice: toNum(p.unitPrice),
       dozenPrice: toNum(p.dozenPrice),
@@ -322,6 +324,7 @@
     var q = state.query.trim().toLowerCase();
     return state.products.filter(function (p) {
       if (state.category !== 'all' && p.category !== state.category) return false;
+      if (state.brand && p.brand !== state.brand) return false;
       if (!q) return true;
       return String(p.code).toLowerCase().indexOf(q) >= 0 ||
         String(p.name).toLowerCase().indexOf(q) >= 0;
@@ -332,6 +335,7 @@
     var c = $('admin-cat').value || 'all';
     return state.products.filter(function (p) {
       if (c !== 'all' && p.category !== c) return false;
+      if (state.brand && p.brand !== state.brand) return false;
       if (!q) return true;
       return String(p.code).toLowerCase().indexOf(q) >= 0 ||
         String(p.name).toLowerCase().indexOf(q) >= 0;
@@ -366,19 +370,22 @@
   }
   function renderNav() {
     var mBtn = $('cat-menu-btn');
-    if (mBtn) mBtn.textContent = state.category === 'all' ? t('all') : catName(state.category);
+    var label = state.category === 'all' ? t('all') : catName(state.category);
+    if (state.category !== 'all' && state.brand) label = catName(state.category) + ' · ' + state.brand;
+    if (mBtn) mBtn.textContent = label;
     var panel = $('cat-menu-panel');
     var drawerTitle = $('cat-drawer-title');
     if (drawerTitle) drawerTitle.textContent = t('category');
     if (!panel) return;
     panel.textContent = '';
-    function makeItem(key, label, count) {
-      var b = el('button', 'cat-item' + (state.category === key ? ' active' : ''), label);
+    function makeItem(key, label, count, clickFn) {
+      var b = el('button', 'cat-item' + (state.category === key && !state.brand ? ' active' : ''), label);
       b.type = 'button';
       b.dataset.cat = key;
       b.appendChild(el('span', 'cat-count', String(count)));
-      b.addEventListener('click', function () {
+      b.addEventListener('click', clickFn || function () {
         state.category = key;
+        state.brand = '';
         state.menuOpen = false;
         closeCatDrawer();
         renderNav();
@@ -389,7 +396,37 @@
     panel.appendChild(makeItem('all', t('all'), state.products.length));
     I18N.categoryKeys.forEach(function (key) {
       var n = state.products.filter(function (p) { return p.category === key; }).length;
-      panel.appendChild(makeItem(key, catName(key), n));
+      if (key === '化妆品') {
+        panel.appendChild(makeItem(key, catName(key), n, function () {
+          state.category = key;
+          state.brand = '';
+          state.menuOpen = false;
+          closeCatDrawer();
+          renderNav();
+          renderGrid();
+        }));
+        // 品牌子行
+        var brands = (I18N.brandKeys || ['PINK 21', 'TEI']);
+        brands.forEach(function (bk) {
+          var bn = state.products.filter(function (p) { return p.category === key && p.brand === bk; }).length;
+          var bb = el('button', 'cat-item brand-item' + (state.category === key && state.brand === bk ? ' active' : ''), bk);
+          bb.type = 'button';
+          bb.dataset.cat = key;
+          bb.dataset.brand = bk;
+          bb.appendChild(el('span', 'cat-count', String(bn)));
+          bb.addEventListener('click', function () {
+            state.category = key;
+            state.brand = bk;
+            state.menuOpen = false;
+            closeCatDrawer();
+            renderNav();
+            renderGrid();
+          });
+          panel.appendChild(bb);
+        });
+      } else {
+        panel.appendChild(makeItem(key, catName(key), n));
+      }
     });
   }
   function openCatDrawer() {
@@ -422,6 +459,7 @@
     var body = el('div', 'card-body');
     body.appendChild(el('div', 'card-code', p.code || '—'));
     if (p.name) body.appendChild(el('div', 'card-name', p.name));
+    if (p.brand) body.appendChild(el('div', 'card-brand', p.brand));
     body.appendChild(el('div', 'card-sizes', p.sizes || '—'));
     var pr1 = el('div', 'card-price');
     pr1.appendChild(el('span', 'label', t('unitPrice')));
@@ -597,15 +635,22 @@
       info.appendChild(modeWrap);
       row.appendChild(info);
       var qtyWrap = el("div", "cart-qty");
+      var bMinus12 = el("button", "qty-btn qty-step", "-12");
       var bMinus = el("button", "qty-btn", "−");
       var bPlus = el("button", "qty-btn", "+");
-      bMinus.type = "button"; bPlus.type = "button";
-      bMinus.addEventListener("click", function () { it.qty = Math.max(1, toNum(it.qty) - (it.mode === "dozen" ? 1 : 1)); saveCart(state.cart); });
-      bPlus.addEventListener("click", function () { it.qty = Math.min(99, toNum(it.qty) + (it.mode === "dozen" ? 1 : 1)); saveCart(state.cart); });
+      var bPlus12 = el("button", "qty-btn qty-step", "+12");
+      bMinus12.type = "button"; bMinus.type = "button"; bPlus.type = "button"; bPlus12.type = "button";
+      bMinus12.title = t("qtyStep12"); bPlus12.title = t("qtyStep12");
+      bMinus12.addEventListener("click", function () { it.qty = Math.max(1, toNum(it.qty) - 12); saveCart(state.cart); });
+      bMinus.addEventListener("click", function () { it.qty = Math.max(1, toNum(it.qty) - 1); saveCart(state.cart); });
+      bPlus.addEventListener("click", function () { it.qty = Math.min(99, toNum(it.qty) + 1); saveCart(state.cart); });
+      bPlus12.addEventListener("click", function () { it.qty = Math.min(99, toNum(it.qty) + 12); saveCart(state.cart); });
+      qtyWrap.appendChild(bMinus12);
       qtyWrap.appendChild(bMinus);
       var qtyVal = el("span", "qty-val", it.mode === "dozen" ? String(it.qty) + " " + t("cartByDozen") : String(it.qty) + " " + t("cartByUnit"));
       qtyWrap.appendChild(qtyVal);
       qtyWrap.appendChild(bPlus);
+      qtyWrap.appendChild(bPlus12);
       row.appendChild(qtyWrap);
       var right = el("div", "cart-right");
       var priceLine = el("div", "cart-line-total", fmtMoney(it.mode === "dozen" ? toNum(it.dozenPrice) : toNum(it.unitPrice)));
@@ -778,6 +823,11 @@
     $('btn-upload').textContent = t('imageUpload');
     $('f-image').placeholder = t('imageFileName');
     $('f-image-tip').textContent = t('imageTip');
+    var bf = $('brand-field');
+    if (bf) {
+      var bl = bf.querySelector('label');
+      if (bl) bl.textContent = t('brand');
+    }
     var curCat = $('admin-cat').value || 'all';
     buildSelect($('admin-cat'), ['all'].concat(I18N.categoryKeys), function (k) {
       return k === 'all' ? t('all') : catName(k);
@@ -873,6 +923,10 @@
     $('f-code').value = p ? (p.code || '') : '';
     $('f-name').value = p ? (p.name || '') : '';
     buildSelect($('f-category'), I18N.categoryKeys, catName, p ? p.category : '文胸');
+    $('f-category').addEventListener('change', function () {
+      var bf = $('brand-field');
+      if (bf) bf.hidden = this.value !== '化妆品';
+    });
     $('f-sizes').value = p ? (p.sizes || '') : '';
     $('f-unit').value = p ? String(p.unitPrice || '') : '';
     $('f-dozen').value = p ? String(p.dozenPrice || '') : '';
@@ -880,6 +934,22 @@
     $('f-note').value = p ? (p.note || '') : '';
     $('f-image').value = p ? (p.image || '') : '';
     renderImageSelect(IMAGES, p ? p.image : '');
+    var brandSel = $('f-brand');
+    if (brandSel) {
+      brandSel.textContent = '';
+      var b0 = document.createElement('option');
+      b0.value = '';
+      b0.textContent = t('brandNone');
+      brandSel.appendChild(b0);
+      (I18N.brandKeys || []).forEach(function (bk) {
+        var o = document.createElement('option');
+        o.value = bk;
+        o.textContent = bk;
+        brandSel.appendChild(o);
+      });
+      brandSel.value = p ? (p.brand || '') : '';
+      $('brand-field').hidden = cat !== '化妆品';
+    }
     updatePreview();
     $('form-overlay').hidden = false;
   }
@@ -900,6 +970,7 @@
       unitPrice: toNum($('f-unit').value),
       dozenPrice: toNum($('f-dozen').value),
       image: $('f-image').value.trim(),
+      brand: cat === '化妆品' ? $('f-brand').value : '',
       status: $('f-status').value,
       note: $('f-note').value.trim()
     });
