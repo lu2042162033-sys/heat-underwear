@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:44:47.066723",
+  "updatedAt": "2026-08-20T20:45:05.230259",
   "products": [
     {
       "code": "6088",
@@ -1498,9 +1498,9 @@
       "id": 115
     },
     {
-      "code": "113",
+      "code": "YIHE-113",
       "name": "",
-      "category": "瑜伽裤-冬季",
+      "category": "瑜伽裤-夏季",
       "brand": "",
       "sizes": "M/L L/XL XL/XXL",
       "unitPrice": 28000,
