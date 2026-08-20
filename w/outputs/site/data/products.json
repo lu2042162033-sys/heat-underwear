@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:57:23.545164",
+  "updatedAt": "2026-08-20T20:57:45.173641",
   "products": [
     {
       "code": "6088",
@@ -3059,9 +3059,9 @@
     },
     {
       "code": "CS2553",
-      "name": "",
+      "name": "睫毛膏",
       "category": "化妆品",
-      "brand": "",
+      "brand": "PINK 21",
       "sizes": "",
       "unitPrice": 2000,
       "dozenPrice": 0,
