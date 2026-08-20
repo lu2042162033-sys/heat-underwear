@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:57:45.173641",
+  "updatedAt": "2026-08-20T20:58:18.696309",
   "products": [
     {
       "code": "6088",
@@ -3072,9 +3072,9 @@
     },
     {
       "code": "CS6847",
-      "name": "",
+      "name": "眉毛膏",
       "category": "化妆品",
-      "brand": "",
+      "brand": "PINK 21",
       "sizes": "",
       "unitPrice": 1700,
       "dozenPrice": 0,
