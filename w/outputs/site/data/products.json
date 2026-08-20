@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-20T20:53:28.632880",
+  "updatedAt": "2026-08-20T20:55:48.429286",
   "products": [
     {
       "code": "6088",
@@ -2994,9 +2994,9 @@
     },
     {
       "code": "CS6765",
-      "name": "",
+      "name": "散粉",
       "category": "化妆品",
-      "brand": "",
+      "brand": "PINK 21",
       "sizes": "",
       "unitPrice": 2900,
       "dozenPrice": 0,
