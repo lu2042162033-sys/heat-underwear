@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-21T17:06:06.297854",
+  "updatedAt": "2026-08-21T17:10:49.771251",
   "products": [
     {
       "code": "6088",
@@ -3554,7 +3554,7 @@
     {
       "code": "F-4093",
       "name": "保温杯450ML",
-      "category": "袜子",
+      "category": "杯子",
       "brand": "",
       "sizes": "",
       "unitPrice": 16000,
@@ -3567,7 +3567,7 @@
     {
       "code": "3195",
       "name": "三丽鸥保温杯520ML",
-      "category": "本子",
+      "category": "杯子",
       "brand": "",
       "sizes": "",
       "unitPrice": 26500,
