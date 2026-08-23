@@ -6,6 +6,7 @@
   <title>HEAT UNDERWEAR · 商品展示</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
   <header class="site-header">
@@ -36,6 +37,10 @@
     <div class="cat-drawer-head">
       <span id="cat-drawer-title"></span>
       <button id="cat-drawer-close" class="btn" type="button">×</button>
+    </div>
+    <div class="cat-sort">
+      <span id="cat-sort-label" class="cat-sort-label"></span>
+      <select id="cat-sort" aria-label="sort"></select>
     </div>
     <div id="cat-menu-panel" class="cat-menu-panel"></div>
   </div>
@@ -141,8 +146,6 @@
               <th data-i18n="size"></th>
               <th data-i18n="unitPrice"></th>
               <th data-i18n="dozenPrice"></th>
-              <th data-i18n="status"></th>
-              <th data-i18n="note"></th>
               <th data-i18n="actions"></th>
             </tr>
           </thead>
@@ -164,7 +167,6 @@
         <div><label data-i18n="size"></label><input id="f-sizes"></div>
         <div><label data-i18n="unitPrice"></label><input id="f-unit" type="number" min="0"></div>
         <div><label data-i18n="dozenPrice"></label><input id="f-dozen" type="number" min="0"></div>
-        <div><label data-i18n="status"></label><select id="f-status"></select></div>
         <div class="span-2">
           <label data-i18n="image"></label>
           <div class="image-picker">

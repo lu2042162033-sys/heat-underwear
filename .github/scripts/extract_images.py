@@ -110,6 +110,8 @@ def main():
     for p in products:
         if not isinstance(p, dict):
             continue
+        # 已彻底移除状态体系：任何来源的 status 都不再写入
+        p.pop("status", None)
         if (p.get("image") or "").startswith("data:"):
             p["image"] = extract_image(p, img_dir)
             extracted += 1

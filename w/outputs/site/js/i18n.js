@@ -1,13 +1,17 @@
 /* 中 / 西 双语文案 */
 window.I18N = {
   categoryKeys: ["文胸","内裤","内衣裤套装","睡衣","束身衣","瑜伽裤-夏季","瑜伽裤-冬季","背心","动物睡衣","发夹","手机链","项链","手链","脚链","戒指","袜子","U型枕","毛绒钥匙扣","文具","本子","杯子","化妆品","皇冠"],
-  statusKeys: ["无价格", "已匹配", "需核对"],
   brandKeys: ["PINK 21", "TEI"],
   zh: {
     langName: "中文",
     subtitle: "热感保暖内衣 · 价格目录",
     searchPlaceholder: "搜索货号…",
     all: "全部",
+    sortLabel: "排序",
+    sortDefault: "默认",
+    sortCode: "货号",
+    sortPriceAsc: "单价↑",
+    sortPriceDesc: "单价↓",
     unitPrice: "单价",
     dozenPrice: "成打价",
     size: "尺码",
@@ -42,7 +46,6 @@ window.I18N = {
     saveFailed: "保存失败，请重试",
     name: "名称",
     note: "备注",
-    status: "状态",
     actions: "操作",
     image: "图片",
     noImage: "暂无图片",
@@ -114,11 +117,6 @@ window.I18N = {
       "杯子": "杯子",
       "化妆品": "化妆品",
       "皇冠": "皇冠"
-    },
-    statusNames: {
-      "无价格": "无价格",
-      "已匹配": "已匹配",
-      "需核对": "需核对"
     }
   },
   es: {
@@ -126,6 +124,11 @@ window.I18N = {
     subtitle: "Catálogo de Precios",
     searchPlaceholder: "Buscar Nº de artículo…",
     all: "Todos",
+    sortLabel: "Ordenar",
+    sortDefault: "Predeterminado",
+    sortCode: "Nº de artículo",
+    sortPriceAsc: "Precio ↑",
+    sortPriceDesc: "Precio ↓",
     unitPrice: "Precio por unidad",
     dozenPrice: "Precio por 12U",
     size: "Talle",
@@ -160,7 +163,6 @@ window.I18N = {
     saveFailed: "Error al guardar, intente de nuevo",
     name: "Nombre",
     note: "Nota",
-    status: "Estado",
     actions: "Acciones",
     image: "Imagen",
     noImage: "Sin imagen",
@@ -232,11 +234,6 @@ window.I18N = {
       "杯子": "Tazas",
       "化妆品": "Cosméticos",
       "皇冠": "Coronas"
-    },
-    statusNames: {
-      "无价格": "Sin precio",
-      "已匹配": "Coincide",
-      "需核对": "Verificar"
     }
   }
 };

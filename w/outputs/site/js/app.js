@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260822-19';
+  var APP_VERSION = '20260823-20';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -179,6 +179,7 @@
     category: 'all',
     brand: '',
     query: '',
+    sort: 'default',
     unlocked: false,
     editingId: null,
     cart: [],
@@ -226,10 +227,6 @@
     var m = (I18N[state.lang] || {}).categoryNames || {};
     return m[key] || key;
   }
-  function statusName(key) {
-    var m = (I18N[state.lang] || {}).statusNames || {};
-    return m[key] || key;
-  }
   function toNum(v) {
     if (typeof v === 'number') return isNaN(v) ? 0 : v;
     var n = parseInt(String(v == null ? '' : v).replace(/[^\d-]/g, ''), 10);
@@ -254,7 +251,6 @@
       unitPrice: toNum(p.unitPrice),
       dozenPrice: toNum(p.dozenPrice),
       image: p.image || '',
-      status: p.status || '',
       note: p.note || ''
     };
     if (p.id !== undefined && p.id !== null) o.id = p.id;
@@ -322,13 +318,23 @@
   }
   function filtered() {
     var q = state.query.trim().toLowerCase();
-    return state.products.filter(function (p) {
+    var list = state.products.filter(function (p) {
       if (state.category !== 'all' && p.category !== state.category) return false;
       if (state.brand && p.brand !== state.brand) return false;
       if (!q) return true;
       return String(p.code).toLowerCase().indexOf(q) >= 0 ||
         String(p.name).toLowerCase().indexOf(q) >= 0;
     });
+    var s = state.sort;
+    if (s === 'code') {
+      list = list.slice().sort(function (a, b) {
+        return String(a.code).localeCompare(String(b.code), undefined, { numeric: true });
+      });
+    } else if (s === 'price-asc' || s === 'price-desc') {
+      var price = function (p) { return Math.max(toNum(p.unitPrice), toNum(p.dozenPrice)); };
+      list = list.slice().sort(function (a, b) { return s === 'price-asc' ? price(a) - price(b) : price(b) - price(a); });
+    }
+    return list;
   }
   function filteredAdmin() {
     var q = ($('admin-search').value || '').trim().toLowerCase();
@@ -376,6 +382,25 @@
     var panel = $('cat-menu-panel');
     var drawerTitle = $('cat-drawer-title');
     if (drawerTitle) drawerTitle.textContent = t('category');
+    var sortSel = $('cat-sort');
+    var sortLabel = $('cat-sort-label');
+    if (sortLabel) sortLabel.textContent = t('sortLabel');
+    if (sortSel) {
+      sortSel.textContent = '';
+      var sortOpts = [
+        ['default', 'sortDefault'],
+        ['code', 'sortCode'],
+        ['price-asc', 'sortPriceAsc'],
+        ['price-desc', 'sortPriceDesc']
+      ];
+      sortOpts.forEach(function (pair) {
+        var o = document.createElement('option');
+        o.value = pair[0];
+        o.textContent = t(pair[1]);
+        sortSel.appendChild(o);
+      });
+      sortSel.value = state.sort;
+    }
     if (!panel) return;
     panel.textContent = '';
     function makeItem(key, label, count, clickFn) {
@@ -450,12 +475,31 @@
     if (p.image) {
       img.src = imgSrc(p.image);
       img.loading = QA ? 'eager' : 'lazy';
+      img.addEventListener('load', function () { media.classList.add('is-loaded'); });
+      img.addEventListener('error', function () {
+        img.style.display = 'none';
+        ph.hidden = false;
+        media.classList.add('is-loaded');
+      });
     } else {
       ph.hidden = false;
+      media.classList.add('is-loaded');
     }
-    img.addEventListener('error', function () { img.style.display = 'none'; ph.hidden = false; });
     media.appendChild(img);
     media.appendChild(ph);
+    var priced = toNum(p.unitPrice) > 0 || toNum(p.dozenPrice) > 0;
+    var qa = el('button', 'quick-add' + (priced ? '' : ' disabled'), '+');
+    qa.type = 'button';
+    qa.setAttribute('aria-label', t('addToCart'));
+    qa.setAttribute('aria-disabled', priced ? 'false' : 'true');
+    if (priced) {
+      qa.addEventListener('click', function (e) {
+        e.stopPropagation();
+        addToCart(p, 1);
+        showToast(t('cartAdded'), 'success', 1800);
+      });
+    }
+    media.appendChild(qa);
     var body = el('div', 'card-body');
     body.appendChild(el('div', 'card-code', p.code || '—'));
     if (p.name) body.appendChild(el('div', 'card-name', p.name));
@@ -478,7 +522,11 @@
     var grid = $('grid');
     grid.textContent = '';
     var list = filtered();
-    list.forEach(function (p) { grid.appendChild(card(p)); });
+    list.forEach(function (p, idx) {
+      var c = card(p);
+      c.style.animationDelay = (Math.min(idx, 12) * 14) + 'ms';
+      grid.appendChild(c);
+    });
     $('empty').hidden = list.length > 0;
     $('empty').textContent = t('noResults');
     $('count').textContent = list.length + ' ' + t('countSuffix');
@@ -853,10 +901,6 @@
     tr.appendChild(el('td', '', p.sizes || '—'));
     tr.appendChild(el('td', '', fmtPrice(p.unitPrice)));
     tr.appendChild(el('td', '', fmtPrice(p.dozenPrice)));
-    tr.appendChild(el('td', '', statusName(p.status || '')));
-    var tdNote = el('td', 'note-cell', p.note || '');
-    tdNote.title = p.note || '';
-    tr.appendChild(tdNote);
     var tdAct = el('td');
     var bEdit = el('button', 'btn btn-sm', t('edit'));
     bEdit.type = 'button';
@@ -927,7 +971,6 @@
     $('f-sizes').value = p ? (p.sizes || '') : '';
     $('f-unit').value = p ? String(p.unitPrice || '') : '';
     $('f-dozen').value = p ? String(p.dozenPrice || '') : '';
-    buildSelect($('f-status'), I18N.statusKeys, statusName, p ? (p.status || '已匹配') : '已匹配');
     $('f-note').value = p ? (p.note || '') : '';
     $('f-image').value = p ? (p.image || '') : '';
     renderImageSelect(IMAGES, p ? p.image : '');
@@ -970,7 +1013,6 @@
       dozenPrice: toNum($('f-dozen').value),
       image: $('f-image').value.trim(),
       brand: cat === '化妆品' ? $('f-brand').value : '',
-      status: $('f-status').value,
       note: $('f-note').value.trim()
     });
     if (state.editingId === null) {
@@ -1093,6 +1135,11 @@
     }
     var catDrawerClose = $('cat-drawer-close');
     if (catDrawerClose) catDrawerClose.addEventListener('click', closeCatDrawer);
+    var catSort = $('cat-sort');
+    if (catSort) catSort.addEventListener('change', function () {
+      state.sort = catSort.value;
+      renderGrid();
+    });
     document.addEventListener('click', function (e) {
       if (state.menuOpen && e.target.closest && !e.target.closest('#cat-drawer') && !e.target.closest('#cat-menu-btn')) {
         closeCatDrawer();
