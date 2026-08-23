@@ -89,11 +89,10 @@ body{letter-spacing:.01em;}
 .quick-add{position:absolute;right:12px;bottom:12px;z-index:3;width:44px;height:44px;border-radius:50%;
   border:1px solid rgba(255,255,255,.55);background:rgba(36,31,25,.92);color:#fff;font-size:22px;font-weight:600;
   line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow-sm);
-  opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s,background .2s;}
-.card:hover .quick-add,.quick-add:focus-visible,.quick-add.visible{opacity:1;transform:none;}
+  opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s,background .2s;}
+.card:hover .quick-add,.quick-add:focus-visible,.quick-add.visible{opacity:1;pointer-events:auto;transform:none;}
 .quick-add:hover{background:var(--accent-strong);}
 .quick-add.disabled{background:rgba(36,31,25,.5);cursor:not-allowed;opacity:.65;}
-@media(hover:none){.quick-add{opacity:1;transform:none;}}
 
 /* ---------- 页脚 ---------- */
 .site-footer{border-top:1px solid var(--line);background:linear-gradient(180deg,var(--bg),var(--surface));}
