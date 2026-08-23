@@ -27,6 +27,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -r w/outputs/site/* _site/
+          rm -f _site/data/pending-products.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

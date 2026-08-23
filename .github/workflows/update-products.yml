@@ -28,28 +28,10 @@ jobs:
             echo "ok=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Apply pending products
+      - name: Apply pending products (extract images + compact data)
         if: steps.auth.outputs.ok == 'true' && github.event.action == 'update-products'
         run: |
-          python3 -c "
-          import json, os
-          src = 'w/outputs/site/data/pending-products.json'
-          if not os.path.exists(src):
-              print('NO_PENDING_FILE')
-              raise SystemExit(0)
-          with open(src, encoding='utf-8') as f:
-              obj = json.load(f)
-          products = obj.get('products') if isinstance(obj, dict) else obj
-          if isinstance(products, dict) and 'value' in products:
-              products = products['value']
-          if not isinstance(products, list) or len(products) < 1:
-              raise SystemExit('BAD_PENDING_DATA')
-          import datetime
-          data = {'version': 2, 'updatedAt': datetime.datetime.now().isoformat(), 'products': products}
-          with open('w/outputs/site/data/products.json', 'w', encoding='utf-8') as f:
-              json.dump(data, f, ensure_ascii=False, indent=2)
-          print('products.json written:', len(products))
-          "
+          python3 .github/scripts/extract_images.py
 
       - name: Write auth result
         env:
@@ -64,7 +46,7 @@ jobs:
         run: |
           git config user.name "heat-site-bot"
           git config user.email "heat-site-bot@users.noreply.github.com"
-          git add w/outputs/site/data/products.json w/outputs/site/data/admin-auth.json w/outputs/site/data/pending-products.json
+          git add w/outputs/site/data w/outputs/site/images/products
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0

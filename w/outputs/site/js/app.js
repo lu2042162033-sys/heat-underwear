@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260809-18';
+  var APP_VERSION = '20260822-19';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -1204,33 +1204,28 @@
       if (state.unlocked) {
         setTimeout(function () { openAdmin(); }, 400);
       }
-    }
-    function finishBoot() {
-      finish();
-      if (state.unlocked) {
-        setTimeout(function () { openAdmin(); }, 400);
-      }
-    }
-    if (github.mode && ghDataUrl()) {
-      var urls = ghDataUrl().split('|');
-      function tryFetch(i) {
-        if (i >= urls.length) return Promise.reject(new Error('all failed'));
-        return fetch(urls[i] + '?t=' + Date.now(), { cache: 'no-store' }).then(function (res) {
-          if (!res.ok) return tryFetch(i + 1);
-          return res.json();
-        });
-      }
-      tryFetch(0).then(function (obj) {
-        var list = Array.isArray(obj) ? obj : (obj && Array.isArray(obj.products) ? obj.products : null);
-        if (list && list.length) {
-          state.products = list.map(function (p, i) { return normalize(p, i + 1); });
-          try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ schema: SCHEMA, savedAt: new Date().toISOString(), products: state.products })); } catch (e) {}
+      // 先渲染种子/本地缓存，再后台刷新最新数据，避免等待大文件下载完成才显示商品
+      if (github.mode && ghDataUrl()) {
+        var urls = ghDataUrl().split('|');
+        function tryFetch(i) {
+          if (i >= urls.length) return Promise.reject(new Error('all failed'));
+          return fetch(urls[i] + '?t=' + Date.now(), { cache: 'no-store' }).then(function (res) {
+            if (!res.ok) return tryFetch(i + 1);
+            return res.json();
+          });
         }
-        finishBoot();
-      }).catch(function () { boot(); });
-    } else {
-      boot();
+        tryFetch(0).then(function (obj) {
+          var list = Array.isArray(obj) ? obj : (obj && Array.isArray(obj.products) ? obj.products : null);
+          if (list && list.length) {
+            state.products = list.map(function (p, i) { return normalize(p, i + 1); });
+            try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ schema: SCHEMA, savedAt: new Date().toISOString(), products: state.products })); } catch (e) {}
+            renderAll();
+            if (state.adminOpen && !$('admin-overlay').hidden) renderAdminTable();
+          }
+        }).catch(function () { /* 网络失败时保持种子/缓存数据 */ });
+      }
     }
+    boot();
   }
 
   if (document.readyState === 'loading') {
