@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T19:55:35.022683+00:00",
+  "updatedAt": "2026-08-24T19:56:24.924164+00:00",
   "products": [
     {
       "code": "6088",
@@ -4952,8 +4952,8 @@
       "category": "戒指",
       "brand": "",
       "sizes": "",
-      "unitPrice": 26000,
-      "dozenPrice": 0,
+      "unitPrice": 0,
+      "dozenPrice": 26000,
       "image": "admin_413_1edfbd72.jpg",
       "note": "",
       "id": 413
@@ -5005,6 +5005,18 @@
       "image": "admin_417_9a1181e8.jpg",
       "note": "",
       "id": 417
+    },
+    {
+      "code": "AZ-217 X24",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 0,
+      "dozenPrice": 55000,
+      "image": "admin_418_069da081.jpg",
+      "note": "",
+      "id": 418
     }
   ]
 }

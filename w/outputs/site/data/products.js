@@ -412,9 +412,10 @@ window.PRODUCTS_SEED = [
   {"code": "AZ-218 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 31000, "image": "admin_410_61cb76a5.jpg", "note": "", "id": 410},
   {"code": "AZ-191 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 49000, "image": "admin_411_8534bbf5.jpg", "note": "", "id": 411},
   {"code": "AZ-225 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 43000, "image": "admin_412_f3d08c8c.jpg", "note": "", "id": 412},
-  {"code": "AZ-231 24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 26000, "dozenPrice": 0, "image": "admin_413_1edfbd72.jpg", "note": "", "id": 413},
+  {"code": "AZ-231 24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 26000, "image": "admin_413_1edfbd72.jpg", "note": "", "id": 413},
   {"code": "AZ-204 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 43000, "image": "admin_414_ba6cdee9.jpg", "note": "", "id": 414},
   {"code": "AZ-205 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 19000, "image": "admin_415_9a1181e8.jpg", "note": "", "id": 415},
   {"code": "AZ-217 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 55000, "image": "admin_416_069da081.jpg", "note": "", "id": 416},
-  {"code": "AZ-205 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 19000, "image": "admin_417_9a1181e8.jpg", "note": "", "id": 417}
+  {"code": "AZ-205 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 19000, "image": "admin_417_9a1181e8.jpg", "note": "", "id": 417},
+  {"code": "AZ-217 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 55000, "image": "admin_418_069da081.jpg", "note": "", "id": 418}
 ];
