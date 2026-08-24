@@ -192,7 +192,12 @@
       var raw = localStorage.getItem(CART_KEY);
       if (raw) {
         var arr = JSON.parse(raw);
-        if (Array.isArray(arr)) return arr;
+        if (Array.isArray(arr)) {
+          return arr.map(function (it) {
+            if (it && typeof it === 'object' && it.note === undefined) it.note = '';
+            return it;
+          });
+        }
       }
     } catch (e) {}
     return [];
@@ -617,7 +622,7 @@
         return;
       }
     }
-    state.cart.push({ id: p.id, code: p.code, name: p.name || "", category: p.category, image: p.image || "", unitPrice: toNum(p.unitPrice), dozenPrice: toNum(p.dozenPrice), qty: q, mode: mode });
+    state.cart.push({ id: p.id, code: p.code, name: p.name || "", category: p.category, image: p.image || "", unitPrice: toNum(p.unitPrice), dozenPrice: toNum(p.dozenPrice), qty: q, mode: mode, note: "" });
     saveCart(state.cart);
   }
   function cartLinePrice(item) {
@@ -681,6 +686,17 @@
       bD.addEventListener("click", function () { it.mode = "dozen"; it.qty = 1; saveCart(state.cart); });
       modeWrap.appendChild(bU); modeWrap.appendChild(bD);
       info.appendChild(modeWrap);
+      var noteInput = document.createElement("input");
+      noteInput.type = "text";
+      noteInput.className = "cart-note";
+      noteInput.value = it.note || "";
+      noteInput.placeholder = t("cartNotePlaceholder");
+      noteInput.maxLength = 80;
+      noteInput.addEventListener("input", function () {
+        it.note = this.value;
+        try { localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); } catch (e) {}
+      });
+      info.appendChild(noteInput);
       row.appendChild(info);
       var qtyWrap = el("div", "cart-qty");
       var bMinus12 = el("button", "qty-btn qty-step", "-12");
@@ -740,7 +756,7 @@
       var line = cartLinePrice(it);
       total += line;
       var modeTxt = it.mode === "dozen" ? t("cartByDozen") + " (" + t("cartModeDozen") + ")" : t("cartByUnit") + " (" + t("cartModeUnit") + ")";
-      rows += "<tr><td>" + (i + 1) + "</td><td>" + (it.code || "\u2014") + "</td><td>" + (it.name || "") + "</td><td>" + catName(it.category) + "</td><td>" + modeTxt + "</td><td>" + it.qty + "</td><td>" + fmtMoney(line) + "</td></tr>";
+      rows += "<tr><td>" + (i + 1) + "</td><td>" + (it.code || "\u2014") + "</td><td>" + (it.name || "") + "</td><td>" + (it.note || "") + "</td><td>" + catName(it.category) + "</td><td>" + modeTxt + "</td><td>" + it.qty + "</td><td>" + fmtMoney(line) + "</td></tr>";
     });
     var w = window.open("", "_blank");
     if (!w) { alert(t("saveErr")); return; }
@@ -753,7 +769,7 @@
       "<h1>" + (CFG.title || "") + "</h1>" +
       "<p>" + (CFG.storeLine || "") + "</p>" +
       "<p>" + t("cartDate") + ": " + new Date().toLocaleString() + "</p>" +
-      "<table><thead><tr><th>" + t("cartItemNo") + "</th><th>" + t("code") + "</th><th>" + t("name") + "</th><th>" + t("category") + "</th><th>" + t("cartMode") + "</th><th>" + t("qty") + "</th><th class=\"r\">" + t("cartLineTotal") + "</th></tr></thead><tbody>" +
+      "<table><thead><tr><th>" + t("cartItemNo") + "</th><th>" + t("code") + "</th><th>" + t("name") + "</th><th>" + t("note") + "</th><th>" + t("category") + "</th><th>" + t("cartMode") + "</th><th>" + t("qty") + "</th><th class=\"r\">" + t("cartLineTotal") + "</th></tr></thead><tbody>" +
       rows + "</tbody></table>" +
       "<p class=\"total\">" + t("cartTotal") + ": " + fmtMoney(total) + "</p>" +
       "</body></html>";
