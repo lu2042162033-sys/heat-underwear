@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T20:40:45.913393+00:00",
+  "updatedAt": "2026-08-24T20:42:08.459141+00:00",
   "products": [
     {
       "code": "6088",
@@ -5089,6 +5089,18 @@
       "image": "admin_424_fd672258.jpg",
       "note": "",
       "id": 424
+    },
+    {
+      "code": "218-18",
+      "name": "儿童蜘蛛侠睡衣",
+      "category": "动物睡衣",
+      "brand": "",
+      "sizes": "100-110-120-130-140",
+      "unitPrice": 16000,
+      "dozenPrice": 0,
+      "image": "admin_425_4f8fde72.jpg",
+      "note": "",
+      "id": 425
     }
   ]
 }
