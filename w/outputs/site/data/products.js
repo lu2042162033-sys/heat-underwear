@@ -411,5 +411,6 @@ window.PRODUCTS_SEED = [
   {"code": "AZ-179 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 28000, "image": "admin_409_3fbd11d6.jpg", "note": "", "id": 409},
   {"code": "AZ-218 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 31000, "image": "admin_410_61cb76a5.jpg", "note": "", "id": 410},
   {"code": "AZ-191 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 49000, "image": "admin_411_8534bbf5.jpg", "note": "", "id": 411},
-  {"code": "AZ-225 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 43000, "image": "admin_412_f3d08c8c.jpg", "note": "", "id": 412}
+  {"code": "AZ-225 X24", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 43000, "image": "admin_412_f3d08c8c.jpg", "note": "", "id": 412},
+  {"code": "AZ-231 24", "name": "", "category": "文胸", "brand": "", "sizes": "", "unitPrice": 26000, "dozenPrice": 0, "image": "admin_413_1edfbd72.jpg", "note": "", "id": 413}
 ];

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T15:55:33.509564+00:00",
+  "updatedAt": "2026-08-24T15:55:54.219460+00:00",
   "products": [
     {
       "code": "6088",
@@ -4945,6 +4945,18 @@
       "image": "admin_412_f3d08c8c.jpg",
       "note": "",
       "id": 412
+    },
+    {
+      "code": "AZ-231 24",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 26000,
+      "dozenPrice": 0,
+      "image": "admin_413_1edfbd72.jpg",
+      "note": "",
+      "id": 413
     }
   ]
 }
