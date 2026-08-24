@@ -147,6 +147,16 @@ body{letter-spacing:.01em;}
 .cart-note::placeholder{color:#B8B2A7;}
 @media(max-width:480px){.cart-note{font-size:13px;padding:8px 10px;}}
 
+/* ---------- 移动端购物车适配（避免重叠） ---------- */
+@media(max-width:480px){
+  .cart-item{flex-wrap:wrap;gap:8px 10px;}
+  .cart-thumb{flex-shrink:0;}
+  .cart-info{flex:1 1 auto;min-width:0;}
+  .cart-qty{flex:1 1 100%;align-self:auto;}
+  .cart-right{flex:1 1 100%;min-width:0;align-self:auto;align-items:flex-end;}
+  .cart-note{margin-top:8px;}
+}
+
 /* ---------- 减少动效 ---------- */
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;}
