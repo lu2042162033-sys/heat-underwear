@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T20:44:10.219651+00:00",
+  "updatedAt": "2026-08-24T20:45:05.369500+00:00",
   "products": [
     {
       "code": "6088",
@@ -5113,6 +5113,18 @@
       "image": "admin_426_fcf055b2.jpg",
       "note": "",
       "id": 426
+    },
+    {
+      "code": "218-15",
+      "name": "",
+      "category": "动物睡衣",
+      "brand": "",
+      "sizes": "100-110-120-130-140",
+      "unitPrice": 16000,
+      "dozenPrice": 0,
+      "image": "admin_427_db7b22b7.jpg",
+      "note": "",
+      "id": 427
     }
   ]
 }

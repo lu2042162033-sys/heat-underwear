@@ -425,5 +425,6 @@ window.PRODUCTS_SEED = [
   {"code": "AZ-245", "name": "", "category": "手链", "brand": "", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_423_ee25fba4.jpg", "note": "", "id": 423},
   {"code": "219-3", "name": "儿童独角兽星星睡衣", "category": "动物睡衣", "brand": "", "sizes": "100-110-120-130-140", "unitPrice": 16000, "dozenPrice": 0, "image": "admin_424_fd672258.jpg", "note": "", "id": 424},
   {"code": "218-18", "name": "儿童蜘蛛侠睡衣", "category": "动物睡衣", "brand": "", "sizes": "100-110-120-130-140", "unitPrice": 16000, "dozenPrice": 0, "image": "admin_425_4f8fde72.jpg", "note": "", "id": 425},
-  {"code": "218-7", "name": "大人库洛米睡衣", "category": "动物睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 18000, "dozenPrice": 0, "image": "admin_426_fcf055b2.jpg", "note": "", "id": 426}
+  {"code": "218-7", "name": "大人库洛米睡衣", "category": "动物睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 18000, "dozenPrice": 0, "image": "admin_426_fcf055b2.jpg", "note": "", "id": 426},
+  {"code": "218-15", "name": "", "category": "动物睡衣", "brand": "", "sizes": "100-110-120-130-140", "unitPrice": 16000, "dozenPrice": 0, "image": "admin_427_db7b22b7.jpg", "note": "", "id": 427}
 ];
