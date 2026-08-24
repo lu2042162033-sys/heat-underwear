@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T15:55:54.219460+00:00",
+  "updatedAt": "2026-08-24T15:56:50.911950+00:00",
   "products": [
     {
       "code": "6088",
@@ -4949,7 +4949,7 @@
     {
       "code": "AZ-231 24",
       "name": "",
-      "category": "文胸",
+      "category": "戒指",
       "brand": "",
       "sizes": "",
       "unitPrice": 26000,
@@ -4957,6 +4957,18 @@
       "image": "admin_413_1edfbd72.jpg",
       "note": "",
       "id": 413
+    },
+    {
+      "code": "AZ-204 X24",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 0,
+      "dozenPrice": 43000,
+      "image": "admin_414_ba6cdee9.jpg",
+      "note": "",
+      "id": 414
     }
   ]
 }
