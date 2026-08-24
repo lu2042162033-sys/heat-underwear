@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T15:47:14.453587+00:00",
+  "updatedAt": "2026-08-24T15:48:48.627818+00:00",
   "products": [
     {
       "code": "6088",
@@ -4909,6 +4909,18 @@
       "image": "admin_409_3fbd11d6.jpg",
       "note": "",
       "id": 409
+    },
+    {
+      "code": "AZ-218",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 0,
+      "dozenPrice": 31000,
+      "image": "admin_410_61cb76a5.jpg",
+      "note": "",
+      "id": 410
     }
   ]
 }
