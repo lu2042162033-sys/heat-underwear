@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-24T19:56:24.924164+00:00",
+  "updatedAt": "2026-08-24T19:56:46.984006+00:00",
   "products": [
     {
       "code": "6088",
@@ -5017,6 +5017,18 @@
       "image": "admin_418_069da081.jpg",
       "note": "",
       "id": 418
+    },
+    {
+      "code": "AZ-220 X24",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 0,
+      "dozenPrice": 37000,
+      "image": "admin_419_73bf0d00.jpg",
+      "note": "",
+      "id": 419
     }
   ]
 }
