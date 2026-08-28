@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T19:42:15.857604+00:00",
+  "updatedAt": "2026-08-28T19:43:28.445892+00:00",
   "products": [
     {
       "code": "6088",
@@ -6073,6 +6073,18 @@
       "image": "admin_506_a4ea3980.png",
       "note": "",
       "id": 506
+    },
+    {
+      "code": "HW1060",
+      "name": "",
+      "category": "睡衣",
+      "brand": "",
+      "sizes": "S/M M/L XL/XXL",
+      "unitPrice": 47000,
+      "dozenPrice": 470000,
+      "image": "admin_507_552fddbf.jpg",
+      "note": "",
+      "id": 507
     }
   ]
 }
