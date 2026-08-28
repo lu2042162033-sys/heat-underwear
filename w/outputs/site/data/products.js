@@ -475,5 +475,6 @@ window.PRODUCTS_SEED = [
   {"code": "8831", "name": "", "category": "文胸", "brand": "", "sizes": "XL-4XL", "unitPrice": 13000, "dozenPrice": 130000, "image": "admin_473_f0f41928.jpg", "note": "", "id": 473},
   {"code": "94397", "name": "", "category": "文胸", "brand": "", "sizes": "M-XL", "unitPrice": 11500, "dozenPrice": 115000, "image": "admin_474_8540bd58.jpg", "note": "", "id": 474},
   {"code": "7613", "name": "", "category": "文胸", "brand": "", "sizes": "L-5XL", "unitPrice": 13000, "dozenPrice": 130000, "image": "admin_475_7dea38c6.jpg", "note": "", "id": 475},
-  {"code": "004", "name": "", "category": "文胸", "brand": "", "sizes": "L-3XL", "unitPrice": 10000, "dozenPrice": 100000, "image": "admin_476_ec9d988e.jpg", "note": "", "id": 476}
+  {"code": "004", "name": "", "category": "文胸", "brand": "", "sizes": "L-3XL", "unitPrice": 10000, "dozenPrice": 100000, "image": "admin_476_ec9d988e.jpg", "note": "", "id": 476},
+  {"code": "9841", "name": "", "category": "文胸", "brand": "", "sizes": "L-3XL", "unitPrice": 13000, "dozenPrice": 130000, "image": "admin_477_e015c16b.jpg", "note": "", "id": 477}
 ];
