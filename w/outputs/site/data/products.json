@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:12:14.173888+00:00",
+  "updatedAt": "2026-08-28T15:12:58.678067+00:00",
   "products": [
     {
       "code": "6088",
@@ -5941,6 +5941,18 @@
       "image": "admin_495_42318590.jpg",
       "note": "",
       "id": 495
+    },
+    {
+      "code": "CH-614",
+      "name": "",
+      "category": "束身衣",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 18700,
+      "dozenPrice": 187000,
+      "image": "admin_496_dfd23d04.jpg",
+      "note": "",
+      "id": 496
     }
   ]
 }
