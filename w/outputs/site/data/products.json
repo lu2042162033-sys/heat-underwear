@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:51:11.792171+00:00",
+  "updatedAt": "2026-08-28T14:53:54.475819+00:00",
   "products": [
     {
       "code": "6088",
@@ -5833,6 +5833,18 @@
       "image": "admin_486_c73005f3.jpg",
       "note": "",
       "id": 486
+    },
+    {
+      "code": "H5037",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 2600,
+      "dozenPrice": 26000,
+      "image": "admin_487_445ff587.jpg",
+      "note": "",
+      "id": 487
     }
   ]
 }
