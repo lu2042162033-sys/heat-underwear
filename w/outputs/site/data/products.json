@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:20:12.362737+00:00",
+  "updatedAt": "2026-08-28T15:42:14.724454+00:00",
   "products": [
     {
       "code": "6088",
@@ -6061,6 +6061,18 @@
       "image": "admin_505_f51f4a31.jpg",
       "note": "",
       "id": 505
+    },
+    {
+      "code": "2580-24",
+      "name": "",
+      "category": "手机链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3300,
+      "dozenPrice": 0,
+      "image": "admin_506_a4ea3980.png",
+      "note": "",
+      "id": 506
     }
   ]
 }
