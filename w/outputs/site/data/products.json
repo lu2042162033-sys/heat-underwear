@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:33:12.975398+00:00",
+  "updatedAt": "2026-08-28T14:33:38.693927+00:00",
   "products": [
     {
       "code": "6088",
@@ -3581,7 +3581,7 @@
     {
       "code": "BRO-25025",
       "name": "",
-      "category": "文胸",
+      "category": "发夹",
       "brand": "",
       "sizes": "",
       "unitPrice": 1200,
@@ -5465,7 +5465,7 @@
     {
       "code": "BRO-25034",
       "name": "",
-      "category": "文胸",
+      "category": "发夹",
       "brand": "",
       "sizes": "",
       "unitPrice": 1400,
