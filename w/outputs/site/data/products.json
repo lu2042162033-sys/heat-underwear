@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:17:42.679421+00:00",
+  "updatedAt": "2026-08-28T15:18:22.779436+00:00",
   "products": [
     {
       "code": "6088",
@@ -6025,6 +6025,18 @@
       "image": "admin_502_6d04c671.jpg",
       "note": "",
       "id": 502
+    },
+    {
+      "code": "16-M828",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "S-M-L",
+      "unitPrice": 4600,
+      "dozenPrice": 46000,
+      "image": "admin_503_36c0bf94.jpg",
+      "note": "",
+      "id": 503
     }
   ]
 }
