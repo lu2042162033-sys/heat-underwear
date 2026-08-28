@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T13:09:59.879054+00:00",
+  "updatedAt": "2026-08-28T13:10:24.197797+00:00",
   "products": [
     {
       "code": "6088",
@@ -5461,6 +5461,18 @@
       "image": "admin_455_4c650f8e.jpg",
       "note": "",
       "id": 455
+    },
+    {
+      "code": "BRO-25034",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 1400,
+      "dozenPrice": 0,
+      "image": "admin_456_551bd2bc.jpg",
+      "note": "",
+      "id": 456
     }
   ]
 }
