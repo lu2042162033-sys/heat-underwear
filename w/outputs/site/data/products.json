@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:54:52.847850+00:00",
+  "updatedAt": "2026-08-28T15:04:04.909096+00:00",
   "products": [
     {
       "code": "6088",
@@ -5857,6 +5857,18 @@
       "image": "admin_488_d6e29482.jpg",
       "note": "",
       "id": 488
+    },
+    {
+      "code": "H12002",
+      "name": "",
+      "category": "背心",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 7200,
+      "dozenPrice": 72000,
+      "image": "admin_489_bd758a99.jpg",
+      "note": "",
+      "id": 489
     }
   ]
 }
