@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:16:23.796311+00:00",
+  "updatedAt": "2026-08-28T15:17:08.037638+00:00",
   "products": [
     {
       "code": "6088",
@@ -6001,6 +6001,18 @@
       "image": "admin_500_9110fe65.jpg",
       "note": "",
       "id": 500
+    },
+    {
+      "code": "HG-1726",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 115000,
+      "dozenPrice": 115000,
+      "image": "admin_501_045d528f.jpg",
+      "note": "",
+      "id": 501
     }
   ]
 }
