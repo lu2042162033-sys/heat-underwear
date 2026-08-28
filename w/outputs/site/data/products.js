@@ -94,7 +94,7 @@ window.PRODUCTS_SEED = [
   {"code": "HK04012", "name": "", "category": "内衣裤套装", "brand": "", "sizes": "34B-38B / 36C-38C", "unitPrice": 24000, "dozenPrice": 240000, "image": "WhatsApp Image 2026-08-07 at 12.10.34 PM.jpeg", "note": "", "id": 92},
   {"code": "HK20010", "name": "", "category": "内衣裤套装", "brand": "", "sizes": "34B-40B", "unitPrice": 19500, "dozenPrice": 195000, "image": "WhatsApp Image 2026-08-07 at 12.10.36 PM.jpeg", "note": "", "id": 93},
   {"code": "K606", "name": "", "category": "内衣裤套装", "brand": "", "sizes": "34B/S-36B/M-38B/L", "unitPrice": 22000, "dozenPrice": 220000, "image": "WhatsApp Image 2026-08-07 at 12.10.35 PM.jpeg", "note": "", "id": 94},
-  {"code": "HW1061", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 36000, "dozenPrice": 360000, "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM.jpeg", "note": "", "id": 95},
+  {"code": "HW1061", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 35000, "dozenPrice": 349999, "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM.jpeg", "note": "", "id": 95},
   {"code": "HP384", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 64800, "dozenPrice": 648000, "image": "WhatsApp Image 2026-08-05 at 8.27.12 PM (4).jpeg", "note": "", "id": 96},
   {"code": "HP385", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 61400, "dozenPrice": 614000, "image": "WhatsApp Image 2026-08-05 at 8.27.13 PM (2).jpeg", "note": "", "id": 97},
   {"code": "HP390", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 36300, "dozenPrice": 363000, "image": "WhatsApp Image 2026-08-05 at 8.27.09 PM (3).jpeg", "note": "", "id": 98},

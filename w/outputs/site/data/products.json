@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:42:14.724454+00:00",
+  "updatedAt": "2026-08-28T19:42:15.857604+00:00",
   "products": [
     {
       "code": "6088",
@@ -1136,8 +1136,8 @@
       "category": "睡衣",
       "brand": "",
       "sizes": "S/M M/L XL/XXL",
-      "unitPrice": 36000,
-      "dozenPrice": 360000,
+      "unitPrice": 35000,
+      "dozenPrice": 349999,
       "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM.jpeg",
       "note": "",
       "id": 95
