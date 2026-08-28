@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T19:50:27.659445+00:00",
+  "updatedAt": "2026-08-28T19:56:34.288758+00:00",
   "products": [
     {
       "code": "6088",
@@ -6145,6 +6145,18 @@
       "image": "admin_512_0132f1b2.jpg",
       "note": "",
       "id": 512
+    },
+    {
+      "code": "LLA2580-22",
+      "name": "",
+      "category": "手机链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 4000,
+      "dozenPrice": 0,
+      "image": "admin_513_423ab88c.jpg",
+      "note": "",
+      "id": 513
     }
   ]
 }
