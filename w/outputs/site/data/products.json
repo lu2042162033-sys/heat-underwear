@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:13:53.842232+00:00",
+  "updatedAt": "2026-08-28T15:15:13.572531+00:00",
   "products": [
     {
       "code": "6088",
@@ -5965,6 +5965,18 @@
       "image": "admin_497_7930dbb2.jpg",
       "note": "",
       "id": 497
+    },
+    {
+      "code": "HW848-3PLUS",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "XL-XXL-XXXL",
+      "unitPrice": 5800,
+      "dozenPrice": 58000,
+      "image": "admin_498_1c069f9a.jpg",
+      "note": "",
+      "id": 498
     }
   ]
 }

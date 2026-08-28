@@ -505,5 +505,6 @@ window.PRODUCTS_IMAGES = [
   "admin_494_6a025489.jpg",
   "admin_495_42318590.jpg",
   "admin_496_dfd23d04.jpg",
-  "admin_497_7930dbb2.jpg"
+  "admin_497_7930dbb2.jpg",
+  "admin_498_1c069f9a.jpg"
 ];

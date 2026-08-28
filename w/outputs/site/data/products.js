@@ -496,5 +496,6 @@ window.PRODUCTS_SEED = [
   {"code": "CH-513", "name": "", "category": "内裤", "brand": "", "sizes": "L-XL-XXL-XXXL", "unitPrice": 3200, "dozenPrice": 32000, "image": "admin_494_6a025489.jpg", "note": "", "id": 494},
   {"code": "CH-615", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 20000, "dozenPrice": 200000, "image": "admin_495_42318590.jpg", "note": "", "id": 495},
   {"code": "CH-614", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 18700, "dozenPrice": 187000, "image": "admin_496_dfd23d04.jpg", "note": "", "id": 496},
-  {"code": "HW848-3SMALL", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L", "unitPrice": 5800, "dozenPrice": 58000, "image": "admin_497_7930dbb2.jpg", "note": "", "id": 497}
+  {"code": "HW848-3SMALL", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L", "unitPrice": 5800, "dozenPrice": 58000, "image": "admin_497_7930dbb2.jpg", "note": "", "id": 497},
+  {"code": "HW848-3PLUS", "name": "", "category": "内裤", "brand": "", "sizes": "XL-XXL-XXXL", "unitPrice": 5800, "dozenPrice": 58000, "image": "admin_498_1c069f9a.jpg", "note": "", "id": 498}
 ];
