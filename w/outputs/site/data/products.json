@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:12:58.678067+00:00",
+  "updatedAt": "2026-08-28T15:13:53.842232+00:00",
   "products": [
     {
       "code": "6088",
@@ -5953,6 +5953,18 @@
       "image": "admin_496_dfd23d04.jpg",
       "note": "",
       "id": 496
+    },
+    {
+      "code": "HW848-3SMALL",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "S-M-L",
+      "unitPrice": 5800,
+      "dozenPrice": 58000,
+      "image": "admin_497_7930dbb2.jpg",
+      "note": "",
+      "id": 497
     }
   ]
 }
