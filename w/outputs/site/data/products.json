@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T12:44:33.534022+00:00",
+  "updatedAt": "2026-08-28T12:45:36.296322+00:00",
   "products": [
     {
       "code": "6088",
@@ -5221,6 +5221,18 @@
       "image": "admin_435_aac69e92.jpg",
       "note": "",
       "id": 435
+    },
+    {
+      "code": "BRO-25827",
+      "name": "",
+      "category": "发夹",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3100,
+      "dozenPrice": 0,
+      "image": "admin_436_0d41b0df.jpg",
+      "note": "",
+      "id": 436
     }
   ]
 }
