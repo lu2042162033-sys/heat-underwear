@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:29:39.966613+00:00",
+  "updatedAt": "2026-08-28T14:30:55.015606+00:00",
   "products": [
     {
       "code": "6088",
@@ -116,8 +116,8 @@
       "category": "文胸",
       "brand": "",
       "sizes": "XL-XXXL",
-      "unitPrice": 14000,
-      "dozenPrice": 140000,
+      "unitPrice": 13000,
+      "dozenPrice": 130000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (4).jpeg",
       "note": "",
       "id": 10

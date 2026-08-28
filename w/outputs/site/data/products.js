@@ -9,7 +9,7 @@ window.PRODUCTS_SEED = [
   {"code": "94316", "name": "", "category": "文胸", "brand": "", "sizes": "42,44,46,48", "unitPrice": 6000, "dozenPrice": 60000, "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM.jpeg", "note": "", "id": 7},
   {"code": "94457", "name": "", "category": "文胸", "brand": "", "sizes": "M-L-XL-XXL", "unitPrice": 8700, "dozenPrice": 87000, "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (2).jpeg", "note": "", "id": 8},
   {"code": "967", "name": "", "category": "文胸", "brand": "", "sizes": "L-XL-XXL", "unitPrice": 12500, "dozenPrice": 125000, "image": "WhatsApp Image 2026-08-05 at 8.27.10 PM (1).jpeg", "note": "", "id": 9},
-  {"code": "968", "name": "", "category": "文胸", "brand": "", "sizes": "XL-XXXL", "unitPrice": 14000, "dozenPrice": 140000, "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (4).jpeg", "note": "", "id": 10},
+  {"code": "968", "name": "", "category": "文胸", "brand": "", "sizes": "XL-XXXL", "unitPrice": 13000, "dozenPrice": 130000, "image": "WhatsApp Image 2026-08-05 at 8.27.11 PM (4).jpeg", "note": "", "id": 10},
   {"code": "H05002", "name": "", "category": "文胸", "brand": "", "sizes": "S/M M/L L/XL", "unitPrice": 12000, "dozenPrice": 120000, "image": "WhatsApp Image 2026-08-07 at 12.10.38 PM (1).jpeg", "note": "", "id": 11},
   {"code": "H80008", "name": "", "category": "文胸", "brand": "", "sizes": "S/M,L/XL,XL/XXL", "unitPrice": 11000, "dozenPrice": 110000, "image": "WhatsApp Image 2026-08-05 at 8.26.56 PM (2).jpeg", "note": "", "id": 12},
   {"code": "HF20009", "name": "", "category": "文胸", "brand": "", "sizes": "34B-40B", "unitPrice": 8000, "dozenPrice": 80000, "image": "WhatsApp Image 2026-08-07 at 12.10.38 PM.jpeg", "note": "", "id": 13},
