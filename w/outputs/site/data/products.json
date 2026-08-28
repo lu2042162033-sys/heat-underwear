@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:17:08.037638+00:00",
+  "updatedAt": "2026-08-28T15:17:42.679421+00:00",
   "products": [
     {
       "code": "6088",
@@ -6013,6 +6013,18 @@
       "image": "admin_501_045d528f.jpg",
       "note": "",
       "id": 501
+    },
+    {
+      "code": "CH-512",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "L-XL-XXL-XXXL",
+      "unitPrice": 3200,
+      "dozenPrice": 32000,
+      "image": "admin_502_6d04c671.jpg",
+      "note": "",
+      "id": 502
     }
   ]
 }
