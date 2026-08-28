@@ -507,5 +507,6 @@ window.PRODUCTS_SEED = [
   {"code": "HG-1721", "name": "", "category": "文胸", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 11500, "dozenPrice": 115000, "image": "admin_505_f51f4a31.jpg", "note": "", "id": 505},
   {"code": "2580-24", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_506_a4ea3980.png", "note": "", "id": 506},
   {"code": "HW1060", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 47000, "dozenPrice": 470000, "image": "admin_507_552fddbf.jpg", "note": "", "id": 507},
-  {"code": "7-342", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 35000, "dozenPrice": 350000, "image": "admin_508_cf7dafb2.jpg", "note": "", "id": 508}
+  {"code": "7-342", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 35000, "dozenPrice": 350000, "image": "admin_508_cf7dafb2.jpg", "note": "", "id": 508},
+  {"code": "348", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 49000, "dozenPrice": 490000, "image": "admin_509_72557213.jpg", "note": "", "id": 509}
 ];
