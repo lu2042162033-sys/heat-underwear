@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:04:04.909096+00:00",
+  "updatedAt": "2026-08-28T15:05:06.001996+00:00",
   "products": [
     {
       "code": "6088",
@@ -5869,6 +5869,18 @@
       "image": "admin_489_bd758a99.jpg",
       "note": "",
       "id": 489
+    },
+    {
+      "code": "H 14-005",
+      "name": "",
+      "category": "背心",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 7200,
+      "dozenPrice": 72000,
+      "image": "admin_490_6d7020ca.jpg",
+      "note": "",
+      "id": 490
     }
   ]
 }
