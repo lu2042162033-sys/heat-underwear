@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:18:22.779436+00:00",
+  "updatedAt": "2026-08-28T15:19:03.296707+00:00",
   "products": [
     {
       "code": "6088",
@@ -6037,6 +6037,18 @@
       "image": "admin_503_36c0bf94.jpg",
       "note": "",
       "id": 503
+    },
+    {
+      "code": "16-G828",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "XL-XXL-XXXL",
+      "unitPrice": 5500,
+      "dozenPrice": 55000,
+      "image": "admin_504_05786c7d.jpg",
+      "note": "",
+      "id": 504
     }
   ]
 }
