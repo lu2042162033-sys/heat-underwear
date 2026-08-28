@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:33:38.693927+00:00",
+  "updatedAt": "2026-08-28T14:34:15.836831+00:00",
   "products": [
     {
       "code": "6088",
@@ -5635,7 +5635,7 @@
       "name": "",
       "category": "文胸",
       "brand": "",
-      "sizes": "",
+      "sizes": "XL-XXL",
       "unitPrice": 11500,
       "dozenPrice": 115000,
       "image": "admin_470_79b6dea1.jpg",
@@ -5647,7 +5647,7 @@
       "name": "",
       "category": "文胸",
       "brand": "",
-      "sizes": "",
+      "sizes": "M-XXL",
       "unitPrice": 10000,
       "dozenPrice": 10000,
       "image": "admin_471_fc338302.jpg",
@@ -5659,7 +5659,7 @@
       "name": "",
       "category": "文胸",
       "brand": "",
-      "sizes": "",
+      "sizes": "M-2XL",
       "unitPrice": 11500,
       "dozenPrice": 115000,
       "image": "admin_472_329866a3.jpg",
