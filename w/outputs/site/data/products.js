@@ -509,5 +509,6 @@ window.PRODUCTS_SEED = [
   {"code": "HW1060", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 47000, "dozenPrice": 470000, "image": "admin_507_552fddbf.jpg", "note": "", "id": 507},
   {"code": "7-342", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 35000, "dozenPrice": 350000, "image": "admin_508_cf7dafb2.jpg", "note": "", "id": 508},
   {"code": "348", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 49000, "dozenPrice": 490000, "image": "admin_509_72557213.jpg", "note": "", "id": 509},
-  {"code": "8-340", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 35000, "dozenPrice": 350000, "image": "admin_510_c7edfcae.jpg", "note": "", "id": 510}
+  {"code": "8-340", "name": "", "category": "睡衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 35000, "dozenPrice": 350000, "image": "admin_510_c7edfcae.jpg", "note": "", "id": 510},
+  {"code": "HP378", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L XL/XXL", "unitPrice": 35000, "dozenPrice": 350000, "image": "admin_511_8b02b136.jpg", "note": "", "id": 511}
 ];

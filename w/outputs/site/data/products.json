@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T19:45:47.682572+00:00",
+  "updatedAt": "2026-08-28T19:46:35.693938+00:00",
   "products": [
     {
       "code": "6088",
@@ -6121,6 +6121,18 @@
       "image": "admin_510_c7edfcae.jpg",
       "note": "",
       "id": 510
+    },
+    {
+      "code": "HP378",
+      "name": "",
+      "category": "睡衣",
+      "brand": "",
+      "sizes": "S/M M/L XL/XXL",
+      "unitPrice": 35000,
+      "dozenPrice": 350000,
+      "image": "admin_511_8b02b136.jpg",
+      "note": "",
+      "id": 511
     }
   ]
 }
