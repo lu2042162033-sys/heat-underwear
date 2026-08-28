@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:53:54.475819+00:00",
+  "updatedAt": "2026-08-28T14:54:52.847850+00:00",
   "products": [
     {
       "code": "6088",
@@ -5845,6 +5845,18 @@
       "image": "admin_487_445ff587.jpg",
       "note": "",
       "id": 487
+    },
+    {
+      "code": "CH-503",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "L-XL-XXL-XXXL",
+      "unitPrice": 3200,
+      "dozenPrice": 32000,
+      "image": "admin_488_d6e29482.jpg",
+      "note": "",
+      "id": 488
     }
   ]
 }
