@@ -503,5 +503,6 @@ window.PRODUCTS_SEED = [
   {"code": "HG-1726", "name": "", "category": "文胸", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 115000, "dozenPrice": 115000, "image": "admin_501_045d528f.jpg", "note": "", "id": 501},
   {"code": "CH-512", "name": "", "category": "内裤", "brand": "", "sizes": "L-XL-XXL-XXXL", "unitPrice": 3200, "dozenPrice": 32000, "image": "admin_502_6d04c671.jpg", "note": "", "id": 502},
   {"code": "16-M828", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L", "unitPrice": 4600, "dozenPrice": 46000, "image": "admin_503_36c0bf94.jpg", "note": "", "id": 503},
-  {"code": "16-G828", "name": "", "category": "内裤", "brand": "", "sizes": "XL-XXL-XXXL", "unitPrice": 5500, "dozenPrice": 55000, "image": "admin_504_05786c7d.jpg", "note": "", "id": 504}
+  {"code": "16-G828", "name": "", "category": "内裤", "brand": "", "sizes": "XL-XXL-XXXL", "unitPrice": 5500, "dozenPrice": 55000, "image": "admin_504_05786c7d.jpg", "note": "", "id": 504},
+  {"code": "HG-1721", "name": "", "category": "文胸", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 11500, "dozenPrice": 115000, "image": "admin_505_f51f4a31.jpg", "note": "", "id": 505}
 ];
