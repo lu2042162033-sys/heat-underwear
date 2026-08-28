@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:39:42.539438+00:00",
+  "updatedAt": "2026-08-28T14:40:17.206924+00:00",
   "products": [
     {
       "code": "6088",
@@ -5761,6 +5761,18 @@
       "image": "admin_480_c064e3cd.jpg",
       "note": "",
       "id": 480
+    },
+    {
+      "code": "9842",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "L-3XL",
+      "unitPrice": 13000,
+      "dozenPrice": 130000,
+      "image": "admin_481_094e20f5.jpg",
+      "note": "",
+      "id": 481
     }
   ]
 }
