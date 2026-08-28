@@ -458,5 +458,6 @@ window.PRODUCTS_SEED = [
   {"code": "BRO-25034", "name": "", "category": "文胸", "brand": "", "sizes": "", "unitPrice": 1400, "dozenPrice": 0, "image": "admin_456_551bd2bc.jpg", "note": "", "id": 456},
   {"code": "BRO-25037", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_457_4c0a5ac8.jpg", "note": "", "id": 457},
   {"code": "BRO-25183", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 3000, "dozenPrice": 0, "image": "admin_458_6f6f57be.jpg", "note": "", "id": 458},
-  {"code": "BRO-25125", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 1400, "dozenPrice": 0, "image": "admin_459_53002916.jpg", "note": "", "id": 459}
+  {"code": "BRO-25125", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 1400, "dozenPrice": 0, "image": "admin_459_53002916.jpg", "note": "", "id": 459},
+  {"code": "BRO-25836", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 2800, "dozenPrice": 0, "image": "admin_460_11d80272.jpg", "note": "", "id": 460}
 ];
