@@ -471,5 +471,6 @@ window.PRODUCTS_SEED = [
   {"code": "BRO-25170", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 2500, "dozenPrice": 0, "image": "admin_469_bfd051c8.jpg", "note": "", "id": 469},
   {"code": "6878", "name": "", "category": "文胸", "brand": "", "sizes": "", "unitPrice": 11500, "dozenPrice": 115000, "image": "admin_470_79b6dea1.jpg", "note": "", "id": 470},
   {"code": "6227", "name": "", "category": "文胸", "brand": "", "sizes": "", "unitPrice": 10000, "dozenPrice": 10000, "image": "admin_471_fc338302.jpg", "note": "", "id": 471},
-  {"code": "6657", "name": "", "category": "文胸", "brand": "", "sizes": "", "unitPrice": 11500, "dozenPrice": 115000, "image": "admin_472_329866a3.jpg", "note": "", "id": 472}
+  {"code": "6657", "name": "", "category": "文胸", "brand": "", "sizes": "", "unitPrice": 11500, "dozenPrice": 115000, "image": "admin_472_329866a3.jpg", "note": "", "id": 472},
+  {"code": "8831", "name": "", "category": "文胸", "brand": "", "sizes": "XL-4XL", "unitPrice": 13000, "dozenPrice": 130000, "image": "admin_473_f0f41928.jpg", "note": "", "id": 473}
 ];
