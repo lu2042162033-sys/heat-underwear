@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T19:43:28.445892+00:00",
+  "updatedAt": "2026-08-28T19:44:17.645471+00:00",
   "products": [
     {
       "code": "6088",
@@ -6085,6 +6085,18 @@
       "image": "admin_507_552fddbf.jpg",
       "note": "",
       "id": 507
+    },
+    {
+      "code": "7-342",
+      "name": "",
+      "category": "睡衣",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 35000,
+      "dozenPrice": 350000,
+      "image": "admin_508_cf7dafb2.jpg",
+      "note": "",
+      "id": 508
     }
   ]
 }
