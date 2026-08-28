@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:09:18.853929+00:00",
+  "updatedAt": "2026-08-28T15:10:11.427159+00:00",
   "products": [
     {
       "code": "6088",
@@ -5905,6 +5905,18 @@
       "image": "admin_492_e6d98c12.jpg",
       "note": "",
       "id": 492
+    },
+    {
+      "code": "HG1709",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "M-L-XL-XXL",
+      "unitPrice": 17300,
+      "dozenPrice": 173000,
+      "image": "admin_493_63249e17.jpg",
+      "note": "",
+      "id": 493
     }
   ]
 }
