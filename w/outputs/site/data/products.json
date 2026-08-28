@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T14:42:25.710168+00:00",
+  "updatedAt": "2026-08-28T14:46:04.855429+00:00",
   "products": [
     {
       "code": "6088",
@@ -5797,6 +5797,18 @@
       "image": "admin_483_dc367c58.jpg",
       "note": "",
       "id": 483
+    },
+    {
+      "code": "HX86004",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "M-L-XL",
+      "unitPrice": 2600,
+      "dozenPrice": 26000,
+      "image": "admin_484_f66847a4.jpg",
+      "note": "",
+      "id": 484
     }
   ]
 }
