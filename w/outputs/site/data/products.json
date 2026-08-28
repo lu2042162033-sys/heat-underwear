@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T15:07:15.133808+00:00",
+  "updatedAt": "2026-08-28T15:09:18.853929+00:00",
   "products": [
     {
       "code": "6088",
@@ -5893,6 +5893,18 @@
       "image": "admin_491_0911e9bb.jpg",
       "note": "",
       "id": 491
+    },
+    {
+      "code": "HN8559B-MJ",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "34B-40B",
+      "unitPrice": 72000,
+      "dozenPrice": 72000,
+      "image": "admin_492_e6d98c12.jpg",
+      "note": "",
+      "id": 492
     }
   ]
 }
