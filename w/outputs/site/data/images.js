@@ -265,6 +265,7 @@ window.PRODUCTS_IMAGES = [
   "admin_257_f6746e01.png",
   "admin_258_8da349f6.png",
   "admin_259_a6e8d24a.png",
+  "admin_25_6f610dbe.jpg",
   "admin_260_bf66cd2c.jpg",
   "admin_261_f34c065d.png",
   "admin_262_b57c2ff5.png",

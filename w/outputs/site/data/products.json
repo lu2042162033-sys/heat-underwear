@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-31T17:44:14.883959+00:00",
+  "updatedAt": "2026-08-31T17:44:50.615758+00:00",
   "products": [
     {
       "code": "6878",
@@ -297,8 +297,8 @@
       "brand": "",
       "sizes": "S-M-L-XL",
       "unitPrice": 7200,
-      "dozenPrice": 72000,
-      "image": "admin_490_6d7020ca.jpg",
+      "dozenPrice": 120000,
+      "image": "admin_25_6f610dbe.jpg",
       "note": "",
       "id": 25
     },

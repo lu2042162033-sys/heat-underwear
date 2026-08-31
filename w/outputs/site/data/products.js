@@ -24,7 +24,7 @@ window.PRODUCTS_SEED = [
   {"code": "HN8559C", "name": "", "category": "文胸", "brand": "", "sizes": "36C-38C-40C-42C", "unitPrice": 7200, "dozenPrice": 72000, "image": "admin_491_0911e9bb.jpg", "note": "", "id": 22},
   {"code": "HN8559B-MJ", "name": "", "category": "文胸", "brand": "", "sizes": "34B-40B", "unitPrice": 7200, "dozenPrice": 72000, "image": "admin_492_e6d98c12.jpg", "note": "", "id": 23},
   {"code": "HG1709", "name": "", "category": "文胸", "brand": "", "sizes": "M-L-XL-XXL", "unitPrice": 17300, "dozenPrice": 173000, "image": "admin_493_63249e17.jpg", "note": "", "id": 24},
-  {"code": "H 14-005", "name": "", "category": "背心", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 7200, "dozenPrice": 72000, "image": "admin_490_6d7020ca.jpg", "note": "", "id": 25},
+  {"code": "H 14-005", "name": "", "category": "背心", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 7200, "dozenPrice": 120000, "image": "admin_25_6f610dbe.jpg", "note": "", "id": 25},
   {"code": "CH-615", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 20000, "dozenPrice": 200000, "image": "admin_495_42318590.jpg", "note": "", "id": 26},
   {"code": "CH-614", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 18700, "dozenPrice": 187000, "image": "admin_496_dfd23d04.jpg", "note": "", "id": 27},
   {"code": "HW848-3SMALL", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L", "unitPrice": 5800, "dozenPrice": 58000, "image": "admin_497_7930dbb2.jpg", "note": "", "id": 28},
