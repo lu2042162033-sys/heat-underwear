@@ -19,7 +19,7 @@ window.PRODUCTS_SEED = [
   {"code": "HG-1727", "name": "", "category": "文胸", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 13000, "dozenPrice": 130000, "image": "admin_486_c73005f3.jpg", "note": "", "id": 17},
   {"code": "H5037", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 2600, "dozenPrice": 26000, "image": "admin_487_445ff587.jpg", "note": "", "id": 18},
   {"code": "CH-503", "name": "", "category": "内裤", "brand": "", "sizes": "L-XL-XXL-XXXL", "unitPrice": 3200, "dozenPrice": 32000, "image": "admin_488_d6e29482.jpg", "note": "", "id": 19},
-  {"code": "H12002", "name": "", "category": "背心", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 7200, "dozenPrice": 72000, "image": "admin_489_bd758a99.jpg", "note": "", "id": 20},
+  {"code": "H12002", "name": "", "category": "背心", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 7200, "dozenPrice": 120000, "image": "admin_20_bd8daa62.jpg", "note": "", "id": 20},
   {"code": "HG1728", "name": "", "category": "文胸", "brand": "", "sizes": "L-XL-XXL-XXXL", "unitPrice": 20000, "dozenPrice": 200000, "image": "admin_485_4e5460cb.jpg", "note": "", "id": 21},
   {"code": "HN8559C", "name": "", "category": "文胸", "brand": "", "sizes": "36C-38C-40C-42C", "unitPrice": 7200, "dozenPrice": 72000, "image": "admin_491_0911e9bb.jpg", "note": "", "id": 22},
   {"code": "HN8559B-MJ", "name": "", "category": "文胸", "brand": "", "sizes": "34B-40B", "unitPrice": 7200, "dozenPrice": 72000, "image": "admin_492_e6d98c12.jpg", "note": "", "id": 23},
