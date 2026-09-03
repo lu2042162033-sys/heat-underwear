@@ -527,5 +527,6 @@ window.PRODUCTS_SEED = [
   {"code": "TEI8332", "name": "MASCARA /睫毛膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_525_6df74ce0.jpg", "note": "", "id": 525},
   {"code": "TEI8281", "name": "LIP GLOSS / 唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2000, "dozenPrice": 0, "image": "admin_526_046fd45b.jpg", "note": "", "id": 526},
   {"code": "TEI8455", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1100, "dozenPrice": 0, "image": "admin_527_1ed59870.jpg", "note": "", "id": 527},
-  {"code": "TEI8549", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_528_0dc83bf7.jpg", "note": "", "id": 528}
+  {"code": "TEI8549", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_528_0dc83bf7.jpg", "note": "", "id": 528},
+  {"code": "TEI8410", "name": "BB CREMA / BB 霜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 4500, "dozenPrice": 0, "image": "admin_529_bdf0830e.jpg", "note": "", "id": 529}
 ];

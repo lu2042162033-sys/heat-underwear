@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T15:43:54.593160+00:00",
+  "updatedAt": "2026-09-03T17:42:22.381725+00:00",
   "products": [
     {
       "code": "6878",
@@ -6337,6 +6337,18 @@
       "image": "admin_528_0dc83bf7.jpg",
       "note": "",
       "id": 528
+    },
+    {
+      "code": "TEI8410",
+      "name": "BB CREMA / BB 霜",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 4500,
+      "dozenPrice": 0,
+      "image": "admin_529_bdf0830e.jpg",
+      "note": "",
+      "id": 529
     }
   ]
 }
