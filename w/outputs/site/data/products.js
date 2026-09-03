@@ -534,5 +534,6 @@ window.PRODUCTS_SEED = [
   {"code": "TEI8430", "name": "LIPSTICK /唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_532_dceadb79.jpg", "note": "", "id": 532},
   {"code": "TEI8108", "name": "MASCARA /睫毛膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1600, "dozenPrice": 0, "image": "admin_533_079d7f1a.jpg", "note": "", "id": 533},
   {"code": "TEI8293", "name": "LIP BALM /唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1400, "dozenPrice": 0, "image": "admin_534_262a80f6.jpg", "note": "", "id": 534},
-  {"code": "TEI8153", "name": "RUBOR / 腮红", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_535_94e21ed4.jpg", "note": "", "id": 535}
+  {"code": "TEI8153", "name": "RUBOR / 腮红", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_535_94e21ed4.jpg", "note": "", "id": 535},
+  {"code": "TEI8489", "name": "MATTE LIP GLOSS / 唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2400, "dozenPrice": 0, "image": "admin_536_0996aba5.jpg", "note": "", "id": 536}
 ];
