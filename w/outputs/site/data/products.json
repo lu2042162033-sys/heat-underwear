@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T15:31:22.657953+00:00",
+  "updatedAt": "2026-09-03T15:43:54.593160+00:00",
   "products": [
     {
       "code": "6878",
@@ -6325,6 +6325,18 @@
       "image": "admin_527_1ed59870.jpg",
       "note": "",
       "id": 527
+    },
+    {
+      "code": "TEI8549",
+      "name": "BALSAMO / 唇膏",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1500,
+      "dozenPrice": 0,
+      "image": "admin_528_0dc83bf7.jpg",
+      "note": "",
+      "id": 528
     }
   ]
 }

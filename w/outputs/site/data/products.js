@@ -526,5 +526,6 @@ window.PRODUCTS_SEED = [
   {"code": "DH087", "name": "", "category": "瑜伽裤-夏季", "brand": "", "sizes": "M/L L/XL XL/2XL", "unitPrice": 31600, "dozenPrice": 316000, "image": "admin_524_ea061775.jpg", "note": "", "id": 524},
   {"code": "TEI8332", "name": "MASCARA /睫毛膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_525_6df74ce0.jpg", "note": "", "id": 525},
   {"code": "TEI8281", "name": "LIP GLOSS / 唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2000, "dozenPrice": 0, "image": "admin_526_046fd45b.jpg", "note": "", "id": 526},
-  {"code": "TEI8455", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1100, "dozenPrice": 0, "image": "admin_527_1ed59870.jpg", "note": "", "id": 527}
+  {"code": "TEI8455", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1100, "dozenPrice": 0, "image": "admin_527_1ed59870.jpg", "note": "", "id": 527},
+  {"code": "TEI8549", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_528_0dc83bf7.jpg", "note": "", "id": 528}
 ];
