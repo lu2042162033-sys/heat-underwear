@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T12:11:09.370364+00:00",
+  "updatedAt": "2026-09-03T12:12:57.863628+00:00",
   "products": [
     {
       "code": "6878",
@@ -6265,6 +6265,18 @@
       "image": "admin_522_13ac9d17.jpg",
       "note": "",
       "id": 522
+    },
+    {
+      "code": "DH057",
+      "name": "",
+      "category": "瑜伽裤-夏季",
+      "brand": "",
+      "sizes": "M/L L/XL XL/2XL",
+      "unitPrice": 28800,
+      "dozenPrice": 288000,
+      "image": "admin_523_0e4fdd78.jpg",
+      "note": "",
+      "id": 523
     }
   ]
 }
