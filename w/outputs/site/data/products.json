@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T17:47:07.824610+00:00",
+  "updatedAt": "2026-09-03T19:55:13.682288+00:00",
   "products": [
     {
       "code": "6878",
@@ -6361,6 +6361,18 @@
       "image": "admin_530_0bae8eac.jpg",
       "note": "",
       "id": 530
+    },
+    {
+      "code": "TEI8522",
+      "name": "LIP GLOSS / 唇蜜",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1800,
+      "dozenPrice": 0,
+      "image": "admin_531_0a40b751.jpg",
+      "note": "",
+      "id": 531
     }
   ]
 }
