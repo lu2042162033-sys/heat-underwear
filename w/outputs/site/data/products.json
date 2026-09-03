@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T20:01:06.498156+00:00",
+  "updatedAt": "2026-09-03T20:02:17.850940+00:00",
   "products": [
     {
       "code": "6878",
@@ -6409,6 +6409,18 @@
       "image": "admin_534_262a80f6.jpg",
       "note": "",
       "id": 534
+    },
+    {
+      "code": "TEI8153",
+      "name": "RUBOR / 腮红",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1800,
+      "dozenPrice": 0,
+      "image": "admin_535_94e21ed4.jpg",
+      "note": "",
+      "id": 535
     }
   ]
 }
