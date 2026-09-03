@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T17:42:22.381725+00:00",
+  "updatedAt": "2026-09-03T17:47:07.824610+00:00",
   "products": [
     {
       "code": "6878",
@@ -6349,6 +6349,18 @@
       "image": "admin_529_bdf0830e.jpg",
       "note": "",
       "id": 529
+    },
+    {
+      "code": "TEI8468",
+      "name": "ACEITE P/PELO -头发精华液",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 8400,
+      "dozenPrice": 0,
+      "image": "admin_530_0bae8eac.jpg",
+      "note": "",
+      "id": 530
     }
   ]
 }
