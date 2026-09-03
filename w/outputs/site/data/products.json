@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T19:56:33.996318+00:00",
+  "updatedAt": "2026-09-03T19:59:20.505116+00:00",
   "products": [
     {
       "code": "6878",
@@ -6385,6 +6385,18 @@
       "image": "admin_532_dceadb79.jpg",
       "note": "",
       "id": 532
+    },
+    {
+      "code": "TEI8108",
+      "name": "MASCARA /睫毛膏",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1600,
+      "dozenPrice": 0,
+      "image": "admin_533_079d7f1a.jpg",
+      "note": "",
+      "id": 533
     }
   ]
 }
