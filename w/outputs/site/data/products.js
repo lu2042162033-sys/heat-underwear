@@ -520,5 +520,6 @@ window.PRODUCTS_SEED = [
   {"code": "CH-8018", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 2600, "dozenPrice": 26000, "image": "admin_518_ebf5bde6.jpg", "note": "", "id": 518},
   {"code": "CH-525", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 2900, "dozenPrice": 29000, "image": "admin_519_dd638d5b.jpg", "note": "", "id": 519},
   {"code": "CH8023", "name": "", "category": "内裤", "brand": "", "sizes": "M-L-XL", "unitPrice": 5200, "dozenPrice": 52000, "image": "admin_520_52a7be5b.jpg", "note": "", "id": 520},
-  {"code": "AH-236", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L L/XL", "unitPrice": 14400, "dozenPrice": 18000, "image": "admin_521_6722585a.jpg", "note": "", "id": 521}
+  {"code": "AH-236", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L L/XL", "unitPrice": 14400, "dozenPrice": 18000, "image": "admin_521_6722585a.jpg", "note": "", "id": 521},
+  {"code": "AH-235", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L L/XL", "unitPrice": 17300, "dozenPrice": 217000, "image": "admin_522_13ac9d17.jpg", "note": "", "id": 522}
 ];

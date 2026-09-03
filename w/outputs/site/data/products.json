@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T12:08:50.887954+00:00",
+  "updatedAt": "2026-09-03T12:11:09.370364+00:00",
   "products": [
     {
       "code": "6878",
@@ -6253,6 +6253,18 @@
       "image": "admin_521_6722585a.jpg",
       "note": "",
       "id": 521
+    },
+    {
+      "code": "AH-235",
+      "name": "",
+      "category": "睡衣",
+      "brand": "",
+      "sizes": "S/M M/L L/XL",
+      "unitPrice": 17300,
+      "dozenPrice": 217000,
+      "image": "admin_522_13ac9d17.jpg",
+      "note": "",
+      "id": 522
     }
   ]
 }
