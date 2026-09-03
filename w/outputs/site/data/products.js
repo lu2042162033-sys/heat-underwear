@@ -280,7 +280,7 @@ window.PRODUCTS_SEED = [
   {"code": "CS6771", "name": "唇彩", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2000, "dozenPrice": 0, "image": "admin_242_44f5997b.jpg", "note": "", "id": 278},
   {"code": "CS6781", "name": "唇彩", "category": "化妆品", "brand": "", "sizes": "", "unitPrice": 2000, "dozenPrice": 0, "image": "admin_243_d55520e6.jpg", "note": "", "id": 279},
   {"code": "CS6146", "name": "唇釉", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 850, "dozenPrice": 0, "image": "admin_244_7406e806.jpg", "note": "", "id": 280},
-  {"code": "TEI8339", "name": "粉底液", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 3100, "dozenPrice": 0, "image": "admin_245_656b0d13.jpg", "note": "", "id": 281},
+  {"code": "TEI8339", "name": "BASE / 粉底液", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 3100, "dozenPrice": 0, "image": "admin_245_656b0d13.jpg", "note": "", "id": 281},
   {"code": "903-3", "name": "西瓜毛绒钥匙扣", "category": "毛绒钥匙扣", "brand": "", "sizes": "", "unitPrice": 9000, "dozenPrice": 0, "image": "admin_246_145b183f.jpg", "note": "", "id": 282},
   {"code": "903-2", "name": "草莓毛绒钥匙扣", "category": "毛绒钥匙扣", "brand": "", "sizes": "", "unitPrice": 9000, "dozenPrice": 0, "image": "admin_247_e563c94c.jpg", "note": "", "id": 283},
   {"code": "903-1", "name": "牛油果毛绒钥匙扣", "category": "毛绒钥匙扣", "brand": "", "sizes": "", "unitPrice": 9000, "dozenPrice": 0, "image": "admin_248_aa5de5ad.jpg", "note": "", "id": 284},
