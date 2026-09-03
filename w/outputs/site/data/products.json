@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T12:06:19.332320+00:00",
+  "updatedAt": "2026-09-03T12:07:13.059496+00:00",
   "products": [
     {
       "code": "6878",
@@ -6229,6 +6229,18 @@
       "image": "admin_519_dd638d5b.jpg",
       "note": "",
       "id": 519
+    },
+    {
+      "code": "CH8023",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "M-L-XL",
+      "unitPrice": 5200,
+      "dozenPrice": 52000,
+      "image": "admin_520_52a7be5b.jpg",
+      "note": "",
+      "id": 520
     }
   ]
 }
