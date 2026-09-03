@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T19:55:13.682288+00:00",
+  "updatedAt": "2026-09-03T19:56:33.996318+00:00",
   "products": [
     {
       "code": "6878",
@@ -6373,6 +6373,18 @@
       "image": "admin_531_0a40b751.jpg",
       "note": "",
       "id": 531
+    },
+    {
+      "code": "TEI8430",
+      "name": "LIPSTICK /唇彩",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1800,
+      "dozenPrice": 0,
+      "image": "admin_532_dceadb79.jpg",
+      "note": "",
+      "id": 532
     }
   ]
 }

@@ -530,5 +530,6 @@ window.PRODUCTS_SEED = [
   {"code": "TEI8549", "name": "BALSAMO / 唇膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_528_0dc83bf7.jpg", "note": "", "id": 528},
   {"code": "TEI8410", "name": "BB CREMA / BB 霜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 4500, "dozenPrice": 0, "image": "admin_529_bdf0830e.jpg", "note": "", "id": 529},
   {"code": "TEI8468", "name": "ACEITE P/PELO -头发精华液", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 8400, "dozenPrice": 0, "image": "admin_530_0bae8eac.jpg", "note": "", "id": 530},
-  {"code": "TEI8522", "name": "LIP GLOSS / 唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_531_0a40b751.jpg", "note": "", "id": 531}
+  {"code": "TEI8522", "name": "LIP GLOSS / 唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_531_0a40b751.jpg", "note": "", "id": 531},
+  {"code": "TEI8430", "name": "LIPSTICK /唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_532_dceadb79.jpg", "note": "", "id": 532}
 ];
