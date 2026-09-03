@@ -524,5 +524,6 @@ window.PRODUCTS_SEED = [
   {"code": "AH-235", "name": "", "category": "睡衣", "brand": "", "sizes": "S/M M/L L/XL", "unitPrice": 17300, "dozenPrice": 217000, "image": "admin_522_13ac9d17.jpg", "note": "", "id": 522},
   {"code": "DH057", "name": "", "category": "瑜伽裤-夏季", "brand": "", "sizes": "M/L L/XL XL/2XL", "unitPrice": 28800, "dozenPrice": 288000, "image": "admin_523_0e4fdd78.jpg", "note": "", "id": 523},
   {"code": "DH087", "name": "", "category": "瑜伽裤-夏季", "brand": "", "sizes": "M/L L/XL XL/2XL", "unitPrice": 31600, "dozenPrice": 316000, "image": "admin_524_ea061775.jpg", "note": "", "id": 524},
-  {"code": "TEI8332", "name": "MASCARA /睫毛膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_525_6df74ce0.jpg", "note": "", "id": 525}
+  {"code": "TEI8332", "name": "MASCARA /睫毛膏", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_525_6df74ce0.jpg", "note": "", "id": 525},
+  {"code": "TEI8281", "name": "LIP GLOSS / 唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2000, "dozenPrice": 0, "image": "admin_526_046fd45b.jpg", "note": "", "id": 526}
 ];
