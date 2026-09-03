@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-31T17:44:50.615758+00:00",
+  "updatedAt": "2026-09-03T12:05:01.942885+00:00",
   "products": [
     {
       "code": "6878",
@@ -6193,6 +6193,18 @@
       "image": "admin_516_72d9588c.jpg",
       "note": "",
       "id": 516
+    },
+    {
+      "code": "CH-8017",
+      "name": "",
+      "category": "内裤",
+      "brand": "",
+      "sizes": "S-M-L-XL",
+      "unitPrice": 2600,
+      "dozenPrice": 26000,
+      "image": "admin_517_d9310000.jpg",
+      "note": "",
+      "id": 517
     }
   ]
 }
