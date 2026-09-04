@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:48:36.875922+00:00",
+  "updatedAt": "2026-09-04T13:52:38.423906+00:00",
   "products": [
     {
       "code": "6878",
@@ -6601,6 +6601,18 @@
       "image": "admin_550_d0da2234.jpg",
       "note": "",
       "id": 550
+    },
+    {
+      "code": "TEI6342",
+      "name": "CORRECTOR / 遮瑕",
+      "category": "化妆品",
+      "brand": "PINK 21",
+      "sizes": "",
+      "unitPrice": 2800,
+      "dozenPrice": 0,
+      "image": "admin_551_559b2b30.jpg",
+      "note": "",
+      "id": 551
     }
   ]
 }

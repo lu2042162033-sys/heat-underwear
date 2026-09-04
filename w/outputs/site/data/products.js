@@ -549,5 +549,6 @@ window.PRODUCTS_SEED = [
   {"code": "TEI8020", "name": "SOMBRA / 眉粉", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1000, "dozenPrice": 0, "image": "admin_547_53b9b9db.jpg", "note": "", "id": 547},
   {"code": "CS6974", "name": "BRILLO LABIAL / 彩色唇油", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "admin_548_82c5e521.jpg", "note": "", "id": 548},
   {"code": "CS7074", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2200, "dozenPrice": 0, "image": "admin_549_9809b9a7.jpg", "note": "", "id": 549},
-  {"code": "CS5152", "name": "DELINEADOR PARA LABIOS / 唇笔", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 600, "dozenPrice": 0, "image": "admin_550_d0da2234.jpg", "note": "", "id": 550}
+  {"code": "CS5152", "name": "DELINEADOR PARA LABIOS / 唇笔", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 600, "dozenPrice": 0, "image": "admin_550_d0da2234.jpg", "note": "", "id": 550},
+  {"code": "TEI6342", "name": "CORRECTOR / 遮瑕", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2800, "dozenPrice": 0, "image": "admin_551_559b2b30.jpg", "note": "", "id": 551}
 ];
