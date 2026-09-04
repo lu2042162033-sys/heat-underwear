@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:39:27.972241+00:00",
+  "updatedAt": "2026-09-04T12:48:36.875922+00:00",
   "products": [
     {
       "code": "6878",
@@ -6589,6 +6589,18 @@
       "image": "admin_549_9809b9a7.jpg",
       "note": "",
       "id": 549
+    },
+    {
+      "code": "CS5152",
+      "name": "DELINEADOR PARA LABIOS / 唇笔",
+      "category": "化妆品",
+      "brand": "PINK 21",
+      "sizes": "",
+      "unitPrice": 600,
+      "dozenPrice": 0,
+      "image": "admin_550_d0da2234.jpg",
+      "note": "",
+      "id": 550
     }
   ]
 }
