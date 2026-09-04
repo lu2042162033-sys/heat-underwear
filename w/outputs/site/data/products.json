@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:28:12.171751+00:00",
+  "updatedAt": "2026-09-04T12:34:19.710868+00:00",
   "products": [
     {
       "code": "6878",
@@ -6529,6 +6529,18 @@
       "image": "admin_544_084ff526.jpg",
       "note": "",
       "id": 544
+    },
+    {
+      "code": "TEI8484",
+      "name": "MATTE LIP GLOSS / 唇彩",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1800,
+      "dozenPrice": 0,
+      "image": "admin_545_fb2e5f73.jpg",
+      "note": "",
+      "id": 545
     }
   ]
 }
