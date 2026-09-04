@@ -546,5 +546,6 @@ window.PRODUCTS_SEED = [
   {"code": "TEI8021", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1000, "dozenPrice": 0, "image": "admin_544_084ff526.jpg", "note": "", "id": 544},
   {"code": "TEI8484", "name": "MATTE LIP GLOSS / 唇彩", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_545_fb2e5f73.jpg", "note": "", "id": 545},
   {"code": "TEI8010", "name": "CORRECTOR / 遮瑕", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2400, "dozenPrice": 0, "image": "admin_546_6d739dd0.jpg", "note": "", "id": 546},
-  {"code": "TEI8020", "name": "SOMBRA / 眉粉", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1000, "dozenPrice": 0, "image": "admin_547_53b9b9db.jpg", "note": "", "id": 547}
+  {"code": "TEI8020", "name": "SOMBRA / 眉粉", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1000, "dozenPrice": 0, "image": "admin_547_53b9b9db.jpg", "note": "", "id": 547},
+  {"code": "CS6974", "name": "BRILLO LABIAL / 彩色唇油", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "admin_548_82c5e521.jpg", "note": "", "id": 548}
 ];

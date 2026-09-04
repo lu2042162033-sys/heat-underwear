@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:36:47.338049+00:00",
+  "updatedAt": "2026-09-04T12:38:34.824114+00:00",
   "products": [
     {
       "code": "6878",
@@ -6565,6 +6565,18 @@
       "image": "admin_547_53b9b9db.jpg",
       "note": "",
       "id": 547
+    },
+    {
+      "code": "CS6974",
+      "name": "BRILLO LABIAL / 彩色唇油",
+      "category": "化妆品",
+      "brand": "PINK 21",
+      "sizes": "",
+      "unitPrice": 2300,
+      "dozenPrice": 0,
+      "image": "admin_548_82c5e521.jpg",
+      "note": "",
+      "id": 548
     }
   ]
 }
