@@ -542,5 +542,6 @@ window.PRODUCTS_SEED = [
   {"code": "TEI8361", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2350, "dozenPrice": 0, "image": "admin_540_832df7b0.jpg", "note": "", "id": 540},
   {"code": "TEI8492", "name": "LIP GLAZE / 唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1400, "dozenPrice": 0, "image": "admin_541_832df7b0.jpg", "note": "", "id": 541},
   {"code": "TEI8346", "name": "PRIMER CORRECTOR /遮瑕", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2100, "dozenPrice": 0, "image": "admin_542_7ddc3658.jpg", "note": "", "id": 542},
-  {"code": "TEI8452", "name": "LIP BALM /唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_543_0cc97190.jpg", "note": "", "id": 543}
+  {"code": "TEI8452", "name": "LIP BALM /唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1500, "dozenPrice": 0, "image": "admin_543_0cc97190.jpg", "note": "", "id": 543},
+  {"code": "TEI8021", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1000, "dozenPrice": 0, "image": "admin_544_084ff526.jpg", "note": "", "id": 544}
 ];

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:26:43.694922+00:00",
+  "updatedAt": "2026-09-04T12:28:12.171751+00:00",
   "products": [
     {
       "code": "6878",
@@ -6517,6 +6517,18 @@
       "image": "admin_543_0cc97190.jpg",
       "note": "",
       "id": 543
+    },
+    {
+      "code": "TEI8021",
+      "name": "SOMBRA / 眼影",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1000,
+      "dozenPrice": 0,
+      "image": "admin_544_084ff526.jpg",
+      "note": "",
+      "id": 544
     }
   ]
 }
