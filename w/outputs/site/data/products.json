@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:35:14.093228+00:00",
+  "updatedAt": "2026-09-04T12:36:47.338049+00:00",
   "products": [
     {
       "code": "6878",
@@ -6553,6 +6553,18 @@
       "image": "admin_546_6d739dd0.jpg",
       "note": "",
       "id": 546
+    },
+    {
+      "code": "TEI8020",
+      "name": "SOMBRA / 眉粉",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1000,
+      "dozenPrice": 0,
+      "image": "admin_547_53b9b9db.jpg",
+      "note": "",
+      "id": 547
     }
   ]
 }
