@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T11:56:52.872755+00:00",
+  "updatedAt": "2026-09-04T11:59:59.843357+00:00",
   "products": [
     {
       "code": "6878",
@@ -6445,6 +6445,18 @@
       "image": "admin_537_81e1a63a.jpg",
       "note": "",
       "id": 537
+    },
+    {
+      "code": "TEI8414",
+      "name": "CORRECTOR / 遮瑕",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 2950,
+      "dozenPrice": 0,
+      "image": "admin_538_e32d452d.jpg",
+      "note": "",
+      "id": 538
     }
   ]
 }
