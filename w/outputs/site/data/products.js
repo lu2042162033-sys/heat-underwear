@@ -539,5 +539,6 @@ window.PRODUCTS_SEED = [
   {"code": "BRO-26021", "name": "", "category": "发夹", "brand": "", "sizes": "", "unitPrice": 1600, "dozenPrice": 0, "image": "admin_537_81e1a63a.jpg", "note": "", "id": 537},
   {"code": "TEI8414", "name": "CORRECTOR / 遮瑕", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2950, "dozenPrice": 0, "image": "admin_538_e32d452d.jpg", "note": "", "id": 538},
   {"code": "TEI8446", "name": "CONTORNO / 修容", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1900, "dozenPrice": 0, "image": "admin_539_0dc708e8.jpg", "note": "", "id": 539},
-  {"code": "TEI8361", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2350, "dozenPrice": 0, "image": "admin_540_832df7b0.jpg", "note": "", "id": 540}
+  {"code": "TEI8361", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 2350, "dozenPrice": 0, "image": "admin_540_832df7b0.jpg", "note": "", "id": 540},
+  {"code": "TEI8492", "name": "LIP GLAZE / 唇蜜", "category": "化妆品", "brand": "TEI", "sizes": "", "unitPrice": 1400, "dozenPrice": 0, "image": "admin_541_832df7b0.jpg", "note": "", "id": 541}
 ];

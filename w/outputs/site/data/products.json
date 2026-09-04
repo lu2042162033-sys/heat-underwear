@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:04:12.305118+00:00",
+  "updatedAt": "2026-09-04T12:05:15.941488+00:00",
   "products": [
     {
       "code": "6878",
@@ -6481,6 +6481,18 @@
       "image": "admin_540_832df7b0.jpg",
       "note": "",
       "id": 540
+    },
+    {
+      "code": "TEI8492",
+      "name": "LIP GLAZE / 唇蜜",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1400,
+      "dozenPrice": 0,
+      "image": "admin_541_832df7b0.jpg",
+      "note": "",
+      "id": 541
     }
   ]
 }
