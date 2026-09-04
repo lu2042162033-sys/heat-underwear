@@ -551,5 +551,6 @@ window.PRODUCTS_SEED = [
   {"code": "CS7074", "name": "SOMBRA / 眼影", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2200, "dozenPrice": 0, "image": "admin_549_9809b9a7.jpg", "note": "", "id": 549},
   {"code": "CS5152", "name": "DELINEADOR PARA LABIOS / 唇笔", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 600, "dozenPrice": 0, "image": "admin_550_d0da2234.jpg", "note": "", "id": 550},
   {"code": "TEI6342", "name": "CORRECTOR / 遮瑕", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 2800, "dozenPrice": 0, "image": "admin_551_559b2b30.jpg", "note": "", "id": 551},
-  {"code": "CS4484", "name": "ILUMINADOR / 高光", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 1900, "dozenPrice": 0, "image": "admin_552_862eca4f.jpg", "note": "", "id": 552}
+  {"code": "CS4484", "name": "ILUMINADOR / 高光", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 1900, "dozenPrice": 0, "image": "admin_552_862eca4f.jpg", "note": "", "id": 552},
+  {"code": "CS5682", "name": "MASCARA DE PESTANA / 睫毛膏", "category": "化妆品", "brand": "PINK 21", "sizes": "", "unitPrice": 1900, "dozenPrice": 0, "image": "admin_553_6e1830c6.jpg", "note": "", "id": 553}
 ];
