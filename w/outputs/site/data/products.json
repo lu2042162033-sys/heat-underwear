@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T13:52:38.423906+00:00",
+  "updatedAt": "2026-09-04T13:54:12.381266+00:00",
   "products": [
     {
       "code": "6878",
@@ -6613,6 +6613,18 @@
       "image": "admin_551_559b2b30.jpg",
       "note": "",
       "id": 551
+    },
+    {
+      "code": "CS4484",
+      "name": "ILUMINADOR / 高光",
+      "category": "化妆品",
+      "brand": "PINK 21",
+      "sizes": "",
+      "unitPrice": 1900,
+      "dozenPrice": 0,
+      "image": "admin_552_862eca4f.jpg",
+      "note": "",
+      "id": 552
     }
   ]
 }
