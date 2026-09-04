@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:06:39.541849+00:00",
+  "updatedAt": "2026-09-04T12:26:43.694922+00:00",
   "products": [
     {
       "code": "6878",
@@ -6505,6 +6505,18 @@
       "image": "admin_542_7ddc3658.jpg",
       "note": "",
       "id": 542
+    },
+    {
+      "code": "TEI8452",
+      "name": "LIP BALM /唇蜜",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 1500,
+      "dozenPrice": 0,
+      "image": "admin_543_0cc97190.jpg",
+      "note": "",
+      "id": 543
     }
   ]
 }

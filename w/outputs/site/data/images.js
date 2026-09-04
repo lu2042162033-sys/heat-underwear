@@ -552,5 +552,6 @@ window.PRODUCTS_IMAGES = [
   "admin_539_0dc708e8.jpg",
   "admin_540_832df7b0.jpg",
   "admin_541_832df7b0.jpg",
-  "admin_542_7ddc3658.jpg"
+  "admin_542_7ddc3658.jpg",
+  "admin_543_0cc97190.jpg"
 ];
