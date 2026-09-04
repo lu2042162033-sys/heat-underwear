@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T12:05:15.941488+00:00",
+  "updatedAt": "2026-09-04T12:06:39.541849+00:00",
   "products": [
     {
       "code": "6878",
@@ -6493,6 +6493,18 @@
       "image": "admin_541_832df7b0.jpg",
       "note": "",
       "id": 541
+    },
+    {
+      "code": "TEI8346",
+      "name": "PRIMER CORRECTOR /遮瑕",
+      "category": "化妆品",
+      "brand": "TEI",
+      "sizes": "",
+      "unitPrice": 2100,
+      "dozenPrice": 0,
+      "image": "admin_542_7ddc3658.jpg",
+      "note": "",
+      "id": 542
     }
   ]
 }
