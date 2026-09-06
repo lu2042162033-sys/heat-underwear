@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:05:56.951143+00:00",
+  "updatedAt": "2026-09-06T14:08:40.388421+00:00",
   "products": [
     {
       "code": "6878",
@@ -7009,6 +7009,18 @@
       "image": "admin_584_c17152a3.jpg",
       "note": "",
       "id": 584
+    },
+    {
+      "code": "AZ-175",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2300,
+      "dozenPrice": 0,
+      "image": "admin_585_3fab5aa6.jpg",
+      "note": "",
+      "id": 585
     }
   ]
 }
