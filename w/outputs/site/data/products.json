@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:39:40.428738+00:00",
+  "updatedAt": "2026-09-06T13:40:22.387387+00:00",
   "products": [
     {
       "code": "6878",
@@ -6817,6 +6817,18 @@
       "image": "admin_568_11150c99.jpg",
       "note": "",
       "id": 568
+    },
+    {
+      "code": "AZ-063",
+      "name": "",
+      "category": "项链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3400,
+      "dozenPrice": 0,
+      "image": "admin_569_3659d4a0.jpg",
+      "note": "",
+      "id": 569
     }
   ]
 }
