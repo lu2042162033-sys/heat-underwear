@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:31:55.622901+00:00",
+  "updatedAt": "2026-09-06T14:32:41.614091+00:00",
   "products": [
     {
       "code": "6878",
@@ -7225,6 +7225,18 @@
       "image": "admin_602_32d9a825.jpg",
       "note": "",
       "id": 602
+    },
+    {
+      "code": "AZ-291",
+      "name": "",
+      "category": "脚链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2100,
+      "dozenPrice": 0,
+      "image": "admin_603_83cbb995.jpg",
+      "note": "",
+      "id": 603
     }
   ]
 }
