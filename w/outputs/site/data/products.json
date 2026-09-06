@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:36:23.975301+00:00",
+  "updatedAt": "2026-09-06T13:37:00.576145+00:00",
   "products": [
     {
       "code": "6878",
@@ -6757,6 +6757,18 @@
       "image": "admin_563_0915afc1.jpg",
       "note": "",
       "id": 563
+    },
+    {
+      "code": "AZ-122",
+      "name": "",
+      "category": "耳环",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2100,
+      "dozenPrice": 0,
+      "image": "admin_564_9550cc4a.jpg",
+      "note": "",
+      "id": 564
     }
   ]
 }
