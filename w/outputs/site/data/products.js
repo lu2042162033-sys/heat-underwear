@@ -572,5 +572,6 @@ window.PRODUCTS_SEED = [
   {"code": "AZ-204", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_570_96f54a79.jpg", "note": "", "id": 570},
   {"code": "AZ-147", "name": "", "category": "耳环", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "admin_571_0e57e72e.jpg", "note": "", "id": 571},
   {"code": "AZ-223", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_572_7a569ce8.jpg", "note": "", "id": 572},
-  {"code": "AZ-085", "name": "", "category": "耳环", "brand": "", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_573_20b9edd3.jpg", "note": "", "id": 573}
+  {"code": "AZ-085", "name": "", "category": "耳环", "brand": "", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_573_20b9edd3.jpg", "note": "", "id": 573},
+  {"code": "AZ-126", "name": "", "category": "耳环", "brand": "", "sizes": "", "unitPrice": 1800, "dozenPrice": 0, "image": "admin_574_ec39cdd7.jpg", "note": "", "id": 574}
 ];
