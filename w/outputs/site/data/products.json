@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:17:30.508437+00:00",
+  "updatedAt": "2026-09-06T14:20:41.944155+00:00",
   "products": [
     {
       "code": "6878",
@@ -7105,6 +7105,18 @@
       "image": "admin_592_2fb7fb0f.jpg",
       "note": "",
       "id": 592
+    },
+    {
+      "code": "AZ-224",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 1300,
+      "dozenPrice": 0,
+      "image": "admin_593_9de9a7cc.jpg",
+      "note": "",
+      "id": 593
     }
   ]
 }
