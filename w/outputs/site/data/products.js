@@ -582,5 +582,6 @@ window.PRODUCTS_SEED = [
   {"code": "AZ-242", "name": "", "category": "手链", "brand": "", "sizes": "", "unitPrice": 2600, "dozenPrice": 0, "image": "admin_580_c66f6f2e.jpg", "note": "", "id": 580},
   {"code": "AZ-219", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 1300, "dozenPrice": 0, "image": "admin_581_1740447c.jpg", "note": "", "id": 581},
   {"code": "AZ-179", "name": "", "category": "脚链", "brand": "", "sizes": "", "unitPrice": 1200, "dozenPrice": 0, "image": "admin_582_1bcbccb1.jpg", "note": "", "id": 582},
-  {"code": "AZ-207", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 2100, "dozenPrice": 0, "image": "admin_583_eb14639a.jpg", "note": "", "id": 583}
+  {"code": "AZ-207", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 2100, "dozenPrice": 0, "image": "admin_583_eb14639a.jpg", "note": "", "id": 583},
+  {"code": "AZ-240", "name": "", "category": "手链", "brand": "", "sizes": "", "unitPrice": 2800, "dozenPrice": 0, "image": "admin_584_c17152a3.jpg", "note": "", "id": 584}
 ];
