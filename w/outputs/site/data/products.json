@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:27:59.180975+00:00",
+  "updatedAt": "2026-09-06T14:30:04.246134+00:00",
   "products": [
     {
       "code": "6878",
@@ -7189,6 +7189,18 @@
       "image": "admin_599_b4ba23f9.jpg",
       "note": "",
       "id": 599
+    },
+    {
+      "code": "AZ-005",
+      "name": "",
+      "category": "脚链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2600,
+      "dozenPrice": 0,
+      "image": "admin_600_6eb1f3d7.jpg",
+      "note": "",
+      "id": 600
     }
   ]
 }
