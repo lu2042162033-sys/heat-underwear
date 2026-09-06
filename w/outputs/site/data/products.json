@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:21:17.510446+00:00",
+  "updatedAt": "2026-09-06T14:21:58.156878+00:00",
   "products": [
     {
       "code": "6878",
@@ -7129,6 +7129,18 @@
       "image": "admin_594_f56a3b32.jpg",
       "note": "",
       "id": 594
+    },
+    {
+      "code": "AZ-156 x12",
+      "name": "",
+      "category": "耳环",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 9700,
+      "dozenPrice": 0,
+      "image": "admin_595_9e4d1000.jpg",
+      "note": "",
+      "id": 595
     }
   ]
 }
