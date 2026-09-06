@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:41:45.538132+00:00",
+  "updatedAt": "2026-09-06T13:42:20.715177+00:00",
   "products": [
     {
       "code": "6878",
@@ -6853,6 +6853,18 @@
       "image": "admin_571_0e57e72e.jpg",
       "note": "",
       "id": 571
+    },
+    {
+      "code": "AZ-223",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 1800,
+      "dozenPrice": 0,
+      "image": "admin_572_7a569ce8.jpg",
+      "note": "",
+      "id": 572
     }
   ]
 }
