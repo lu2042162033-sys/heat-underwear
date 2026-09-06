@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:32:41.614091+00:00",
+  "updatedAt": "2026-09-06T14:33:32.874827+00:00",
   "products": [
     {
       "code": "6878",
@@ -7181,7 +7181,7 @@
     {
       "code": "AZ-218",
       "name": "",
-      "category": "文胸",
+      "category": "戒指",
       "brand": "",
       "sizes": "",
       "unitPrice": 1300,
@@ -7237,6 +7237,18 @@
       "image": "admin_603_83cbb995.jpg",
       "note": "",
       "id": 603
+    },
+    {
+      "code": "AZ-265",
+      "name": "",
+      "category": "手链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3900,
+      "dozenPrice": 0,
+      "image": "admin_604_addfb523.jpg",
+      "note": "",
+      "id": 604
     }
   ]
 }
