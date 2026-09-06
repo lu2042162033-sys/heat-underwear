@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:30:38.863255+00:00",
+  "updatedAt": "2026-09-06T13:32:01.762037+00:00",
   "products": [
     {
       "code": "6878",
@@ -6697,6 +6697,18 @@
       "image": "admin_558_2be41b20.jpg",
       "note": "",
       "id": 558
+    },
+    {
+      "code": "AZ-151",
+      "name": "耳环",
+      "category": "耳环",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2300,
+      "dozenPrice": 0,
+      "image": "admin_559_034122ed.jpg",
+      "note": "",
+      "id": 559
     }
   ]
 }
