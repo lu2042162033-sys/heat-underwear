@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:46:24.316890+00:00",
+  "updatedAt": "2026-09-06T13:46:57.793228+00:00",
   "products": [
     {
       "code": "6878",
@@ -6913,6 +6913,18 @@
       "image": "admin_576_fdef13bd.jpg",
       "note": "",
       "id": 576
+    },
+    {
+      "code": "AZ-282",
+      "name": "",
+      "category": "手链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3100,
+      "dozenPrice": 0,
+      "image": "admin_577_94ee02e9.jpg",
+      "note": "",
+      "id": 577
     }
   ]
 }
