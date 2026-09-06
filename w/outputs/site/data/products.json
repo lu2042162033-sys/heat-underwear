@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:32:44.774314+00:00",
+  "updatedAt": "2026-09-06T13:34:15.794138+00:00",
   "products": [
     {
       "code": "6878",
@@ -6721,6 +6721,18 @@
       "image": "admin_560_d505b512.jpg",
       "note": "",
       "id": 560
+    },
+    {
+      "code": "AZ-088",
+      "name": "",
+      "category": "耳环",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2800,
+      "dozenPrice": 0,
+      "image": "admin_561_4fb68629.jpg",
+      "note": "",
+      "id": 561
     }
   ]
 }
