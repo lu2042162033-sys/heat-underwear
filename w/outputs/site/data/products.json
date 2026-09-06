@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:34:15.794138+00:00",
+  "updatedAt": "2026-09-06T13:35:16.592320+00:00",
   "products": [
     {
       "code": "6878",
@@ -6733,6 +6733,18 @@
       "image": "admin_561_4fb68629.jpg",
       "note": "",
       "id": 561
+    },
+    {
+      "code": "AZ-110",
+      "name": "",
+      "category": "耳环",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 1900,
+      "dozenPrice": 0,
+      "image": "admin_562_c2d4a563.jpg",
+      "note": "",
+      "id": 562
     }
   ]
 }
