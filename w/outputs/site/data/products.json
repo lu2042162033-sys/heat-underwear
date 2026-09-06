@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:41:16.595380+00:00",
+  "updatedAt": "2026-09-06T13:41:45.538132+00:00",
   "products": [
     {
       "code": "6878",
@@ -6841,6 +6841,18 @@
       "image": "admin_570_96f54a79.jpg",
       "note": "",
       "id": 570
+    },
+    {
+      "code": "AZ-147",
+      "name": "",
+      "category": "耳环",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2300,
+      "dozenPrice": 0,
+      "image": "admin_571_0e57e72e.jpg",
+      "note": "",
+      "id": 571
     }
   ]
 }
