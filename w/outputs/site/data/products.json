@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T14:13:09.423232+00:00",
+  "updatedAt": "2026-09-06T14:13:45.933376+00:00",
   "products": [
     {
       "code": "6878",
@@ -7057,6 +7057,18 @@
       "image": "admin_588_7d756035.jpg",
       "note": "",
       "id": 588
+    },
+    {
+      "code": "AZ-004",
+      "name": "",
+      "category": "手链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3100,
+      "dozenPrice": 0,
+      "image": "admin_589_d0e5f83a.jpg",
+      "note": "",
+      "id": 589
     }
   ]
 }
