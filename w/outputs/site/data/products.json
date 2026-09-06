@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-06T13:52:33.646086+00:00",
+  "updatedAt": "2026-09-06T13:59:04.799619+00:00",
   "products": [
     {
       "code": "6878",
@@ -6973,6 +6973,30 @@
       "image": "admin_581_1740447c.jpg",
       "note": "",
       "id": 581
+    },
+    {
+      "code": "AZ-179",
+      "name": "",
+      "category": "脚链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 1200,
+      "dozenPrice": 0,
+      "image": "admin_582_1bcbccb1.jpg",
+      "note": "",
+      "id": 582
+    },
+    {
+      "code": "AZ-207",
+      "name": "",
+      "category": "戒指",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2100,
+      "dozenPrice": 0,
+      "image": "admin_583_eb14639a.jpg",
+      "note": "",
+      "id": 583
     }
   ]
 }
