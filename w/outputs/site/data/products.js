@@ -629,5 +629,6 @@ window.PRODUCTS_SEED = [
   {"code": "HD25605 X 10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_627_4f0d8eda.jpg", "note": "", "id": 627},
   {"code": "HD25604 X 10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_628_52a84f40.jpg", "note": "", "id": 628},
   {"code": "HD25603 X 10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_629_73301179.jpg", "note": "", "id": 629},
-  {"code": "HD25602 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_630_96f6095d.jpg", "note": "", "id": 630}
+  {"code": "HD25602 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_630_96f6095d.jpg", "note": "", "id": 630},
+  {"code": "HD25606 X 10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 12000, "image": "admin_631_0612139b.jpg", "note": "", "id": 631}
 ];
