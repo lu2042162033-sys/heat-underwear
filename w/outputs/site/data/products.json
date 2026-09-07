@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-07T20:10:10.680804+00:00",
+  "updatedAt": "2026-09-07T20:10:54.153036+00:00",
   "products": [
     {
       "code": "6878",
@@ -7549,6 +7549,18 @@
       "image": "admin_629_73301179.jpg",
       "note": "",
       "id": 629
+    },
+    {
+      "code": "HD25602 X10U",
+      "name": "",
+      "category": "文胸",
+      "brand": "",
+      "sizes": "UNICO",
+      "unitPrice": 0,
+      "dozenPrice": 13000,
+      "image": "admin_630_96f6095d.jpg",
+      "note": "",
+      "id": 630
     }
   ]
 }
