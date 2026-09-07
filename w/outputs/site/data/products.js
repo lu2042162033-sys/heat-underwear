@@ -625,5 +625,6 @@ window.PRODUCTS_SEED = [
   {"code": "AZ-272", "name": "", "category": "手环", "brand": "", "sizes": "", "unitPrice": 3900, "dozenPrice": 0, "image": "admin_623_2a90401b.jpg", "note": "", "id": 623},
   {"code": "AZ-206", "name": "", "category": "戒指", "brand": "", "sizes": "", "unitPrice": 2100, "dozenPrice": 0, "image": "admin_624_ec3a758a.jpg", "note": "", "id": 624},
   {"code": "HD25607 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 19000, "image": "admin_625_f5793bfc.jpg", "note": "", "id": 625},
-  {"code": "HD25608 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 17000, "image": "admin_626_8960f481.jpg", "note": "", "id": 626}
+  {"code": "HD25608 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "", "unitPrice": 0, "dozenPrice": 17000, "image": "admin_626_8960f481.jpg", "note": "", "id": 626},
+  {"code": "HD25605 X 10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_627_4f0d8eda.jpg", "note": "", "id": 627}
 ];

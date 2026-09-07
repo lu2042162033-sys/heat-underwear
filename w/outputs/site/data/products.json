@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-07T15:07:19.727365+00:00",
+  "updatedAt": "2026-09-07T20:08:36.141029+00:00",
   "products": [
     {
       "code": "6878",
@@ -7513,6 +7513,18 @@
       "image": "admin_626_8960f481.jpg",
       "note": "",
       "id": 626
+    },
+    {
+      "code": "HD25605 X 10U",
+      "name": "",
+      "category": "袜子",
+      "brand": "",
+      "sizes": "UNICO",
+      "unitPrice": 0,
+      "dozenPrice": 13000,
+      "image": "admin_627_4f0d8eda.jpg",
+      "note": "",
+      "id": 627
     }
   ]
 }
