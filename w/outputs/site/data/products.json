@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-07T14:02:53.894409+00:00",
+  "updatedAt": "2026-09-07T15:07:19.727365+00:00",
   "products": [
     {
       "code": "6878",
@@ -7501,6 +7501,18 @@
       "image": "admin_625_f5793bfc.jpg",
       "note": "",
       "id": 625
+    },
+    {
+      "code": "HD25608 X10U",
+      "name": "",
+      "category": "袜子",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 0,
+      "dozenPrice": 17000,
+      "image": "admin_626_8960f481.jpg",
+      "note": "",
+      "id": 626
     }
   ]
 }
