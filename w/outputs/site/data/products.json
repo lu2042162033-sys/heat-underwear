@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-08T14:08:33.090211+00:00",
+  "updatedAt": "2026-09-08T14:09:02.985417+00:00",
   "products": [
     {
       "code": "6878",
@@ -7765,6 +7765,18 @@
       "image": "admin_649_7e86cdb1.jpg",
       "note": "",
       "id": 649
+    },
+    {
+      "code": "LLA5980-25",
+      "name": "",
+      "category": "手机链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3000,
+      "dozenPrice": 0,
+      "image": "admin_650_54090aca.jpg",
+      "note": "",
+      "id": 650
     }
   ]
 }
