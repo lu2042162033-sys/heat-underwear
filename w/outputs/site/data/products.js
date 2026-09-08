@@ -630,5 +630,6 @@ window.PRODUCTS_SEED = [
   {"code": "HD25602 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 13000, "image": "admin_630_96f6095d.jpg", "note": "", "id": 630},
   {"code": "HD25606 X 10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 12000, "image": "admin_631_0612139b.jpg", "note": "", "id": 631},
   {"code": "HD25601 X10U", "name": "", "category": "袜子", "brand": "", "sizes": "UNICO", "unitPrice": 0, "dozenPrice": 12000, "image": "admin_632_15ab5218.jpg", "note": "", "id": 632},
-  {"code": "LLA2585-7", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_633_378ebadd.jpg", "note": "", "id": 633}
+  {"code": "LLA2585-7", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_633_378ebadd.jpg", "note": "", "id": 633},
+  {"code": "LLA5980-47", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 4000, "dozenPrice": 0, "image": "admin_634_96bf9a4f.jpg", "note": "", "id": 634}
 ];
