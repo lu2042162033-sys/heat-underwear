@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-08T14:10:06.311102+00:00",
+  "updatedAt": "2026-09-08T14:11:25.295659+00:00",
   "products": [
     {
       "code": "6878",
@@ -7801,6 +7801,18 @@
       "image": "admin_652_dd4ca7aa.jpg",
       "note": "",
       "id": 652
+    },
+    {
+      "code": "LLA-055",
+      "name": "",
+      "category": "手机链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3300,
+      "dozenPrice": 0,
+      "image": "admin_653_e09dd0b2.jpg",
+      "note": "",
+      "id": 653
     }
   ]
 }
