@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-08T14:11:25.295659+00:00",
+  "updatedAt": "2026-09-08T14:12:03.975954+00:00",
   "products": [
     {
       "code": "6878",
@@ -7813,6 +7813,18 @@
       "image": "admin_653_e09dd0b2.jpg",
       "note": "",
       "id": 653
+    },
+    {
+      "code": "LLA-064",
+      "name": "",
+      "category": "手机链",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 3300,
+      "dozenPrice": 0,
+      "image": "admin_654_4440b5c0.jpg",
+      "note": "",
+      "id": 654
     }
   ]
 }
