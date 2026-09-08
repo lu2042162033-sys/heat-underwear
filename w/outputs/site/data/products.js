@@ -633,5 +633,6 @@ window.PRODUCTS_SEED = [
   {"code": "LLA2585-7", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_633_378ebadd.jpg", "note": "", "id": 633},
   {"code": "LLA5980-47", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 4000, "dozenPrice": 0, "image": "admin_634_96bf9a4f.jpg", "note": "", "id": 634},
   {"code": "LLA5980-31", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3800, "dozenPrice": 0, "image": "admin_635_2c5be2ec.jpg", "note": "", "id": 635},
-  {"code": "LLA5980-65", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 5800, "dozenPrice": 0, "image": "admin_636_cbf45d1a.jpg", "note": "", "id": 636}
+  {"code": "LLA5980-65", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 5800, "dozenPrice": 0, "image": "admin_636_cbf45d1a.jpg", "note": "", "id": 636},
+  {"code": "LLA5980-57", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 4600, "dozenPrice": 0, "image": "admin_637_caa85c81.jpg", "note": "", "id": 637}
 ];
