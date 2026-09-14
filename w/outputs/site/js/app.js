@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260823-20';
+  var APP_VERSION = '20260914-1';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};

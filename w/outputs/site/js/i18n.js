@@ -1,6 +1,6 @@
 /* 中 / 西 双语文案 */
 window.I18N = {
-  categoryKeys: ["文胸","内裤","内衣裤套装","睡衣","束身衣","瑜伽裤-夏季","瑜伽裤-冬季","背心","动物睡衣","发夹","手机链","项链","手链","脚链","戒指","耳环","手环","鞋扣","钥匙扣","袜子","U型枕","毛绒钥匙扣","文具","杯子","化妆品","皇冠"],
+  categoryKeys: ["折扇","文胸","内裤","内衣裤套装","睡衣","束身衣","瑜伽裤-夏季","瑜伽裤-冬季","背心","动物睡衣","发夹","手机链","项链","手链","脚链","戒指","耳环","手环","鞋扣","钥匙扣","袜子","U型枕","毛绒钥匙扣","文具","杯子","化妆品","皇冠"],
   brandKeys: ["PINK 21", "TEI"],
   zh: {
     langName: "中文",
@@ -95,6 +95,7 @@ window.I18N = {
     uploadTooBig: "图片较大（超过 1.5MB），建议改用“选择已有图片 / 手动输入文件名”，避免超出浏览器存储上限。",
     uploadErr: "图片读取失败",
     categoryNames: {
+      "折扇": "折扇",
       "文胸": "文胸",
       "内裤": "内裤",
       "内衣裤套装": "内衣裤套装",
@@ -216,6 +217,7 @@ window.I18N = {
     uploadTooBig: "Imagen >1.5MB: use una imagen existente o nombre de archivo para no superar el límite del navegador.",
     uploadErr: "No se pudo leer la imagen",
     categoryNames: {
+      "折扇": "Abanicos",
       "文胸": "Corpiño",
       "内裤": "Bombacha",
       "内衣裤套装": "Conjuntos",
