@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260915-1';
+  var APP_VERSION = '20260915-2';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -1386,6 +1386,8 @@
         tryFetch(0).then(function (obj) {
           var list = Array.isArray(obj) ? obj : (obj && Array.isArray(obj.products) ? obj.products : null);
           if (list && list.length) {
+            // 本机存在未保存成功的改动时，不用线上数据覆盖，避免刚新增的商品被冲掉
+            if (state.dirty) return;
             state.products = list.map(function (p, i) { return normalize(p, i + 1); });
             try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ schema: SCHEMA, savedAt: new Date().toISOString(), products: state.products })); } catch (e) {}
             renderAll();
