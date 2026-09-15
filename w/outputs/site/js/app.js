@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260914-1';
+  var APP_VERSION = '20260915-1';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -130,16 +130,21 @@
     }))));
     var body = { message: 'chore: stage products from admin', content: content, branch: 'main' };
     return ghApi(apiPath, { method: 'GET', token: state.githubToken }).then(function (g) {
+      var gMsg = (g.data && g.data.message) ? g.data.message : '';
+      // 404 表示暂存文件尚未创建，属正常情况；其余失败（401/403/0）直接返回，避免误报为“保存失败”而无从判断
+      if (!g.ok && g.status !== 404) {
+        setDebug('暂存文件读取失败 ' + g.status + (gMsg ? '（' + gMsg + '）' : ''));
+        return { ok: false, status: g.status, message: gMsg };
+      }
       if (g.ok && g.data && g.data.sha) body.sha = g.data.sha;
       return ghApi(apiPath, {
         method: 'PUT',
         token: state.githubToken,
         json: body
       }).then(function (res) {
-        var msg = '';
-        if (!res.ok && res.data && res.data.message) msg = '（' + res.data.message + '）';
-        setDebug('pending 写入返回 ' + res.status + msg);
-        return { ok: res.ok, status: res.status };
+        var msg = (res.data && res.data.message) ? res.data.message : '';
+        setDebug('pending 写入返回 ' + res.status + (msg ? '（' + msg + '）' : ''));
+        return { ok: res.ok, status: res.status, message: msg };
       });
     });
   }
@@ -184,7 +189,9 @@
     editingId: null,
     cart: [],
     cartOpen: false,
-    menuOpen: false
+    menuOpen: false,
+    dirty: false,
+    adminMsg: ''
   };
   var CART_KEY = 'heat_cart_v1';
   function loadCart() {
@@ -212,7 +219,7 @@
     return state.cart.reduce(function (s, c) { return s + toNum(c.qty); }, 0);
   }
   var server = { mode: false, authed: false, images: null };
-  var github = { mode: !!CFG.pages, authed: false };
+  var github = { mode: !!CFG.pages, authed: false, tokenVerifiedAt: 0 };
 
   function $(id) { return document.getElementById(id); }
   function el(tag, cls, text) {
@@ -295,7 +302,13 @@
     showToast(t("saving"), "", 20000);
     return ghWritePending(list).then(function (w) {
       if (!w.ok) {
-        showToast(t("saveFailed"), "error", 5000);
+        state.dirty = true;
+        var failMsg = saveErrorText(w.status, w.message);
+        setAdminMsg(failMsg, true);
+        updateRetryBtn();
+        showToast(failMsg, "error", 9000);
+        // 令牌被拒（无效/过期/无权限）：立刻转入重新登录，避免用户反复重试却看不到原因
+        if (w.status === 401 || w.status === 403 || w.status === 404) requireReauth('tokenExpired');
         return false;
       }
       showToast(t("savedPublishing"), "", 25000);
@@ -304,10 +317,25 @@
         schema: SCHEMA
       }).then(function (r) {
         if (r.ok) {
+          state.dirty = false;
+          updateRetryBtn();
+          setAdminMsg('', false);
           showToast(t("saved"), "success", 3000);
           return true;
         }
-        showToast(t("saveFailed"), "error", 5000);
+        state.dirty = true;
+        updateRetryBtn();
+        if (r.error === 'token') {
+          setAdminMsg(t('saveTokenInvalid'), true);
+          showToast(t('saveTokenInvalid'), "error", 9000);
+          requireReauth('tokenExpired');
+        } else if (r.error === 'timeout') {
+          setAdminMsg(t('passTimeout'), true);
+          showToast(t('passTimeout'), "error", 9000);
+        } else {
+          setAdminMsg(t('saveFailed'), true);
+          showToast(t('saveFailed'), "error", 6000);
+        }
         return false;
       });
     });
@@ -778,6 +806,72 @@
     setTimeout(function () { w.print(); }, 300);
   }
 
+  /* ---------- 保存失败诊断 / 令牌自检 ---------- */
+  function saveErrorText(status, apiMsg) {
+    var base;
+    if (status === 0) base = t('saveNetErr');
+    else if (status === 401) base = t('saveTokenInvalid');
+    else if (status === 403) base = t('saveTokenForbidden');
+    else if (status === 404) base = t('saveTokenNoRepo');
+    else if (status === 413) base = t('saveTooLarge');
+    else if (status === 422) base = t('saveConflict');
+    else base = t('saveFailed') + (status ? '（HTTP ' + status + '）' : '');
+    // 令牌类错误已有专属文案，不再叠加 GitHub 原始信息
+    if (apiMsg && status !== 401 && status !== 403 && status !== 404) {
+      return base + '（' + apiMsg + '）';
+    }
+    return base;
+  }
+  function setAdminMsg(msg, isErr) {
+    state.adminMsg = msg || '';
+    var el = $('admin-msg');
+    if (!el) return;
+    el.textContent = state.adminMsg;
+    el.hidden = !state.adminMsg;
+    el.style.color = isErr ? '#b23b3b' : '#2f7d32';
+  }
+  function updateRetryBtn() {
+    var b = $('btn-retry');
+    if (!b) return;
+    b.textContent = t('retrySave');
+    b.hidden = !(github.mode && state.dirty);
+  }
+  // 令牌失效时回到登录框，保留内存中的未保存改动，重新登录后可直接重试保存
+  function requireReauth(msgKey) {
+    github.authed = false;
+    state.unlocked = false;
+    state.githubToken = '';
+    github.tokenVerifiedAt = 0;
+    try {
+      localStorage.removeItem('heat_admin_token');
+      localStorage.removeItem('heat_admin_pass');
+      localStorage.removeItem('heat_admin_ts');
+    } catch (e) {}
+    closeAdmin();
+    openAdmin();
+    var pm = $('pass-msg');
+    if (pm) { pm.textContent = t(msgKey); pm.style.color = '#b23b3b'; }
+    var tk = $('pass-token');
+    if (tk) tk.focus();
+  }
+  function verifyToken() {
+    if (!github.mode || !state.githubToken) return Promise.resolve(false);
+    if (github.tokenVerifiedAt && Date.now() - github.tokenVerifiedAt < 300000) return Promise.resolve(true);
+    return ghApi('https://api.github.com/repos/' + ghRepo(), { token: state.githubToken }).then(function (r) {
+      if (r.status === 200) {
+        github.tokenVerifiedAt = Date.now();
+        return true;
+      }
+      // 网络不通只提示，不强制登出（可能只是暂时断网）
+      if (r.status === 0) {
+        setAdminMsg(t('saveNetErr'), true);
+        return false;
+      }
+      requireReauth('tokenExpired');
+      return false;
+    });
+  }
+
   /* ---------- 管理面板 ---------- */
   function openAdmin() {
     if (github.mode && !github.authed) state.unlocked = false;
@@ -802,6 +896,8 @@
     state.adminOpen = true;
     renderAdminLabels();
     renderAdminTable();
+    updateRetryBtn();
+    verifyToken();
   }
   function closeAdmin() {
     $('admin-overlay').hidden = true;
@@ -836,6 +932,8 @@
       if (r.ok) {
         state.unlocked = true;
         github.authed = true;
+        github.tokenVerifiedAt = Date.now();
+        state.dirty = false;
         try {
           localStorage.setItem('heat_admin_token', state.githubToken);
           localStorage.setItem('heat_admin_pass', pw);
@@ -879,6 +977,7 @@
     $('btn-reset').textContent = t('reset');
     $('btn-logout').textContent = t('logout');
     $('admin-search').placeholder = t('searchPlaceholder');
+    updateRetryBtn();
     $('pass-title').textContent = t('passcodeTitle');
     $('pass-prompt').textContent = t('passcodePrompt');
     $('btn-unlock').textContent = t('unlock');
@@ -1236,6 +1335,8 @@
       github.authed = false;
       state.unlocked = false;
       state.adminPassword = '';
+      state.githubToken = '';
+      github.tokenVerifiedAt = 0;
       try {
         localStorage.removeItem('heat_admin_token');
         localStorage.removeItem('heat_admin_pass');
@@ -1244,6 +1345,11 @@
       closeAdmin();
     });
     $('btn-logout').hidden = !github.mode;
+
+    var btnRetry = $('btn-retry');
+    if (btnRetry) {
+      btnRetry.addEventListener('click', function () { saveProducts(state.products); });
+    }
 
     function finish() {
       renderAll();

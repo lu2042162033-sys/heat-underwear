@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HEAT UNDERWEAR · 商品展示</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css?v=20260915-1">
+  <link rel="stylesheet" href="css/theme.css?v=20260915-1">
 </head>
 <body>
   <header class="site-header">
@@ -127,6 +127,7 @@
       </div>
       <div class="admin-toolbar">
         <button id="btn-add" class="btn primary" type="button"></button>
+        <button id="btn-retry" class="btn accent" type="button" hidden></button>
         <button id="btn-export" class="btn" type="button"></button>
         <button id="btn-import" class="btn" type="button"></button>
         <input id="import-file" type="file" accept=".json,application/json" hidden>
@@ -135,6 +136,7 @@
         <input id="admin-search" type="search" autocomplete="off">
         <select id="admin-cat"></select>
       </div>
+      <p id="admin-msg" class="form-msg admin-msg" hidden></p>
       <div class="admin-table-wrap">
         <table>
           <thead>
@@ -193,7 +195,7 @@
   <script src="data/site-config.js"></script>
   <script src="data/products.js"></script>
   <script src="data/images.js"></script>
-  <script src="js/i18n.js?v=20260914-1"></script>
-  <script src="js/app.js?v=20260914-1"></script>
+  <script src="js/i18n.js?v=20260915-1"></script>
+  <script src="js/app.js?v=20260915-1"></script>
 </body>
 </html>

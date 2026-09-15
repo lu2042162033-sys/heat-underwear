@@ -99,6 +99,7 @@ main{max-width:1280px;margin:0 auto;padding:8px 24px 70px;}
 .admin-toolbar input[type=search]{flex:1 1 200px;min-width:160px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;outline:none;background:#fff;}
 .admin-toolbar select{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;outline:none;}
 .admin-table-wrap{overflow:auto;padding:6px 24px 24px;}
+.admin-msg{min-height:0;margin:0;padding:12px 24px 0;font-size:13px;}
 .admin-table-wrap table{width:100%;border-collapse:collapse;font-size:13px;}
 .admin-table-wrap thead th{position:sticky;top:0;background:var(--surface);text-align:left;padding:12px 10px;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line);white-space:nowrap;}
 .admin-table-wrap tbody td{padding:10px;border-bottom:1px solid #F3EEE5;vertical-align:middle;white-space:nowrap;}
