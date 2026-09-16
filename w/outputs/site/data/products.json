@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-08T14:12:27.134114+00:00",
+  "updatedAt": "2026-09-16T00:22:25.407611+00:00",
   "products": [
     {
       "code": "6878",
@@ -7837,6 +7837,18 @@
       "image": "admin_655_a60bb80e.jpg",
       "note": "",
       "id": 655
+    },
+    {
+      "code": "AZ-D70001",
+      "name": "",
+      "category": "折扇",
+      "brand": "",
+      "sizes": "",
+      "unitPrice": 2300,
+      "dozenPrice": 0,
+      "image": "admin_656_b2bbd567.jpg",
+      "note": "",
+      "id": 656
     }
   ]
 }
