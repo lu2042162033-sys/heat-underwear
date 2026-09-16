@@ -653,5 +653,20 @@ window.PRODUCTS_SEED = [
   {"code": "LLA-055", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_653_e09dd0b2.jpg", "note": "", "id": 653},
   {"code": "LLA-064", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_654_4440b5c0.jpg", "note": "", "id": 654},
   {"code": "LLA-050", "name": "", "category": "手机链", "brand": "", "sizes": "", "unitPrice": 3300, "dozenPrice": 0, "image": "admin_655_a60bb80e.jpg", "note": "", "id": 655},
-  {"code": "AZ-D70001", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "admin_656_b2bbd567.jpg", "note": "", "id": 656}
+  {"code": "AZ-D70001", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "admin_656_b2bbd567.jpg", "note": "", "id": 656},
+  {"code": "AZ-D70002", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "zheshan_D70002.jpg", "note": "", "id": 657},
+  {"code": "AZ-D70003", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "zheshan_D70003.jpg", "note": "", "id": 658},
+  {"code": "AZ-D70004", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "zheshan_D70004.jpg", "note": "", "id": 659},
+  {"code": "AZ-D70005", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 3000, "dozenPrice": 0, "image": "zheshan_D70005.jpg", "note": "", "id": 660},
+  {"code": "AZ-D70006", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2300, "dozenPrice": 0, "image": "zheshan_D70006.jpg", "note": "", "id": 661},
+  {"code": "AZ-D70007", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 5000, "dozenPrice": 0, "image": "zheshan_D70007.jpg", "note": "", "id": 662},
+  {"code": "AZ-D70008", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2800, "dozenPrice": 0, "image": "zheshan_D70008.jpg", "note": "", "id": 663},
+  {"code": "AZ-D70009", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 2800, "dozenPrice": 0, "image": "zheshan_D70009.jpg", "note": "", "id": 664},
+  {"code": "AZ-D70010", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 3200, "dozenPrice": 0, "image": "zheshan_D70010.jpg", "note": "", "id": 665},
+  {"code": "AZ-D70011", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 3700, "dozenPrice": 0, "image": "zheshan_D70011.jpg", "note": "", "id": 666},
+  {"code": "AZ-D70012", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 5000, "dozenPrice": 0, "image": "zheshan_D70012.jpg", "note": "", "id": 667},
+  {"code": "AZ-D70013", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 3600, "dozenPrice": 0, "image": "zheshan_D70013.jpg", "note": "", "id": 668},
+  {"code": "AZ-D70014", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 3600, "dozenPrice": 0, "image": "zheshan_D70014.jpg", "note": "", "id": 669},
+  {"code": "AZ-D70015", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 4500, "dozenPrice": 0, "image": "zheshan_D70015.jpg", "note": "", "id": 670},
+  {"code": "AZ-D70016", "name": "", "category": "折扇", "brand": "", "sizes": "", "unitPrice": 3500, "dozenPrice": 0, "image": "zheshan_D70016.jpg", "note": "", "id": 671}
 ];

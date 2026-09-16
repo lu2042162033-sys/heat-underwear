@@ -666,5 +666,20 @@ window.PRODUCTS_IMAGES = [
   "admin_653_e09dd0b2.jpg",
   "admin_654_4440b5c0.jpg",
   "admin_655_a60bb80e.jpg",
-  "admin_656_b2bbd567.jpg"
+  "admin_656_b2bbd567.jpg",
+  "zheshan_D70002.jpg",
+  "zheshan_D70003.jpg",
+  "zheshan_D70004.jpg",
+  "zheshan_D70005.jpg",
+  "zheshan_D70006.jpg",
+  "zheshan_D70007.jpg",
+  "zheshan_D70008.jpg",
+  "zheshan_D70009.jpg",
+  "zheshan_D70010.jpg",
+  "zheshan_D70011.jpg",
+  "zheshan_D70012.jpg",
+  "zheshan_D70013.jpg",
+  "zheshan_D70014.jpg",
+  "zheshan_D70015.jpg",
+  "zheshan_D70016.jpg"
 ];
