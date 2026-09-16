@@ -6,15 +6,24 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# 与 deploy.yml 共用 pages 组，避免两次发布互相打断
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   update:
     if: github.event_name == 'repository_dispatch'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # 使用仓库自带的 GITHUB_TOKEN：不再依赖会到期的 DEPLOY_TOKEN
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.DEPLOY_TOKEN }}
 
       - name: Verify admin password
         id: auth
@@ -43,13 +52,39 @@ jobs:
           echo "auth result written: valid=$OK"
 
       - name: Commit and push
+        id: commit
         run: |
           git config user.name "heat-site-bot"
           git config user.email "heat-site-bot@users.noreply.github.com"
           git add w/outputs/site/data w/outputs/site/images/products
           if git diff --cached --quiet; then
             echo "No changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "chore: admin update"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # 用 GITHUB_TOKEN 提交的推送不会触发 deploy.yml，因此在同一工作流内直接发布 Pages
+      - name: Prepare site files
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          mkdir -p _site
+          cp -r w/outputs/site/* _site/
+          rm -f _site/data/pending-products.json
+
+      - name: Configure Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
