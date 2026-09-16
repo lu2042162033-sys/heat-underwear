@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260915-2';
+  var APP_VERSION = '20260915-3';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -153,12 +153,12 @@
     setDebug('发送请求 ' + eventType + '（ID: ' + payload.request_id + '）');
     return ghDispatch(eventType, payload, state.githubToken).then(function (r) {
       if (r.status === 401 || r.status === 403) {
-        setDebug('请求被拒（令牌无效）');
-        return { ok: false, error: 'token' };
+        setDebug('请求被拒（令牌无效或无权限 ' + r.status + '）');
+        return { ok: false, error: 'token', status: r.status };
       }
       if (!r.ok) {
         setDebug('请求发送失败（状态 ' + r.status + '）');
-        return { ok: false, error: 'dispatch' };
+        return { ok: false, error: 'dispatch', status: r.status };
       }
       setDebug('请求已发送，等待校验回执…');
       return pollAuth(payload.request_id, 60000).then(function (auth) {
@@ -166,7 +166,7 @@
         return { ok: !!auth.valid, auth: auth };
       }).catch(function () {
         setDebug('等待回执超时');
-        return { ok: false, error: 'timeout' };
+        return { ok: false, error: 'timeout', status: 0 };
       });
     });
   }
@@ -326,9 +326,11 @@
         state.dirty = true;
         updateRetryBtn();
         if (r.error === 'token') {
-          setAdminMsg(t('saveTokenInvalid'), true);
-          showToast(t('saveTokenInvalid'), "error", 9000);
-          requireReauth('tokenExpired');
+          // 403 = 有令牌但权限不足（最常见：Contents 只给了 Read），401 = 令牌无效/过期
+          var tkKey = r.status === 403 ? 'saveTokenForbidden' : 'saveTokenInvalid';
+          setAdminMsg(t(tkKey), true);
+          showToast(t(tkKey), "error", 12000);
+          requireReauth(tkKey);
         } else if (r.error === 'timeout') {
           setAdminMsg(t('passTimeout'), true);
           showToast(t('passTimeout'), "error", 9000);
@@ -857,17 +859,30 @@
   function verifyToken() {
     if (!github.mode || !state.githubToken) return Promise.resolve(false);
     if (github.tokenVerifiedAt && Date.now() - github.tokenVerifiedAt < 300000) return Promise.resolve(true);
-    return ghApi('https://api.github.com/repos/' + ghRepo(), { token: state.githubToken }).then(function (r) {
+    var repoApi = 'https://api.github.com/repos/' + ghRepo();
+    return ghApi(repoApi, { token: state.githubToken }).then(function (r) {
       if (r.status === 200) {
-        github.tokenVerifiedAt = Date.now();
-        return true;
+        // 只读令牌也能读到公开仓库，因此再用一个无人监听的事件类型探测写权限（不会触发任何工作流）
+        return ghApi(repoApi + '/dispatches', {
+          method: 'POST',
+          token: state.githubToken,
+          json: { event_type: 'permission-check', client_payload: { probe: 1 } }
+        }).then(function (w) {
+          if (w.ok) {
+            github.tokenVerifiedAt = Date.now();
+            return true;
+          }
+          if (w.status === 0) { setAdminMsg(t('saveNetErr'), true); return false; }
+          var key = w.status === 401 ? 'saveTokenInvalid' : (w.status === 404 ? 'saveTokenNoRepo' : 'saveTokenForbidden');
+          requireReauth(key);
+          return false;
+        });
       }
+      if (r.status === 401) { requireReauth('saveTokenInvalid'); return false; }
+      if (r.status === 404) { requireReauth('saveTokenNoRepo'); return false; }
       // 网络不通只提示，不强制登出（可能只是暂时断网）
-      if (r.status === 0) {
-        setAdminMsg(t('saveNetErr'), true);
-        return false;
-      }
-      requireReauth('tokenExpired');
+      if (r.status === 0) { setAdminMsg(t('saveNetErr'), true); return false; }
+      requireReauth('saveTokenForbidden');
       return false;
     });
   }
@@ -943,11 +958,15 @@
         $('pass-overlay').hidden = true;
         openAdmin();
       } else if (r.error === 'token') {
-        $('pass-msg').textContent = t('tokenError');
+        // 403 是“权限不足”，401 才是“令牌无效/过期”，分开提示避免误判
+        $('pass-msg').textContent = r.status === 403 ? t('saveTokenForbidden') : t('saveTokenInvalid');
         $('pass-msg').style.color = '#b23b3b';
         $('pass-token').focus();
       } else if (r.error === 'timeout') {
         $('pass-msg').textContent = t('passTimeout');
+        $('pass-msg').style.color = '#b23b3b';
+      } else if (r.error === 'dispatch') {
+        $('pass-msg').textContent = r.status === 404 ? t('saveTokenNoRepo') : t('saveFailed') + '（HTTP ' + r.status + '）';
         $('pass-msg').style.color = '#b23b3b';
       } else {
         $('pass-msg').textContent = t('passcodeWrong');
