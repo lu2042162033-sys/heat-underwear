@@ -11,7 +11,7 @@
   var STORAGE_KEY = CFG.storageKey || 'heat_products_v1';
   var LANG_KEY = CFG.langKey || 'heat_lang';
   var QA = /[?&]qa=1/.test(location.search);
-  var APP_VERSION = '20260915-3';
+  var APP_VERSION = '20260915-4';
   var MAX_UPLOAD = 1.5 * 1024 * 1024;
 
   var memStore = {};
@@ -166,7 +166,10 @@
         return { ok: !!auth.valid, auth: auth };
       }).catch(function () {
         setDebug('等待回执超时');
-        return { ok: false, error: 'timeout', status: 0 };
+        // 超时后再看一眼最近的工作流：能区分“工作流失败（如 DEPLOY_TOKEN 失效）”与“请求没到 Actions”
+        return checkRecentRun().then(function (reasonKey) {
+          return { ok: false, error: 'timeout', status: 0, reason: reasonKey };
+        });
       });
     });
   }
@@ -332,8 +335,9 @@
           showToast(t(tkKey), "error", 12000);
           requireReauth(tkKey);
         } else if (r.error === 'timeout') {
-          setAdminMsg(t('passTimeout'), true);
-          showToast(t('passTimeout'), "error", 9000);
+          var tmKey = r.reason || 'passTimeout';
+          setAdminMsg(t(tmKey), true);
+          showToast(t(tmKey), "error", 12000);
         } else {
           setAdminMsg(t('saveFailed'), true);
           showToast(t('saveFailed'), "error", 6000);
@@ -886,6 +890,25 @@
       return false;
     });
   }
+  // 超时后回查最近的工作流运行（公开只读接口），用于区分“工作流失败”和“请求没触发 Actions”
+  function checkRecentRun() {
+    return ghApi('https://api.github.com/repos/' + ghRepo() + '/actions/runs?per_page=5', {}).then(function (r) {
+      var runs = (r.data && r.data.workflow_runs) || null;
+      if (!r.ok || !runs) return 'saveTimeoutBusy';
+      var now = Date.now();
+      var recent = runs.filter(function (w) {
+        var t0 = Date.parse(w.created_at || '');
+        return !isNaN(t0) && now - t0 < 10 * 60 * 1000;
+      });
+      if (!recent.length) return 'saveNoRun';
+      for (var i = 0; i < recent.length; i++) {
+        if (recent[i].conclusion === 'failure') return 'saveWorkflowFailed';
+      }
+      return 'saveTimeoutBusy';
+    }).catch(function () {
+      return 'saveTimeoutBusy';
+    });
+  }
 
   /* ---------- 管理面板 ---------- */
   function openAdmin() {
@@ -963,7 +986,7 @@
         $('pass-msg').style.color = '#b23b3b';
         $('pass-token').focus();
       } else if (r.error === 'timeout') {
-        $('pass-msg').textContent = t('passTimeout');
+        $('pass-msg').textContent = t(r.reason || 'passTimeout');
         $('pass-msg').style.color = '#b23b3b';
       } else if (r.error === 'dispatch') {
         $('pass-msg').textContent = r.status === 404 ? t('saveTokenNoRepo') : t('saveFailed') + '（HTTP ' + r.status + '）';
