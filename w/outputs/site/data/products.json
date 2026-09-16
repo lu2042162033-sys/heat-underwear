@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-16T00:27:41.465000+00:00",
+  "updatedAt": "2026-09-16T00:53:14.098000+00:00",
   "products": [
     {
       "code": "6878",
@@ -667,24 +667,12 @@
       "name": "",
       "category": "文胸",
       "brand": "",
-      "sizes": "34B-40B",
+      "sizes": "34B-40B / 36C-42C",
       "unitPrice": 8100,
       "dozenPrice": 81000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (2).jpeg",
       "note": "",
       "id": 56
-    },
-    {
-      "code": "HN50094",
-      "name": "",
-      "category": "文胸",
-      "brand": "",
-      "sizes": "36C-42C",
-      "unitPrice": 8100,
-      "dozenPrice": 81000,
-      "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (3).jpeg",
-      "note": "",
-      "id": 57
     },
     {
       "code": "HN50108B",
@@ -703,24 +691,12 @@
       "name": "",
       "category": "文胸",
       "brand": "",
-      "sizes": "34B-40B",
+      "sizes": "34B-40B / 34C-40B",
       "unitPrice": 8100,
       "dozenPrice": 81000,
       "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (1).jpeg",
       "note": "",
       "id": 59
-    },
-    {
-      "code": "HN8558B",
-      "name": "",
-      "category": "文胸",
-      "brand": "",
-      "sizes": "34C-40C",
-      "unitPrice": 8100,
-      "dozenPrice": 81000,
-      "image": "WhatsApp Image 2026-08-05 at 8.27.14 PM (4).jpeg",
-      "note": "",
-      "id": 60
     },
     {
       "code": "HS20126",
@@ -985,18 +961,6 @@
       "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (4).jpeg",
       "note": "",
       "id": 82
-    },
-    {
-      "code": "CH-602",
-      "name": "",
-      "category": "内裤",
-      "brand": "",
-      "sizes": "S-M-L",
-      "unitPrice": 32400,
-      "dozenPrice": 324000,
-      "image": "WhatsApp Image 2026-08-05 at 8.27.13 PM (1).jpeg",
-      "note": "",
-      "id": 83
     },
     {
       "code": "CH-613",
@@ -1887,18 +1851,6 @@
       "id": 157
     },
     {
-      "code": "YIHE-218",
-      "name": "",
-      "category": "瑜伽裤-夏季",
-      "brand": "",
-      "sizes": "M/L L/XL XL/XXL",
-      "unitPrice": 22400,
-      "dozenPrice": 224000,
-      "image": "WhatsApp Image 2026-08-05 at 8.26.52 PM (1).jpeg",
-      "note": "",
-      "id": 158
-    },
-    {
       "code": "YIHE-275",
       "name": "",
       "category": "瑜伽裤-夏季",
@@ -2055,18 +2007,6 @@
       "id": 171
     },
     {
-      "code": "DH008",
-      "name": "",
-      "category": "瑜伽裤-夏季",
-      "brand": "",
-      "sizes": "M/L L/XL XL/2XL",
-      "unitPrice": 27000,
-      "dozenPrice": 270000,
-      "image": "WhatsApp Image 2026-08-05 at 8.26.49 PM (1).jpeg",
-      "note": "",
-      "id": 172
-    },
-    {
       "code": "DH009",
       "name": "",
       "category": "瑜伽裤-夏季",
@@ -2101,18 +2041,6 @@
       "image": "WhatsApp Image 2026-08-05 at 8.26.49 PM (3).jpeg",
       "note": "",
       "id": 175
-    },
-    {
-      "code": "DH012",
-      "name": "",
-      "category": "瑜伽裤-夏季",
-      "brand": "",
-      "sizes": "M/L L/XL XL/2XL",
-      "unitPrice": 22400,
-      "dozenPrice": 224000,
-      "image": "WhatsApp Image 2026-08-05 at 8.26.54 PM (2).jpeg",
-      "note": "",
-      "id": 176
     },
     {
       "code": "DH013",
@@ -2487,18 +2415,6 @@
       "id": 207
     },
     {
-      "code": "DH064",
-      "name": "",
-      "category": "瑜伽裤-冬季",
-      "brand": "",
-      "sizes": "M/L L/XL XL/2XL",
-      "unitPrice": 16200,
-      "dozenPrice": 162000,
-      "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM (3).jpeg",
-      "note": "",
-      "id": 208
-    },
-    {
       "code": "DH065",
       "name": "",
       "category": "瑜伽裤-冬季",
@@ -2545,18 +2461,6 @@
       "image": "WhatsApp Image 2026-08-05 at 8.26.38 PM (3).jpeg",
       "note": "",
       "id": 213
-    },
-    {
-      "code": "DH069",
-      "name": "",
-      "category": "瑜伽裤-冬季",
-      "brand": "",
-      "sizes": "M/L L/XL XL/2XL",
-      "unitPrice": 17600,
-      "dozenPrice": 176000,
-      "image": "WhatsApp Image 2026-08-05 at 8.26.45 PM (4).jpeg",
-      "note": "",
-      "id": 214
     },
     {
       "code": "DH071",
@@ -2979,18 +2883,6 @@
       "id": 249
     },
     {
-      "code": "BRO-25161",
-      "name": "",
-      "category": "发夹",
-      "brand": "",
-      "sizes": "",
-      "unitPrice": 2200,
-      "dozenPrice": 0,
-      "image": "admin_214_200e05d8.jpg",
-      "note": "",
-      "id": 250
-    },
-    {
       "code": "BRO-25141",
       "name": "",
       "category": "发夹",
@@ -3253,30 +3145,6 @@
       "image": "admin_236_e34cee3a.jpg",
       "note": "",
       "id": 272
-    },
-    {
-      "code": "CS6847",
-      "name": "眉毛膏",
-      "category": "化妆品",
-      "brand": "PINK 21",
-      "sizes": "",
-      "unitPrice": 1700,
-      "dozenPrice": 0,
-      "image": "admin_237_e08ebdfe.jpg",
-      "note": "",
-      "id": 273
-    },
-    {
-      "code": "CS3756",
-      "name": "眼线笔眉笔",
-      "category": "化妆品",
-      "brand": "PINK 21",
-      "sizes": "",
-      "unitPrice": 1600,
-      "dozenPrice": 0,
-      "image": "admin_238_00fec5e9.jpg",
-      "note": "",
-      "id": 274
     },
     {
       "code": "CS3876",
@@ -5439,18 +5307,6 @@
       "id": 458
     },
     {
-      "code": "AZ-245",
-      "name": "",
-      "category": "手链",
-      "brand": "",
-      "sizes": "",
-      "unitPrice": 2600,
-      "dozenPrice": 0,
-      "image": "admin_423_ee25fba4.jpg",
-      "note": "",
-      "id": 459
-    },
-    {
       "code": "BRO-25122",
       "name": "",
       "category": "发夹",
@@ -7263,30 +7119,6 @@
       "id": 610
     },
     {
-      "code": "AZ-021",
-      "name": "",
-      "category": "项链",
-      "brand": "",
-      "sizes": "",
-      "unitPrice": 2800,
-      "dozenPrice": 0,
-      "image": "admin_611_7d1a9bb1.jpg",
-      "note": "",
-      "id": 611
-    },
-    {
-      "code": "AZ-267",
-      "name": "",
-      "category": "手环",
-      "brand": "",
-      "sizes": "",
-      "unitPrice": 3400,
-      "dozenPrice": 0,
-      "image": "admin_612_772a5c76.jpg",
-      "note": "",
-      "id": 612
-    },
-    {
       "code": "AZ-272",
       "name": "",
       "category": "手环",
@@ -7345,18 +7177,6 @@
       "image": "admin_617_c04aef33.jpg",
       "note": "",
       "id": 617
-    },
-    {
-      "code": "AZ-267",
-      "name": "",
-      "category": "手环",
-      "brand": "",
-      "sizes": "",
-      "unitPrice": 3400,
-      "dozenPrice": 0,
-      "image": "admin_618_951e667d.jpg",
-      "note": "",
-      "id": 618
     },
     {
       "code": "AZ-264",
