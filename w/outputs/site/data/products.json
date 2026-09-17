@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-17T14:11:07.662193+00:00",
+  "updatedAt": "2026-09-17T14:16:50.173609+00:00",
   "products": [
     {
       "code": "6878",
@@ -341,7 +341,7 @@
     {
       "code": "HW848-3PLUS",
       "name": "",
-      "category": "束身衣",
+      "category": "内裤",
       "brand": "",
       "sizes": "XL-XXL-XXXL",
       "unitPrice": 5800,
@@ -413,7 +413,7 @@
     {
       "code": "16-G828",
       "name": "",
-      "category": "束身衣",
+      "category": "内裤",
       "brand": "",
       "sizes": "XL-XXL-XXXL",
       "unitPrice": 5500,
@@ -437,7 +437,7 @@
     {
       "code": "16-M828",
       "name": "",
-      "category": "束身衣",
+      "category": "内裤",
       "brand": "",
       "sizes": "S-M-L",
       "unitPrice": 4600,
@@ -941,7 +941,7 @@
     {
       "code": "CH-601",
       "name": "",
-      "category": "内裤",
+      "category": "束身衣",
       "brand": "",
       "sizes": "S-M-L",
       "unitPrice": 32400,
@@ -965,7 +965,7 @@
     {
       "code": "CH-613",
       "name": "",
-      "category": "内裤",
+      "category": "束身衣",
       "brand": "",
       "sizes": "S-M-L",
       "unitPrice": 35000,
