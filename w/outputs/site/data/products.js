@@ -79,7 +79,7 @@ window.PRODUCTS_SEED = [
   {"code": "CH-506", "name": "", "category": "内裤", "brand": "", "sizes": "L-XL-XXL-XXXL", "unitPrice": 3000, "dozenPrice": 30000, "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM (2).jpeg", "note": "", "id": 79},
   {"code": "CH-508", "name": "", "category": "内裤", "brand": "", "sizes": "L-XL-XXL-XXXL", "unitPrice": 2700, "dozenPrice": 27000, "image": "WhatsApp Image 2026-08-05 at 8.27.10 PM (2).jpeg", "note": "", "id": 80},
   {"code": "CH-601", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L", "unitPrice": 32400, "dozenPrice": 324000, "image": "WhatsApp Image 2026-08-05 at 8.27.00 PM (3).jpeg", "note": "", "id": 81},
-  {"code": "CH-602", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L", "unitPrice": 32400, "dozenPrice": 324000, "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (4).jpeg", "note": "", "id": 82},
+  {"code": "CH-602", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L", "unitPrice": 32400, "dozenPrice": 324000, "image": "WhatsApp Image 2026-08-05 at 8.27.02 PM (4).jpeg", "note": "", "id": 82},
   {"code": "CH-613", "name": "", "category": "束身衣", "brand": "", "sizes": "S-M-L", "unitPrice": 35000, "dozenPrice": 350000, "image": "WhatsApp Image 2026-08-05 at 8.27.08 PM.jpeg", "note": "", "id": 84},
   {"code": "CH-8002", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 2700, "dozenPrice": 27000, "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM.jpeg", "note": "", "id": 85},
   {"code": "CH-8003", "name": "", "category": "内裤", "brand": "", "sizes": "S-M-L-XL", "unitPrice": 2500, "dozenPrice": 24500, "image": "WhatsApp Image 2026-08-05 at 8.27.07 PM (3).jpeg", "note": "", "id": 86},
